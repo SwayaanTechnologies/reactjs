@@ -2469,117 +2469,47 @@ export default App;
 ![image](images/key2.png)
 
 
-# React Fragments
+## React Fragments
 
-In React, whenever you want to render something on the screen, you need to use a render method inside the 
+* In React, whenever you want to render something on the screen, you need to use a render method inside the component. 
 
-component. This render method can return single elements or multiple elements. The render method will only 
+* This render method can return single elements or multiple elements. 
 
-render a single root node inside it at a time. However, if you want to return multiple elements, the render 
+* The render method will only render a single root node inside it at a time. 
 
-method will require a 'div' tag and put the entire content or elements inside it. This extra node to the DOM 
+* However, if you want to return multiple elements, the render method will require a 'div' tag and put the entire content or elements inside it. This extra node to the DOM sometimes results in the wrong formatting of your HTML output
 
-sometimes results in the wrong formatting of your HTML output and also not loved by the many developers.
+**Example:**
 
-<!--style="font-size:30px"-->
-Example
+**App.js**
 
-```markdown
+```
+import React from "react";
 
-// Rendering with div tag  
-class App extends React.Component {   
-     render() {    
-      return (   
-         //Extraneous div element   
-         <div>  
-           <h2> Hello World! </h2>   
-           <p> Welcome to the JavaTpoint. </p>   
-         </div>   
-      );   
-     }   
-} 
-``` 
-<!--style="font-size:30px"-->
-Output
+// Simple rendering with div
+class App extends React.Component {
+	render() {
+		return (
+			// Extraneous div element
+			<div>
+				<h2>Hello</h2>
 
-![image](images/fragment1.png)
+				<p>How you doin'?</p>
+			</div>
+		);
+	}
+}
 
-To solve this problem, React introduced Fragments from the 16.2 and above version. Fragments allow you to 
+export default App;
 
-group a list of children without adding extra nodes to the DOM.
 
-<!--style="font-size:30px"-->
-Syntax
-
-```markdown
-
-<React.Fragment>  
-      <h2> child1 </h2>   
-    <p> child2 </p>   
-      .. ..... .... ...  
-</React.Fragment>  
 ```
 
-<!--style="font-size:30px"-->
-Example
+**Output:**
 
-```markdown
+![fragments](/images/frag.png)
 
-// Rendering with fragments tag  
-class App extends React.Component {   
-    render() {   
-     return (   
-       <React.Fragment>  
-            <h2> Hello World! </h2>   
-        <p> Welcome to the JavaTpoint. </p>   
-         </React.Fragment>  
-     );   
-    }   
-} 
-```  
-
-<!--style="font-size:30px"-->
-Output
-
-![image](images/fragment2.png)
-
-
-<!--style="font-size:30px"-->
-* Why we use Fragments?
-
-The main reason to use Fragments tag is:
-
-1. It makes the execution of code faster as compared to the div tag.
-
-2. It takes less memory.
-
-<!--style="font-size:30px"-->
-Fragments Short Syntax
-
-There is also another shorthand exists for declaring fragments for the above method. It looks like empty tag 
-
-in which we can use of '<>' and '' instead of the 'React.Fragment'.
-
-<!--style="font-size:30px"-->
-Example
-
-```markdown
-
-//Rendering with short syntax   
-class Columns extends React.Component {   
-  render() {   
-    return (   
-      <>    
-        <h2> Hello World! </h2>   
-        <p> Welcome to the JavaTpoint </p>   
-      </>   
-    );   
-  }   
-} 
-```  
-
-<!--style="font-size:30px"-->
-Keyed Fragments
+**Keyed Fragments**
 
 The shorthand syntax does not accept key attributes. You need a key for mapping a collection to an array of 
 
@@ -2589,8 +2519,8 @@ fragments with the explicit `<React.Fragment>`syntax.
 
 ---> Note: Key is the only attributes that can be passed with the Fragments.
 
-<!--style="font-size:30px"-->
-Example
+
+**Example:**
 
 ```markdown
 
