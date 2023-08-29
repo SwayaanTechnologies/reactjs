@@ -9,36 +9,44 @@ React allows us to create reusable UI components.
 
 **-->Define UI**
 
-The User Interface (UI) is the point of human-computer interaction and communication in a device.This can include display screens,keyboard, a mouse and the appearance of a desktop.
+The User Interface (UI) is the point of human-computer interaction and communication in a device. UI encompasses all the visual and interactive elements through which users interact with software, websites, applications, and devices to perform tasks, access information, or achieve specific goals.
+
+![reactjsLogo](/images/react-js-icon.png)
 
 ##  what is React?
 
-React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
+* ReactJS is an open-source JavaScript library used to create user interfaces in a declarative and efficient way. 
 
-React is a tool for building UI components.
+* It was developed by Facebook and is widely used for creating interactive and dynamic web applications. 
 
-It is also known as ReactJs and React.js , so don't get confused if you read different notation in different places.
+* It is a component-based front-end library responsible only for the view layer of a Model View Controller(MVC) architecture. 
 
-React knows only one thing that is to create an awesome UI.
+* React is used to create modular user interfaces and promotes the development of reusable UI components that display dynamic data.
 
-<!--style="font-size:30px"-->
-* Why React?
 
-Created and Maintained By facebook.
+**Why React?**
 
-It has a huge community in github.
+* Created and Maintained By facebook.
 
-Component Based architecture.
+* It has a huge community in github.
+
+* Component Based architecture.
+
+* Efficient Virtual DOM, declarative syntax, reusability, rich ecosystem
+
+* Offers performance optimization, JSX, and wide adoption, making it a top choice for dynamic web applications.
 
 ### How does React works?
 
-React creates a VIRTUAL DOM in memory.
+* React works by creating a virtual representation of the UI called the Virtual DOM in memory.
 
-Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+* Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
 
-React only changes what needs to be changed!
+* When state changes occur, React efficiently calculates the minimal changes needed, updates the Virtual DOM, and then synchronizes these changes with the real DOM.
 
-React finds out what changes have been made, and changes only what needs to be changed.
+* React only changes what needs to be changed!
+
+* React finds out what changes have been made, and changes only what needs to be changed.
 
 ### React.js History
 
@@ -56,30 +64,67 @@ create-react-app includes built tools such as webpack, Babel, and ESLint.
 
 ### React Features
 
-JSX − JSX is JavaScript syntax extension. It isn't necessary to use JSX in React development, but it is recommended.
+* **Component-Based Architecture:** Building UIs using reusable and self-contained components for easier development and maintenance.
 
-Components − React is all about components. You need to think of everything as a component. This will help you maintain the code when working on larger scale projects.
+* **Virtual DOM:** Efficiently updates the actual DOM by minimizing direct manipulations, resulting in better performance.
 
-Unidirectional data flow and Flux − React implements one-way data flow which makes it easy to reason about your app. Flux is a pattern that helps keeping your data unidirectional.
+* **Declarative Syntax:** Describes UI based on state, making it easier to manage and understand.
 
-License − React is licensed under the Facebook Inc. Documentation is licensed under CC BY 4.0.
+* **Unidirectional Data Flow:** Ensures predictable updates by flowing data in one direction.
 
-### React Advantage
+* **JSX:** Embeds HTML-like syntax within JavaScript for intuitive UI representation.
 
-Uses virtual DOM which is a JavaScript object. This will improve apps performance, since JavaScript virtual DOM is faster than the regular DOM.
+* **Component Lifecycle:** Allows control over component creation, update, and destruction.
 
-Can be used on client and server side as well as with other frameworks.
+* **State and Props:** Manages component-specific and passed data for dynamic UIs.
 
-Component and data patterns improve readability, which helps to maintain larger apps.
+* **Hooks:** Offers state and lifecycle functionalities to functional components.
+
+* **Context API:** Facilitates state sharing across components without prop drilling.
+
+* **Ecosystem:** Rich collection of libraries and tools for diverse functionalities.
+
+* **License:** React is licensed under the Facebook Inc. Documentation is licensed under CC BY 4.0.
+
+### React Advantages
+
+•	Component-Based Architecture
+
+•	Virtual DOM
+
+•	Declarative Syntax
+
+•	One-Way Data Flow
+
+•	Rich Ecosystem
+
+•	Community and Support
+
+•	Cross-Platform Development (with React Native)
+
+•	SEO-Friendly (with SSR and Next.js)
+
 
 ### React Limitations
 
-Covers only the view layer of the app, hence you still need to choose other technologies to get a complete tooling set for development.
+•	Learning Curve
 
-Uses inline templating and JSX, which might seem awkward to some developers.
+•	Boilerplate Code
 
-<!--style="font-size:30px"-->
-* Prerequisites for React?
+•	Tooling Complexity
+
+•	Frequent Updates
+
+•	Performance Overhead
+
+•	Unopinionated
+
+•	Lack of Built-in State Management
+
+•	UI Focus (may require additional libraries for non-UI features)
+
+
+**Prerequisites for React?**
 
 1: Basic Knowledge of Html , css and Javascript.
 
@@ -88,74 +133,49 @@ Uses inline templating and JSX, which might seem awkward to some developers.
 3: Basic Understanding of how to use npm(Node Package Manager).
 
 
-# Installation of React
+## React JS Environment Setup
 
-<!--style="font-size:30px"-->
-1. install Node.js
+To run any React application, we need to first setup a ReactJS Development Environment.
 
-Node.js actually provides a runtime environment to execute JavaScript code from outside a browser. NPM, the 
+**Pre-requisite:** We must have NodeJS and npx installed on our PC.
 
-default package manager for Nodejs is used for managing and sharing the packages for any JavaScript project. 
+ReactJS Installation:Using create-react-app(faster method)
 
-React uses Node.js and NPM for the management of dependencies and runtime.
+**Step 1:** Navigate to the folder where you want to create the project and open it in terminal
 
-In this tutorial, we are going to install the create-react-app tool using the Node Package Manager(NPM). 
+**Step 2:** In the terminal of the application directory type the following command
 
-Create-react-app is a tool developed by the React.js team that makes React’s setting up easier.
+```
+npx create-react-app <<Application_Name>>
 
-So first, it needs to install Nodejs on our system. NPM will be installed with Nodejs. The current stable 
+```
 
-version of Node.js can be downloaded and installed from the official website that is given below.
+![environment](/images/ES1.png)
 
----> https://nodejs.org
+![environment](/images/ES2.png)
 
-Download the latest version and install it. Here we can choose the LTS or the latest version. Because both of 
+**Step 3:** Navigate to the newly created folder using the command
 
-the version supports React.
+```
+cd <<Application_Name>>
 
-After the installation, check the versions using the below commands.
+```
+![environment](/images/ES3.png)
 
----> node -v
+**Step 4:** A default application will be created with the following project structure and dependencies.
 
----> npm -v
+**Step 5:** To run this application type the following command in terminal.
 
-This will show the installed versions of Node.js and NPM.
+```
+npm start
 
-<!--style="font-size:30px"-->
-2. Install visual Studio code /Sublime/Atom/Brackets.
+```
 
-<!--style="font-size:30px"-->
-3. Create a New React Project
+**Step 6:** The following output will be displayed in the browser.
 
-After the successful installation of Nodejs and NPM, we can create a new React project by temporarily 
+![environment](/images/ES4.png)
 
-installing the create-react-app tool. Execute the below command on the Command prompt window.
-
----> npx create-react-app awesome-project
-
-Here NPX will temporarily install create-react-app and create a new react project named awesome-project. Note 
-
-that the awesome-project is the name I have chosen for my react project.
-
-<!--style="font-size:30px"-->
-4. Running the Application
-
-So the app we created can run locally on our system with the npm start command.
-
----> cd awesome-project
-
-To start the server for the development:
-
----> npm start
-
-This will open up the react application in a new tab of our browser with the below URL.
-
----> http://localhost:3000
-
-<br>
-
-
-# React File and Folder Structure
+## React File and Folder Structure
 
 In React application, there are several files and folders in the root directory. Some of them are as follows:
 
@@ -181,26 +201,7 @@ allows to identify the project as well as handle the project?s dependencies.
 
 6. README.md: It provides the documentation to read about React topics.
 
-# React Environment Setup
-
-Now, open the src >> App.js file and make changes which you want to display on the screen. After making 
-
-desired changes, save the file. As soon as we save the file, Webpack recompiles the code, and the page will 
-
-refresh automatically, and changes are reflected on the browser screen. Now, we can create as many components 
-
-as we want, import the newly created component inside the App.js file and that file will be included in our 
-
-main index.html file after compiling by Webpack.
-
-Next, if we want to make the project for the production mode, type the following command. This command will 
-
-generate the production build, which is best optimized.
-
----> $ npm build  
-
-
-# React ES6
+## React ES6
 
 What is ES6?
 
@@ -1041,21 +1042,145 @@ export default App;
 ```
 ![image](images/ternary3.png)
 
-# React Render HTML
+## Modify the React Application
+
+* So far so good, but how do I change the content?
+
+* Look in the demoapp directory, and you will find a src folder. Inside the src folder there is a file called App.js, open it and it will look like this:
+
+![modify](/images/modify.png)
+
+Try changing the HTML content and save the file.
+
+Notice that the changes are visible immediately after you save the file, you do not have to reload the browser!.
+
+**Example:** Replace all the content inside the div className="App" with a h1 element.
+See the changes in the browser when you click Save.
+
+```
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello World!</h1>
+    </div>
+  );
+}
+export default App;
+
+```
+
+**Output:**
+
+![modify](/images/modify1.png)
+
+## React Rendering Elements
+
+* React elements are different from DOM elements as React elements are simple JavaScript objects and are efficient to create. 
+
+* React elements are the building blocks of any React app and should not be confused with React components.
+
+**Rendering an Element in React**
+
+* In order to render any element into the Browser DOM, we need to have a container or root DOM element. 
+
+* It is almost a convention to have a div element with the id=”root” or id=”app” to be used as the root DOM element. Let’s suppose our index.html file has the following statement inside it.
+
+**<div id="root"></div>**
+
+Now, in order to render a simple React Element to the root node, we must write the following in the App.js file.
+
+**Example:**
+
+**App.js**
+
+```
+import React, { Component } from 'react';
+
+class App extends Component {
+
+	render() {
+		return (
+			<div>
+				<h1>Welcome All!</h1>
+			</div>
+
+		);
+	}
+}
+
+export default App;
+
+
+```
+
+**Output:**
+
+![render](/images/render.png)
+
+Now, you have created your first ever React Element and also have rendered it in place, but React was not developed to create static pages, the intention of using React is to create a more logical and active webpage. In order to do so, we will need to update the elements. This next section will guide us through the same.
+
+**Updating an Element in React**
+
+* React Elements are immutable i.e. once an element is created it is impossible to update its children or attribute. 
+
+* Thus, in order to update an element, we must use the render() method several times to update the value over time. 
+
+**Example:**
+
+**App.js**
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function App() {
+  const myElement = (
+    <div>
+      <h1>Welcome All!</h1>
+      <h2>{new Date().toLocaleTimeString()}</h2>
+    </div>
+  );
+
+  ReactDOM.render(
+    myElement,
+    document.getElementById("root")
+  );
+}
+
+setInterval(App, 1000);
+export default App
+
+
+```
+
+**Output:** 
+
+![render](/images/renderr2.png)
+
+In the above example, we have created a function showTime() that displays the current time, and we have set an interval of 1000ms or 1 sec that recalls the function each second thus updating the time in each call. For simplicity, we have only shown the timespan of one second in the given image.
+
+**Important Points to Note:**
+
+•	Calling the render() method multiple times may serve our purpose for this example, but in general, it is never used instead a stateful component is used which we will cover in further articles.
+
+•	A React Element is almost never used isolated, we can use elements as the building blocks of creating a component in React.
+
+
+## React Render HTML
 
 React's goal is in many ways to render HTML in a web page.
 
 React renders HTML to the web page by using a function called ReactDOM.render().
 
-<!--style="font-size:30px"-->
-The createRoot Function
+
+**The createRoot Function**
 
 * The createRoot() function takes one argument, an HTML element.
 
 * The purpose of the function is to define the HTML element where a React component should be displayed.
 
-<!--style="font-size:30px"-->
-The Render Function
+
+**The Render Function**
 
 The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
 
@@ -1067,7 +1192,7 @@ There is another folder in the root directory of your React project, named "publ
 
 You'll notice a single `<div>` in the body of this file. This is where our React application will be rendered.
 
-Example
+**Example**
 
 Display a paragraph inside an element with the id of "root":
 
@@ -1078,21 +1203,21 @@ import ReactDOM from 'react-dom/client';
 ReactDOM.render(<p>Hello</p>, document.getElementById('root'));
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/render1.png)
 
 Note that the element id does not have to be called "root", but this is the standard convention.
 
-<!--style="font-size:30px"-->
-* The HTML Code
+
+**The HTML Code**
 
 The HTML code in this tutorial uses JSX which allows you to write HTML tags inside the JavaScript code:
 
 Do not worry if the syntax is unfamiliar, you will learn more about JSX in the next chapter.
 
-Example
+**Example**
 
 Create a variable that contains HTML code and display it in the "root" node:
 
@@ -1117,13 +1242,13 @@ const myelement = (
 ReactDOM.render(myelement, document.getElementById('root'));
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/render2.png)
 
-<!--style="font-size:30px"-->
-* The Root Node
+
+**The Root Node**
 
 The root node is the HTML element where you want to display the result.
 
@@ -1131,7 +1256,7 @@ It is like a container for content managed by React.
 
 It does NOT have to be a `<div>` element and it does NOT have to have the id='root':
 
-Example
+**Example:**
 
 The root node can be called whatever you like:
 
@@ -1147,387 +1272,334 @@ you must have a element with
 id="sandy" on your "index.html" page.
 */
 ```
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/render3.png)
 
 
-# React Jsx
+## React Jsx
 
-<!--style="font-size:30px"-->
-What is Jsx?
+* JSX stands for JavaScript XML.
 
-JSX stands for JavaScript XML.
+* JSX is basically a syntax extension of JavaScript. 
 
-JSX allows us to write HTML in React.
+* It helps us to write HTML in JavaScript and forms the basis of React Development.
 
-JSX makes it easier to write and add HTML in React.
+* JSX makes it easier to write and add HTML in React.
 
-<!--style="font-size:30px"-->
-* Coding Jsx
+* JSX creates an element in React that gets rendered in the UI. 
 
-JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+* It is transformed into JavaScript functions by the compiler at runtime.
 
-JSX converts HTML tags into react elements.
 
-You are not required to use JSX, but JSX makes it easier to write React applications.
+**Jsx Syntax**
 
-Here are two examples. The first uses JSX and the second does not:
-
-<!--style="font-size:30px"-->
-Example 1
-
-Jsx:
-
-```markdown
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-const myElement = <h1>I Love JSX!</h1>;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx1.png)
+const ele = <h1>This is sample JSX</h1>;
 
-<!--style="font-size:30px"-->
-Example 2
-
-Without Jsx:
-
-```markdown
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-const myElement = React.createElement('h1', {}, 'I do not use JSX!');
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx2.png)
 
-As you can see in the first example, JSX allows us to write HTML directly within the JavaScript code.
+The above code snippet somewhat looks like HTML and it also uses a JavaScript-like variable but is neither HTML nor JavaScript, it is JSX(JavaScript XML). With the help of JSX, we have directly written the HTML syntax in JavaScript.
 
-JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.
+**Expressions in JSX**
 
-<!--style="font-size:30px"-->
-* Expressions in jsx:
+* In React we are allowed to use normal JavaScript expressions with JSX. 
 
-With JSX you can write expressions inside curly braces { }.
+* To embed any JavaScript expression in a piece of code written in JSX we will have to wrap that expression in curly braces {}. 
 
-The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:
+The below example specifies a basic use of JavaScript Expression in React.
 
-<!--style="font-size:30px"-->
-Example
+**Example:** This example wraps the JSX code in curly braces
 
-Execute the expression 5 + 5:
+**App.js**
 
-```markdown
-
+```
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+const App = () => {
+  const name = 'Stranger';
+  return (
+    <div>
+      <h1>Hello, {name}! Welcome to DEMO.</h1>
+    </div>
+  );
+};
+export default App;
 
-const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx3.png)
+**Index.js**
 
-<!--style="font-size:30px"-->
-* Inserting a Large Block of HTML
-
-To write HTML on multiple lines, put the HTML inside parentheses:
-
-<!--style="font-size:30px"-->
-Example
-
-Create a list with three list items:
-
-```markdown
-
+```
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const myElement = (
-  <ul>
-    <li>Apples</li>
-    <li>Bananas</li>
-    <li>Cherries</li>
-  </ul>
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx4.png)
+Output:
 
-<!--style="font-size:30px"-->
-* One Top Level Element
+![jsx](/images/jsx.png)
 
-The HTML code must be wrapped in ONE top level element.
+### Attributes in JSX
 
-So if you like to write two paragraphs, you must put them inside a parent element, like a div element.
+JSX allows us to use attributes with the HTML elements just like we do with normal HTML. But instead of the normal naming convention of HTML, JSX uses the camelcase convention for attributes.
 
-<!--style="font-size:30px"-->
-Example
+**App.js**
 
-Wrap two paragraphs inside one DIV element:
+**Example:**
 
-```markdown
+```
 
 import React from 'react';
-import ReactDOM from 'react-do/client';
-
-const myElement = (
-  <div>
-    <h1>I am a Header.</h1>
-    <h1>I am a Header too.</h1>
-  </div>
+import ReactDOM from 'react-dom';
+const MyComponent = () => {
+  const element = (
+    <div>
+      <h1 className="hello">Hello Stranger</h1>
+      <h2 data-sampleAttribute="sample">This is Custom attribute</h2>
+    </div>
+  );
+  return element;
+};
+export default MyComponent;
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementById("root")
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx5.png)
+**Output:**
 
-JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
+![jsx](/images/jsx11.png)
 
-<!--style="font-size:30px"-->
-* Elements Must be Closed
+**Specifying attribute values:**
 
-JSX follows XML rules, and therefore HTML elements must be properly closed.
+JSX allows us to specify attribute values in two ways: 
 
-<!--style="font-size:30px"-->
-Example
+* As for string literals: We can specify the values of attributes as hard-coded strings using quotes:
 
-Close empty elements with />
+```
+const ele = <h1 className = "firstAttribute">Hello!</h1>;
 
-```markdown
+```
+* As expressions: We can specify attributes as expressions using curly braces {}: 
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+```
+const ele = <h1 className = {varName}>Hello!</h1>;
 
-const myElement = <input type="text" />;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx6.png)
 
-JSX will throw an error if the HTML is not properly closed.
 
-<!--style="font-size:30px"-->
-* Attribute class = className
+### Wrapping elements or Children in JSX
 
-The class attribute is a much used attribute in HTML, but since JSX is rendered as JavaScript, and the class 
+Consider a situation where you want to render multiple tags at a time. To do this we need to wrap all of these tags under a parent tag and then render this parent element to the HTML. All the subtags are called child tags or children of this parent element.
 
-keyword is a reserved word in JavaScript, you are not allowed to use it in JSX.
+**Example:** In this example we have wrapped h1, h2, and h3 tags under a single div element and rendered them to HTML:
 
----> Use attribute className instead.
+**App.js**
 
-JSX solved this by using className instead. When JSX is rendered, it translates className attributes into 
-
-class attributes.
-
-<!--style="font-size:30px"-->
-Example
-
-Use attribute className instead of class in JSX:
-
-```markdown
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-const myElement = <h1 className="myclass">Hello World</h1>;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx7.png)
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-<!--style="font-size:30px"-->
-* Conditions - if statements
+const MyComponent = () => {
+  const element = <div>
+    <h1>This is Heading 1 </h1>
+    <h2>This is Heading 2</h2 >
+    <h3>This is Heading 3 </h3>
+</div >;
 
-React supports if statements, but not inside JSX.
+  return element;
+};
+export default MyComponent;
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementById("root")
+);
 
-To be able to use conditional statements in JSX, you should put the if statements outside of the JSX, or you 
+```
 
-could use a ternary expression instead:
+**Output:**
 
--> Option 1:
+![jsx](/images/jsx12.png)
 
-Write if statements outside of the JSX code:
+**Comments in JSX:** JSX allows us to use comments as it allows us to use JavaScript expressions. Comments in JSX begin with /* and ends with */. We can add comments by wrapping them in curly braces {} just like we did in the case of expressions.
 
-<!--style="font-size:30px"-->
-Example
+**index.js**
 
-Write "Hello" if x is less than 10, otherwise "Goodbye":
-
-```markdown
+```
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
-const x = 5;
-let text = "Goodbye";
-if (x < 10) {
-  text = "Hello";
+
+const element = <div>
+	<h1>
+		Hello World !
+		{/*This is a comment*/}
+	</h1>
+</div>;
+
+ReactDOM.render(element, document.getElementById("root"));
+
+
+```
+
+## React Components
+
+* A Component is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. 
+
+* Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI.
+
+**In React, we mainly have two types of components:**
+
+**Functional Components:** Functional components are simply javascript functions. We can create a functional component in React by writing a javascript function. These functions may or may not receive data as parameters. The below example shows a valid functional component in React:
+
+**Note:** The name of a component should always start with a capital letter. This is done to differentiate a component tag from HTML tags.
+
+```
+function demoComponent() {
+    return (<h1>
+                Welcome Message!
+            </h1>);
 }
 
-const myElement = <h1>{text}</h1>;
+```
+**Example:**
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
+**App.js**
+
 ```
 
-![image](images/jsx8.png)
+import React, { Component } from 'react';  
+class App extends React.Component {  
+   render() {  
+      return (  
+         <div>  
+            <First/>  
+            <Second/>  
+         </div>  
+      );  
+   }  
+}  
+class First extends React.Component {  
+   render() {  
+      return (  
+         <div>  
+            <h1>Welcomeeee...</h1>  
+         </div>  
+      );  
+   }  
+}  
+class Second extends React.Component {  
+   render() {  
+      return (  
+         <div>  
+            <h2>www.demoapp.com</h2>  
+            <p>This websites contains the great Reactjs tutorial.</p>  
+         </div>  
+      );  
+   }  
+}  
+export default App;
 
--> Option 2:
-
-Use ternary expressions instead:
-
-<!--style="font-size:30px"-->
-Example
-
-Write "Hello" if x is less than 10, otherwise "Goodbye":
-
-```markdown
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-const x = 5;
-
-const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
 ```
 
-![image](images/jsx9.png)
+**Output:**
 
-Note that in order to embed a JavaScript expression inside JSX, the JavaScript must be wrapped with curly 
+![component](/images/compo.png)
 
-braces.
+**Class Components:** The class components are a little more complex than the functional components. The functional components are not aware of the other components in your program whereas the class components can work with each other. We can pass data from one class component to another class component. We can use JavaScript ES6 classes to create class-based components in React. The below example shows a valid class-based component in React: 
 
-
-# React Components
-
-Components are like functions that return HTML elements.
-
-Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but
-
-work in isolation and return HTML.
-
-Components come in two types, Class components and Function components, in this tutorial we will concentrate
-
-on Function components.
-
-In older React code bases, you may find Class components primarily used. It is now suggested to use Function
-
-components along with Hooks, which were added in React 16.8. There is an optional section on Class
-
-for your reference.
-
-<!--style="font-size:30px"-->
-Create Your First Component
-
-When creating a React component, the component's name MUST start with an upper case letter.
-
-<!--style="font-size:30px"-->
-* Class Component
-
-A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
-
-The component also requires a render() method, this method returns HTML.
-
-<!--style="font-size:30px"-->
-Example 
-
-Create a Class component called Car
-
-```markdown
-
-class Car extends React.Component {
-  render() {
-    return <h2>Hi, I am a Car!</h2>;
-  }
-}
 ```
-
-<!--style="font-size:30px"-->
-* Function Component
-
-Here is the same example as above, but created using a Function component instead.
-
-A Function component also returns HTML, and behaves much the same way as a Class component, but Function
-
-components can be written using much less code, are easier to understand, and will be preferred in this 
- 
-tutorial.
-
-<!--style="font-size:30px"-->
-Example 
-
-Create a Function component called Car
-
-```markdown
-function Car() {
-  return <h2>Hi, I am a Car!</h2>;
-}
-```
-
-<!--style="font-size:30px"-->
-* Components in Files
-
-React is all about re-using code, and it is recommended to split your components into separate files.
-
-To do that, create a new file with a .js file extension and put the code inside it:
-
-Note that the filename must start with an uppercase character.
-
-<!--style="font-size:30px"-->
-Example
-
-This is the new file, we named it "Car.js":
-
-```markdown
-function Car() {
-  return <h2>Hi, I am a Car!</h2>;
+class Democomponent extends React.Component {
+    render() {
+        return <h1>Welcome Message!</h1>;
+    }
 }
 
-export default Car;
 ```
-To be able to use the Car component, you have to import the file in your application.
 
-<!--style="font-size:30px"-->
-Example 
 
-Now we import the "Car.js" file in the application, and we can use the Car component as if it was created 
+**Example:**
+In this example, we are creating the list of unordered elements, where we will dynamically insert StudentName for every object from the data array. Here, we are using ES6 arrow syntax (=>) which looks much cleaner than the old JavaScript syntax. It helps us to create our elements with fewer lines of code. It is especially useful when we need to create a list with a lot of items.
 
-here.
+**App.js**
 
-```markdown
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Car from './Car.js';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
 ```
-# React State
+import React, { Component } from 'react';  
+class App extends React.Component {  
+ constructor() {  
+      super();  
+      this.state = {  
+         data:   
+         [  
+            {             
+               "name":"Abhishek"             
+            },  
+            {            
+               "name":"Saharsh"             
+            },  
+            {    
+               "name":"Ajay"          
+            }  
+         ]  
+      }  
+   }  
+   render() {  
+      return (  
+         <div>  
+            <StudentName/>  
+            <ul>            
+                {this.state.data.map((item) => <List data = {item} />)}           
+            </ul>  
+         </div>  
+      );  
+   }  
+}  
+class StudentName extends React.Component {  
+   render() {  
+      return (  
+         <div>  
+            <h1>Student Name Detail</h1>  
+         </div>  
+      );  
+   }  
+}  
+class List extends React.Component {  
+   render() {  
+      return (  
+         <ul>            
+            <li>{this.props.data.name}</li>   
+         </ul>  
+      );  
+   }  
+}  
+export default App;
+
+
+```
+
+**Output:**
+
+![component](/images/compo2.png)
+
+
+
+## React State
 
 * The state is an updatable structure that is used to contain data or information about the component. The 
 
