@@ -1601,30 +1601,28 @@ export default App;
 
 ## React State
 
-* The state is an updatable structure that is used to contain data or information about the component. The 
+* The state is an updatable structure that is used to contain data or information about the component. 
 
-state in a component can change over time. The change in state over time can happen as a response to user 
+* The state in a component can change over time. The change in state over time can happen as a response to user action or system event. 
 
-action or system event. A component with the state is known as stateful components. It is the heart of the 
+* A component with the state is known as stateful components. 
 
-react component which determines the behavior of the component and how it will render. They are also 
+* It is the heart of the react component which determines the behavior of the component and how it will render. 
 
-responsible for making a component dynamic and interactive.
+* They are also responsible for making a component dynamic and interactive.
 
-* A state must be kept as simple as possible. It can be set by using the setState() method and calling 
+* A state must be kept as simple as possible. It can be set by using the setState() method and calling setState() method triggers UI updates. 
 
-setState() method triggers UI updates. A state represents the component's local state or information. It can 
+* A state represents the component's local state or information. It can only be accessed or modified inside the component or by the component directly. 
 
-only be accessed or modified inside the component or by the component directly. To set an initial state 
-
-before any interaction occurs, we need to use the getInitialState() method.
+* To set an initial state before any interaction occurs, we need to use the getInitialState() method.
 
 For example, if we have five components that need data or information from the state, then we need to create 
 
 one container component that will keep the state for all of them.
 
-<!--style="font-size:30px"-->
-* Defining state
+
+**Defining state**
 
 To define a state, you have to first declare a default set of values for defining the component's initial 
 
@@ -1632,74 +1630,84 @@ state. To do this, add a class constructor which assigns an initial state using 
 
 property can be rendered inside render() method.
 
-<!--style="font-size:30px"-->
-Example
+
+**Example:**
 
 The below sample code shows how we can create a stateful component using ES6 syntax.
 
+**App.js**
 
-```markdown
 
-import React, { Component } from 'react';  
-class App extends React.Component {  
- constructor() {  
-      super();        
-      this.state = { displayBio: true };  
-      }  
-      render() {  
-          const bio = this.state.displayBio ? (  
-              <div>  
-                  <p><h3>Javatpoint is one of the best Java training institute in Noida, Delhi, Gurugram, Ghaziabad and Faridabad. We have a team of experienced Java developers and trainers from multinational companies to teach our campus students.</h3></p>   
-            </div>  
-              ) : null;  
-              return (  
-                  <div>  
-                      <h1> Welcome to JavaTpoint!! </h1>  
-                      { bio }   
-                  </div>  
-              );  
-     }  
-}  
-export default App;  
 ```
 
-![image](images/state1.png)
+import React from 'react';
 
-To set the state, it is required to call the super() method in the constructor. It is because this.state is 
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			count: 0,
+		};
+	}
 
-uninitialized before the super() method has been called.
+	increment = () =>{
+		this.setState((prevState)=>({
+			count: prevState.count+1
+		}))
+	}
 
-# React Props
+	decrement = () =>{
+		this.setState((prevState)=>({
+			count: prevState.count-1
+		}))
+	}
 
-* Props stand for "Properties." They are read-only components. It is an object which stores the value of 
+	render() {
+		return (
+			<div>
+				<h1>The current count is : {this.state.count}</h1>
+				<button onClick={this.increment}>Increase</button>
+				<button onClick={this.decrement}>Decrease</button>
+			</div>
+		);
+	}
+}
 
-attributes of a tag and work similar to the HTML attributes. It gives a way to pass data from one component 
+export default App;
 
-to other components. It is similar to function arguments. Props are passed to the component in the same way 
 
-as arguments passed in a function.
+```
 
-* Props are immutable so we cannot modify the props from inside the component. Inside the components, we can 
+**Output:**
 
-add attributes called props. These attributes are available in the component as this.props and can be used to 
+![image](images/state.png)
 
-render dynamic data in our render method.
+
+
+## React Props
+
+* Props stand for "Properties." They are read-only components. 
+
+* It is an object which stores the value of attributes of a tag and work similar to the HTML attributes. 
+
+* It gives a way to pass data from one component to other components. It is similar to function arguments. Props are passed to the component in the same way as arguments passed in a function.
+
+* Props are immutable so we cannot modify the props from inside the component. 
+
+* Inside the components, we can add attributes called props. These attributes are available in the component as this.props and can be used to render dynamic data in our render method.
 
 * When you need immutable data in the component, you have to add props to reactDom.render() method in the 
+main.js file of your ReactJS project and used it inside the component in which you need.
 
-main.js file of your ReactJS project and used it inside the component in which you need. It can be explained 
 
-in the below example.
-
-<!--style="font-size:30px"-->
- React Props
+**React Props**
 
 React Props are like function arguments in JavaScript and attributes in HTML.
 
 To send props into a component, use the same syntax as HTML attributes:
 
-<!--style="font-size:30px"-->
-Example
+
+**Example:**
 
 ```markdown
 import React from 'react';
@@ -1715,20 +1723,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(myElement);
 ```
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/props1.png)
 
 The component receives the argument as a props object:
 
-<!--style="font-size:30px"-->
- Pass Data
+
+**Pass Data**
 
 Props are also how you pass data from one component to another, as parameters.
 
-<!--style="font-size:30px"-->
-Example
+**Example:**
 
 Send the "brand" property from the Garage component to the Car component:
 
@@ -1752,34 +1759,32 @@ function Garage() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
 ```
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/props2.png)
 
 Note : React Props are read-only! You will get an error if you try to change their value.
 
 
-# React Props Validation
+## React Props Validation
 
-* Props are an important mechanism for passing the read-only attributes to React components. The props are 
+* Props are an important mechanism for passing the read-only attributes to React components. 
 
-usually required to use correctly in the component. If it is not used correctly, the components may not 
+* The props are usually required to use correctly in the component. 
 
-behave as expected. Hence, it is required to use props validation in improving react components.
+* If it is not used correctly, the components may not behave as expected. Hence, it is required to use props validation in improving react components.
 
-* Props validation is a tool that will help the developers to avoid future bugs and problems. It is a useful 
+* Props validation is a tool that will help the developers to avoid future bugs and problems. 
 
-way to force the correct usage of your components. It makes your code more readable. React components used 
+* It is a useful way to force the correct usage of your components. 
 
-special property PropTypes that help you to catch bugs by validating data types of values passed through 
+* It makes your code more readable. React components used special property PropTypes that help you to catch bugs by validating data types of values passed through props, although it is not necessary to define components with propTypes. 
 
-props, although it is not necessary to define components with propTypes. However, if you use propTypes with 
+However, if you use propTypes with your components, it helps you to avoid unexpected bugs.
 
-your components, it helps you to avoid unexpected bugs.
 
-<!--style="font-size:30px"-->
-Validating Props
+* **Validating Props**
 
 App.propTypes is used for props validation in react component. When some of the props are passed with an 
 
@@ -1787,8 +1792,8 @@ invalid type, you will get the warnings on JavaScript console. After specifying 
 
 will set the App.defaultProps.
 
-<!--style="font-size:30px"-->
-Syntax
+
+**Syntax**
 
 ```markdown
 class App extends React.Component {  
@@ -1797,16 +1802,16 @@ class App extends React.Component {
 Component.propTypes = { /*Definition */}; 
 ```
 
-<!--style="font-size:30px"-->
-* ReactJS Props Validator
+
+* **ReactJS Props Validator**
 
 ReactJS props validator contains the following list of validators.
 
 ![image](images/propvalid1.png)
 
 
-<!--style="font-size:30px"-->
-Example
+
+**Example**
 
 Here, we are creating an App component which contains all the props that we need. In this example, App.
 
@@ -1814,7 +1819,7 @@ propTypes is used for props validation. For props validation, you must have to a
 
 PropTypes from 'prop-types' in App.js file.
 
-App.js
+**App.js**
 
 ```markdown
 import React, { Component } from 'react';  
@@ -1877,7 +1882,7 @@ App.defaultProps = {
 export default App;  
 ```
 
-Main.js
+**Main.js**
 
 ```markdown
 import React from 'react';  
@@ -1887,14 +1892,14 @@ import App from './App.js';
 ReactDOM.render(<App/>, document.getElementById('app'));  
 ```
 
-<!--style="font-size:20px"-->
-Output
+
+**Output**
 
 ![image](images/reactjs-props-validation.png)
 
 
-<!--style="font-size:30px"-->
-ReactJS Custom Validators
+
+* **ReactJS Custom Validators**
 
 ReactJS allows creating a custom validation function to perform custom validation. The following argument is 
 
@@ -1904,7 +1909,7 @@ used to create a custom validation function.
 * propName: It is the propName that is going to validate.
 * componentName: It is the componentName that are going to validated again.
 
-Example
+**Example:**
 
 ```markdown
 var Component = React.createClass({  
@@ -1918,28 +1923,141 @@ App.propTypes = {
 })  
 ```
 
-# React Constructor
+## State Vs. Props
 
-The constructor is a method used to initialize an object's state in a class. It automatically called during 
+**State**
 
-the creation of an object in a class.
+* The state is an updatable structure that is used to contain data or information about the component and can change over time. 
 
-The concept of a constructor is the same in React. The constructor in a React component is called before the 
+* The change in state can happen as a response to user action or system event. 
 
-component is mounted. When you implement the constructor for a React component, you need to call super(props) 
+* It is the heart of the react component which determines the behavior of the component and how it will render. A state must be kept as simple as possible. 
 
-method before any other statement. If you do not call super(props) method, this.props will be undefined in 
+* It represents the component's local state or information. It can only be accessed or modified inside the component or by the component directly.
 
-the constructor and can lead to bugs.
+**Props**
+
+* Props are read-only components. 
+
+* It is an object which stores the value of attributes of a tag and work similar to the HTML attributes. 
+
+* It allows passing data from one component to other components. 
+
+* It is similar to function arguments and can be passed to the component the same way as arguments passed in a function. 
+
+* Props are immutable so we cannot modify the props from inside the component.
+
+**Difference between State and Props**
+
+| Props              |          State         |
+|----------------------|------------------------|
+|Props are read-only.	|State changes can be asynchronous.|
+|Props are immutable.	|State is mutable.|
+|Props allow you to pass data from one component to other components as an argument.|	State holds information about the components.|
+|Props can be accessed by the child component.	|State cannot be accessed by child components.|
+|Props are used to communicate between components.|	States can be used for rendering dynamic changes with the component.|
+|Stateless component can have Props.	|Stateless components cannot have State.|
+|Props make components reusable.	|State cannot make components reusable.|
+|Props are external and controlled by whatever renders the component.	|The State is internal and controlled by the React Component itself.|
 
 
-<!--style="font-size:20px"-->
-Syntax:
+
+
+
+
+## React Constructor
+
+* The constructor is a method used to initialize an object's state in a class. 
+
+* It automatically called during the creation of an object in a class. 
+
+* The concept of a constructor is the same in React. The constructor in a React component is called before the component is mounted. 
+
+* When you implement the constructor for a React component, you need to call super() method before any other statement. 
+
+* If you do not call super() method, this.props will be undefined in the constructor and can lead to bugs.
+
+**Syntax:**
 
 ```markdown
 Constructor(props){  
      super(props);  
 }  
+```
+
+In React, it has a few rules that you can follow when using them.
+
+**Step 1:** Call super(props) before using this.props
+
+Due to the nature of the constructor, this.props object is not accessible straight out of the gate, which can lead to errors. An error will be thrown by this constructor:
+
+```
+constructor() {
+ console.log(this.props);
+}
+
+```
+
+Instead, we transfer the value of a prop to the super() function from the constructor():
+
+```
+constructor(props) {
+ super(props);
+ console.log(this.props);
+}
+
+```
+
+When you call the super() function, the parent class constructor is called, which is in the case of a React is React.Component. 
+
+**Step 2:** Never call setState() inside constructor()
+
+The constructor of your component is the ideal place to set the component’s initial state. You must set the initial state directly, rather than using setState() as you can in other methods in your class:
+
+```
+constructor(props) {
+ super(props);
+ this.state = {
+   name 'kapil',
+   age: 22,
+ };
+}
+
+```
+
+The only place you can assign the local state directly like that is the constructor. You should depend on setState() somewhere else inside our component instead.
+
+**Step 3:** Avoid assigning values from this.props to this.state
+
+You should try to avoid setting values from the properties when setting the initial component state in the constructor. We can do the following:
+
+```
+constructor(props) {
+ super(props);
+ this.state = {
+   name: props.name,
+ };
+}
+```
+
+You wouldn’t be allowed to use setState() to change the property later. You may easily reference the property directly in your code by naming this.props.name, instead of assigning the property directly to the state.
+
+**Step 4:** Bind events all in one place
+
+We can easily bind your event handlers in the constructor:
+
+```
+constructor(props) {
+ super(props);
+ this.state = {
+   // Sets that initial state
+ };
+ // Our event handlers
+ this.onClick = this.onClick.bind(this);
+ this.onKeyUp = this.onKeyUp.bind(this);
+ // Rest Code
+}
+
 ```
 
 In React, constructors are mainly used for two purposes:
@@ -1950,82 +2068,81 @@ In React, constructors are mainly used for two purposes:
 
 * Note: If you neither initialize state nor bind methods for your React component, there is no need to 
 
-implement a constructor for React component.
+**Implement a constructor for React component.**
 
+You cannot call setState() method directly in the constructor(). If the component needs to use local state you need directly to use 'this.state' to assign the initial state in the constructor. The constructor only uses this.state to assign initial state, and all other methods need to use set.state() method.
 
-You cannot call setState() method directly in the constructor(). If the component needs to use local state, 
-
-you need directly to use 'this.state' to assign the initial state in the constructor. The constructor only 
-
-uses this.state to assign initial state, and all other methods need to use set.state() method.
-
-Example
+**Example:**
 
 The concept of the constructor can understand from the below example.
 
 App.js
 
 ```markdown
-import React, { Component } from 'react';  
+import React, { Component } from 'react';
+class App extends Component {
+
+constructor(props) {
+
+  // Calling super class constructor
+  super(props);
   
-class App extends Component {  
-  constructor(props){  
-    super(props);  
-    this.state = {  
-         data: 'www.javatpoint.com'  
-      }  
-    this.handleEvent = this.handleEvent.bind(this);  
-  }  
-  handleEvent(){  
-    console.log(this.props);  
-  }  
-  render() {  
-    return (  
-      <div className="App">  
-    <h2>React Constructor Example</h2>  
-    <input type ="text" value={this.state.data} />  
-        <button onClick={this.handleEvent}>Please Click</button>  
-      </div>  
-    );  
-  }  
-}  
-export default App;  
+  // Creating state
+  this.state = {
+  data: 'My name is User'
+  }
+  
+  // Binding event handler
+  this.handleEvent = this.handleEvent.bind(this);
+}
+
+handleEvent() {
+  console.log(this.props);
+}
+
+render() {
+  return (
+  <div >
+    <input type="text" value={this.state.data} />
+    <br></br> <br></br>
+    <button onClick={this.handleEvent}>Please Click</button>
+  </div>
+  );
+}
+}
+
+export default App;
+  
 ```
 
-Main.js
-
-```markdown
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import App from './App.js';  
-  
-ReactDOM.render(<App />, document.getElementById('app'));  
-```
-
-<!--style="font-size:20px"-->
-Output
+**Output:**
 
 When you execute the above code, you get the following output.
 
-![image](images/react-constructor-output.png)
+![image](images/constructor.png)
 
-# React Events
+## React Events
 
-Just like HTML DOM events, React can perform actions based on user events.
+* An action triggered as a result of the user action or system-generated event is termed as an event. 
 
-React has the same events as HTML: click, change, mouseover etc.
+* The React event handling system, also known as Synthetic Events is a cross-browser wrapper of the browser’s native event and is much like handling events on DOM elements but have some syntactic differences.
 
-* Adding Events
+* A function in ReactJS is passed as the event handler with the use of JSX, instead of passing it as a string.
 
-React events are written in camelCase syntax:
+* To prevent the default behaviour, the preventDefault event must be called explicitly in ReactJS instead of returning false.
 
-onClick instead of onclick.
 
-React event handlers are written inside curly braces:
+**Adding Events**
 
-onClick={shoot}  instead of onClick="shoot()".
+* React events are written in camelCase syntax:
 
-Example
+* onClick instead of onclick.
+
+* React event handlers are written inside curly braces:
+
+* onClick={shoot}  instead of onClick="shoot()".
+
+**Example**
 
 Put the shoot function inside the Football component:
 
