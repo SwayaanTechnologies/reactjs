@@ -2142,49 +2142,56 @@ When you execute the above code, you get the following output.
 
 * onClick={shoot}  instead of onClick="shoot()".
 
-**Example**
+**Example:**
 
-Put the shoot function inside the Football component:
 
 ```markdown
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { Component } from 'react';  
+class App extends React.Component {  
+constructor(props) {  
+super(props);  
+this.state = {  
+StudName: ''  
+};  
+}  
+changeText(event) {  
+this.setState({  
+StudName: event.target.value  
+});  
+}  
+render() {  
+return (  
+<div>  
+<h2>Event</h2>  
+<label htmlFor="name">Student name: </label>  
+<input type="text" id="StudName" onChange={this.changeText.bind(this)}/>  
+<h4>Entered name: { this.state.StudName }</h4>  
+</div>  
+);  
+}  
+}  
+export default App;
 
-function Football() {
-  const shoot = () => {
-    alert("Great Shot!");
-  }
-
-  return (
-    <button onClick={shoot}>Take the shot!</button>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Football />);
 ```
 
-<!--style="font-sizeL30px"-->
-Output
+**Output:**
 
-![image](images/event1.png)
+![image](images/event.png)
 
-# React List
+![image](images/event12.png)
 
-Lists are used to display data in an ordered format and mainly used to display menus on websites. In React, 
+## React List
 
-Lists can be created in a similar way as we create lists in JavaScript. Let us see how we transform Lists in 
+* Lists are used to display data in an ordered format and mainly used to display menus on websites. 
 
-regular JavaScript.
+* In React, Lists can be created in a similar way as we create lists in JavaScript. 
 
-The map() function is used for traversing the lists. In the below example, the map() function takes an array 
+* The map() function is used for traversing the lists. 
 
-of numbers and multiply their values with 5. We assign the new array returned by map() to the variable 
+* In the below example, the map() function takes an array of numbers and multiply their values with 5. We assign the new array returned by map() to the variable  multiplyNums and log it.
 
-multiplyNums and log it.
 
-<!--style="font-size:30px"-->
-Example
+**Example:**
 
 ```markdown
 
@@ -2194,8 +2201,8 @@ const multiplyNums = numbers.map((number)=>{
 });   
 console.log(multiplyNums);
 ```
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 The above JavaScript code will log the output on the console. The output of the code is given below.
 
@@ -2210,8 +2217,8 @@ list element, and for updates, we enclosed them between curly braces {}. Finally
 
 elements to listItems. Now, include this new list inside <ul> </ul> elements and render it to the DOM.
 
-<!--style="font-size:30px"-->
-Example
+
+**Example:**
 
 ```markdown
 
@@ -2229,8 +2236,8 @@ ReactDOM.render(
 export default App; 
 ``` 
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ```console
 
@@ -2245,17 +2252,15 @@ Output
 * Alisa
 ```
 
-<!--style="font-size:30px"-->
-* Rendering Lists inside components
 
-In the previous example, we had directly rendered the list to the DOM. But it is not a good practice to 
+**Rendering Lists inside components**
 
-render lists in React. In React, we had already seen that everything is built as individual components. 
+* In the previous example, we had directly rendered the list to the DOM. But it is not a good practice to render lists in React. 
 
-Hence, we would need to render lists inside a component. We can understand it in the following code.
+* In React, we had already seen that everything is built as individual components. Hence, we would need to render lists inside a component. We can understand it in the following code.
 
-<!--style="font-size:30px"-->
-Example
+
+**Example:**
 
 ```markdown
 
@@ -2282,8 +2287,8 @@ ReactDOM.render(
 export default App;
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ```console
 
@@ -2301,51 +2306,167 @@ Rendering Lists inside component
 ```
 
 
-# Keys
+## React Keys
 
-Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will
+* A “key” is a special string attribute you need to include when creating lists of elements in React. 
 
-be re-rendered instead of the entire list.
+* Keys are used in React to identify which items in the list are changed, updated, or deleted.
 
-Keys need to be unique to each sibling. But they can be duplicated globally.
+* Keys are used to give an identity to the elements in the lists. 
 
-Generally, the key should be a unique ID assigned to each item. As a last resort, you can use the array
- 
-index as a key.
+* It is recommended to use a string as a key that uniquely identifies the items in the list. 
 
-Example
+**Assigning keys to the list**
 
-```markdown
+You can assign the array indexes as keys to the list items. The below example assigns array indexes as keys to the elements. 
+
+**Syntax:**
+
+```
+const numbers = [1, 2, 3, 4, 5];
+const updatedNums = numbers.map((number, index) =>
+    <li key={index}>
+        {number}
+    </li>
+);
+
+```
+
+**Using Keys with component**
+
+Consider you have created a separate component for ListItem and extracting ListItem from that component. In this case, you should have to assign keys on the [<ListItem />]ListItem elements in the array, not to the [li]  elements in the ListItem itself. To avoid mistakes, you have to keep in mind that keys only make sense in the context of the surrounding array. So, anything you are returning from map() function is recommended to be assigned a key
+
+###  Incorrect Key usage
+
+**Example:**
+
+```
+
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
-function Car(props) {
-  return <li>I am a { props.brand }</li>;
-}
-
-function Garage() {
-  const cars = [
-    {id: 1, brand: 'Ford'},
-    {id: 2, brand: 'BMW'},
-    {id: 3, brand: 'Audi'}
-  ];
+function ListItem(props) {
+  const item = props.item;
   return (
-    <>
-	    <h1>Who lives in my garage?</h1>
-	    <ul>
-        {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
-      </ul>
-    </>
+    <li>
+      {item}
+    </li>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage />);
-```
-<!--style="font-size:30px"-->
-Output
+function NameList(props) {
+  const myLists = props.myLists;
+  const listItems = myLists.map((strLists) =>
+    <ListItem item={strLists} /> // Incorrect key usage
+  );
+  return (
+    <div>
+      <h2>Incorrect Key Usage Example</h2>
+      <ol>{listItems}</ol>
+    </div>
+  );
+}
 
-![image](images/keys1.png)
+export default function App() {
+  const myLists = ['Peter', 'Sachin', 'Kevin', 'Dhoni', 'Alisa'];
+
+  return (
+    <div>
+      <NameList myLists={myLists} />
+    </div>
+  );
+}
+
+//In the given example, the list is rendered successfully. But it is not a good practice that we had not 
+//assigned a key to the map() iterator.
+
+```
+
+**Output:**You can see in the below output that the list is rendered successfully but a warning is thrown to the console that the elements inside the iterator are not assigned keys. This is because we had not assigned the key to the elements we are returning to the map() iterator.
+
+![image](images/key.png)
+
+### Correct usage of keys
+
+**Example:** The below example shows the correct usage of keys:
+
+```
+
+import React from 'react';
+
+function MenuItems(props) {
+  const item = props.item;
+  return <li>{item}</li>;
+}
+
+function Navmenu(props) {
+  const list = props.menuitems;
+  const updatedList = list.map((listItems) => {
+    return <MenuItems key={listItems.toString()} item={listItems} />;
+  });
+
+  return <ul>{updatedList}</ul>;
+}
+
+const menuItems = [1, 2, 3, 4, 5];
+
+export default function App() {
+  return (
+    <div>
+      <h1>Menu Example</h1>
+      <Navmenu menuitems={menuItems} />
+    </div>
+  );
+}
+
+```
+
+**Output:**
+
+![image](images/key1.png)
+
+### Uniqueness of Keys 
+
+We have told many times while discussing keys that keys assigned to the array elements must be unique. By this, we did not mean that the keys should be globally unique. All the elements in a particular array should have unique keys. That is, two different arrays can have the same set of keys.
+
+**Example:**In the below code, we have created two different arrays.You can see in the below code that the keys for the first 5 items for both arrays are the same still the code runs successfully without any warning.
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+
+function MenuItems(props) {
+  const item = props.item;
+  return <li>{item}</li>;
+}
+
+function Navmenu(props) {
+  const list = props.menuitems;
+  const updatedList = list.map((listItems) => {
+    return <MenuItems key={listItems.toString()} item={listItems} />;
+  });
+
+  return <ul>{updatedList}</ul>;
+}
+
+function App() {
+  const menuItems1 = [1, 2, 3, 4, 5];
+  const menuItems2 = [1, 2, 3, 4, 5, 6];
+
+  return (
+    <div>
+      <Navmenu menuitems={menuItems1} />
+      <Navmenu menuitems={menuItems2} />
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+**Output:**
+
+![image](images/key2.png)
 
 
 # React Fragments
