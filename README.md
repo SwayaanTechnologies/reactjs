@@ -7,13 +7,15 @@ React is used to build single-page applications.
 React allows us to create reusable UI components.
 
 
-**-->Define UI**
+**Define UI**
 
 The User Interface (UI) is the point of human-computer interaction and communication in a device. UI encompasses all the visual and interactive elements through which users interact with software, websites, applications, and devices to perform tasks, access information, or achieve specific goals.
 
+
+
 ![reactjsLogo](/images/react-js-icon.png)
 
-##  what is React?
+#  what is React?
 
 * ReactJS is an open-source JavaScript library used to create user interfaces in a declarative and efficient way. 
 
@@ -50,19 +52,19 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 ### React.js History
 
-Current version of React.JS is V18.0.0 (April 2022).
+* Current version of React.JS is V18.0.0 (April 2022).
 
-Initial Release to the Public (V0.3.0) was in July 2013.
+* Initial Release to the Public (V0.3.0) was in July 2013.
 
-React.JS was first used in 2011 for Facebook's Newsfeed feature.
+* React.JS was first used in 2011 for Facebook's Newsfeed feature.
 
-Facebook Software Engineer, Jordan Walke, created it.
+* Facebook Software Engineer, Jordan Walke, created it.
 
-Current version of create-react-app is v5.0.1 (April 2022).
+* Current version of create-react-app is v5.0.1 (April 2022).
 
-create-react-app includes built tools such as webpack, Babel, and ESLint.
+* create-react-app includes built tools such as webpack, Babel, and ESLint.
 
-### React Features
+## React Features
 
 * **Component-Based Architecture:** Building UIs using reusable and self-contained components for easier development and maintenance.
 
@@ -86,7 +88,7 @@ create-react-app includes built tools such as webpack, Babel, and ESLint.
 
 * **License:** React is licensed under the Facebook Inc. Documentation is licensed under CC BY 4.0.
 
-### React Advantages
+## React Advantages
 
 •	Component-Based Architecture
 
@@ -105,7 +107,7 @@ create-react-app includes built tools such as webpack, Babel, and ESLint.
 •	SEO-Friendly (with SSR and Next.js)
 
 
-### React Limitations
+## React Limitations
 
 •	Learning Curve
 
@@ -231,6 +233,7 @@ A class is a type of function, but instead of using the keyword function to init
 Example:
 
 ```markdown
+
 <!DOCTYPE html>
 <html>
 
@@ -251,6 +254,7 @@ document.write(mycar.brand);
 </body>
 </html>
 ```
+
 
 ![image](images/Es6classes1.png)
 
@@ -2509,15 +2513,90 @@ export default App;
 
 ![fragments](/images/frag.png)
 
+**Reason to use Fragments:** As we saw in the above code when we are trying to render more than one root element we have to put the entire content inside the ‘div’ tag which is not loved by many developers. So in React 16.2 version, Fragments were introduced, and we use them instead of the extraneous ‘div’ tag. 
+
+**Syntax:**
+
+```
+<React.Fragment>  
+    <h2>Child-1</h2>   
+    <p> Child-2</p>   
+</React.Fragment> 
+
+```
+
+**Example:** Open App.js and replace the code with the below code.
+
+```
+import React from "react";
+
+// Simple rendering with fragment syntax
+class App extends React.Component {
+	render() {
+		return (
+			<React.Fragment>
+				<h2>Hello</h2>
+
+				<p>How you doin'?</p>
+			</React.Fragment>
+		);
+	}
+}
+
+export default App;
+```
+
+**Output:**
+
+![fragments](/images/frag.png)
+
+**Shorthand Fragment:** The output of the first code and the code above is the same but the main reason for using is that it is a tiny bit faster when compared to the one with the ‘div’ tag inside it, as we didn’t create any DOM node. Also, it takes less memory. Another shorthand also exists for the above method in which we make use of ‘<>’ and ‘</>’ instead of the ‘React.Fragment’. 
+
+Note: The shorthand syntax does not accept key attributes in that case you have to use the <React.Fragments> tag.
+
+**Syntax:**
+
+```
+<>  
+    <h2>Child-1</h2>   
+    <p> Child-2</p>   
+</> 
+
+```
+
+**Example:**
+
+```
+import React from "react";
+
+// Simple rendering with short syntax
+class App extends React.Component {
+	render() {
+		return (
+			<>
+				<h2>Hello</h2>
+
+				<p>How you doin'?</p>
+			</>
+		);
+	}
+}
+
+export default App;
+
+
+```
+
+**Output:**
+
+![fragments](/images/frag.png)
+
+
 **Keyed Fragments**
 
-The shorthand syntax does not accept key attributes. You need a key for mapping a collection to an array of 
+The shorthand syntax does not accept key attributes. You need a key for mapping a collection to an array of fragments such as to create a description list. If you need to provide keys, you have to declare the  fragments with the explicit `<React.Fragment>`syntax.
 
-fragments such as to create a description list. If you need to provide keys, you have to declare the 
-
-fragments with the explicit `<React.Fragment>`syntax.
-
----> Note: Key is the only attributes that can be passed with the Fragments.
+**Note:** Key is the only attributes that can be passed with the Fragments.
 
 
 **Example:**
@@ -2541,217 +2620,361 @@ Function  = (props) {
 
 ```
 
-
-# React Router
+## React Router
 
 * Routing is a process in which a user is directed to different pages based on their action or request. 
 
-ReactJS Router is mainly used for developing Single Page Web Applications. React Router is used to define 
+* ReactJS Router is mainly used for developing Single Page Web Applications. 
 
-multiple routes in the application. When a user types a specific URL into the browser, and if this URL path 
+* React Router is used to define multiple routes in the application. When a user types a specific URL into the browser, and if this URL path matches any 'route' inside the router file, the user will be redirected to that particular route.
 
-matches any 'route' inside the router file, the user will be redirected to that particular route.
+* React Router is a standard library system built on top of the React and used to create routing in the React application using React Router Package.
 
-* React Router is a standard library system built on top of the React and used to create routing in the React 
-
-application using React Router Package. It provides the synchronous URL on the browser with data that will be 
-
-displayed on the web page. It maintains the standard structure and behavior of the application and mainly 
-
-used for developing single page web applications.
-
-<!--style="font-size:30px"-->
-Need of React Router
-
-React Router plays an important role to display multiple views in a single page application. Without React 
-
-Router, it is not possible to display multiple views in React applications. Most of the social media websites 
-
-like Facebook, Instagram uses React Router for rendering multiple views.
-
-<!--style="font-size:30px"-->
-React Router Installation
+**Installing React Router**
 
 React contains three different packages for routing. These are:
 
-1. react-router: It provides the core routing components and functions for the React Router applications.
+**react-router:** It provides the core routing components and functions for the React Router applications.
 
-2. react-router-native: It is used for mobile applications.
+**react-router-native:** It is used for mobile applications.
 
-3. react-router-dom: It is used for web applications design.
+**react-router-dom:** It is used for web applications design.
 
-It is not possible to install react-router directly in your application. To use react routing, first, you 
+To install react-router in your application write the following command in your terminal
 
-need to install react-router-dom modules in your application. The below command is used to install react 
+```
+// Installing
+npm i react-router-dom
 
-router dom.
+```
+Importing React Router
 
----> $ npm install react-router-dom --save   
-
-<!--style="font-size:30px"-->
-Components in React Router
-
-There are two types of router components:
-
-* `<BrowserRouter>`: It is used for handling the dynamic URL.
-
-* `<HashRouter>`: It is used for handling the static request.
-
-<!--style="font-size:30px"-->
-Example
-
-Step-1: In our project, we will create two more components along with App.js, which is already present.
-
-* About.js
-
-```markdown
-import React from 'react'  
-class About extends React.Component {  
-  render() {  
-    return <h1>About</h1>  
-  }  
-}  
-export default About 
-``` 
-
-* Contact.js
-
-```markdown
-
-import React from 'react'  
-class Contact extends React.Component {  
-  render() {  
-    return <h1>Contact</h1>  
-  }  
-}  
-export default Contact  
+```
+// Importing
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 ```
 
-* App.js
+### React Router Components:
 
-```markdown
+The Main Components of React Router are:
 
-import React from 'react'  
-class App extends React.Component {  
-  render() {  
-    return (  
-      <div>  
-        <h1>Home</h1>  
-      </div>  
-    )  
-  }  
-}  
-export default App
-```  
+•	**BrowserRouter:** BrowserRouter is a router implementation that uses the HTML5 history API(pushState, replaceState, and the popstate event) to keep your UI in sync with the URL. It is the parent component that is used to store all of the other components.
 
-* Step-2: For Routing, open the index.js file and import all the three component files in it. Here, you need 
+•	**Routes:** It’s a new component introduced in the v6 and an upgrade of the component. The main advantages of Routes over Switch are:
 
-to import line: import { Route, Link, BrowserRouter as Router } from 'react-router-dom' which helps us to 
+•	Relative s and s
 
-implement the Routing. Now, our index.js file looks like below.
+•	Routes are chosen based on the best match instead of being traversed in order.
 
-<!--style="font-size:30px"-->
-What is Route?
+•	**Route:** Route is the conditionally shown component that renders some UI when its path matches the current URL.
 
-It is used to define and render component based on the specified path. It will accept components and render 
+•	**Link:** The link component is used to create links to different routes and implement navigation around the application. It works like an HTML anchor tag.
 
-to define what should be rendered.
+**Implementing React Router**
 
-* Index.js
+To use React Router, let us first create a few components in the React application. In your project directory, create a folder named component inside the src folder and now add 3 files named.
 
-```markdown
+•	home.js
 
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'  
-import './index.css';  
-import App from './App';  
-import About from './about'  
-import Contact from './contact'  
-  
-const routing = (  
-  <Router>  
-    <div>  
-      <h1>React Router Example</h1>  
-      <Route path="/" component={App} />  
-      <Route path="/about" component={About} />  
-      <Route path="/contact" component={Contact} />  
-    </div>  
-  </Router>  
-)  
-ReactDOM.render(routing, document.getElementById('root'));  
+•	about.js
+
+•	contact.js
+
+**Note:** Remove/Comment the default styling provided with App.css
+
+**home.js**
+
+```
+// Home.js
+import React from 'react';
+
+function Home (){
+	return <h1>Welcome to the world of Geeks!</h1>
+}
+
+export default Home;
 ```
 
-Step-3: Open command prompt, go to your project location, and then type npm start. You will get the following screen.
+**about.js**
 
-![image](images/react-router.png)
+```
+// About.js
+import React from 'react';
 
-Now, if you enter manually in the browser: localhost:3000/about, you will see About component is rendered on 
+function About () {
+	return <div>
+		<h2>GeeksforGeeks is a computer science portal for geeks!</h2>
 
-the screen.
-
-![image](images/react-router2.png)
-
-Step-4: In the above screen, you can see that Home component is still rendered. It is because the home path 
-
-is '/' and about path is '/about', so you can observe that slash is common in both paths which render both 
-
-components. To stop this behavior, you need to use the exact prop. It can be seen in the below example.
-
-<!--style="font-size:30px"-->
-Index.js
-
-```markdown
-
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'  
-import './index.css';  
-import App from './App';  
-import About from './about'  
-import Contact from './contact'  
-  
-const routing = (  
-  <Router>  
-    <div>  
-      <h1>React Router Example</h1>  
-      <Route exact path="/" component={App} />  
-      <Route path="/about" component={About} />  
-      <Route path="/contact" component={Contact} />  
-    </div>  
-  </Router>  
-)  
-ReactDOM.render(routing, document.getElementById('root'));  
+		Read more about us at :
+		<a href="https://www.geeksforgeeks.org/about/">
+			https://www.geeksforgeeks.org/about/
+		</a>
+	</div>
+}
+export default About;
 ```
 
-<!--style="font-size:30px"-->
-Output
+**contact.js**
 
-![image](images/react-router3.png)
+```
+// Contact.js
+import React from 'react';
 
+function Contact (){
+return <address>
+			You can find us here:<br />
+			GeeksforGeeks<br />
+			5th & 6th Floor, Royal Kapsons, A- 118, <br />
+			Sector- 136, Noida, Uttar Pradesh (201305)
+		</address>
+}
 
-<!--style="font-size:30px"-->
-Adding Navigation using Link component
+export default Contact;
+```
 
-Sometimes, we want to need multiple links on a single page. When we click on any of that particular Link, it 
+Now, let us include React Router components to the application:
 
-should load that page which is associated with that path without reloading the web page. To do this, we need 
+After adding all the components here is our complete source code:
 
-to import <`Link>` component in the index.js file.
+**App.js**
 
+```
+import React, { Component } from 'react';
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import Home from './component/home';
+import About from './component/about';
+import Contact from './component/contact';
+import './App.css';
 
-<!--style="font-size:30px"-->
-What is `<Link>` component?
+class App extends Component {
+render() {
+	return (
+	<Router>
+		<div className="App">
+			<ul className="App-header">
+			<li>
+				<Link to="/">Home</Link>
+			</li>
+			<li>
+				<Link to="/about">About Us</Link>
+			</li>
+			<li>
+				<Link to="/contact">Contact Us</Link>
+			</li>
+			</ul>
+		<Routes>
+				<Route exact path='/' element={< Home />}></Route>
+				<Route exact path='/about' element={< About />}></Route>
+				<Route exact path='/contact' element={< Contact />}></Route>
+		</Routes>
+		</div>
+	</Router>
+);
+}
+}
 
-This component is used to create links which allow to navigate on different URLs and render its content 
+export default App;
 
-without reloading the webpage.
+```
 
-<!--style="font-size:30px"-->
-Example
+**Output:**
 
-<!--style="font-size:30px"-->
-Index.js
+1.This is the Home page 
+
+![router](/images/router.png)
+
+2.If we Click on the About us, the page will be redirected.
+
+![router](/images/router1.png)
+
+3.If u click on contact us .the page will be redirected.
+
+![router](/images/router2.png)
+
+### ReactJS Types of Routers
+ React Router provides three different kinds of routers: 
+
+•	Memory Router
+
+•	Browser Router
+
+•	Hash Router
+
+**Memory Router:** The memory router keeps the URL changes in memory not in the user browsers. It keeps the history of the URL in memory and it does not read or write to the address bar so the user can not use the browser’s back button as well as the forward button. It doesn’t change the URL in your browser. It is very useful for testing and non-browser environments like React Native.
+
+**Syntax:**
+
+```
+import { MemoryRouter as Router } from 'react-router-dom';
+```
+
+**Example:**
+
+```
+import React, { Component } from 'react';
+import { MemoryRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './home';
+import About from './about';
+import Contact from './contact';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <ul className="App-header">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+          </ul>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </Router>
+    );
+  }
+}
+export default App;
+```
+**Output:**
+
+Here in this Output if u click back or forward button in the browser it wont work.
+
+![router](/images/router.png)
+
+### Browser Router
+
+**Browser Router:** It uses HTML 5 history API (i.e. pushState, replaceState, and popState API) to keep your UI in sync with the URL. It routes as a normal URL in the browser and assumes that the server is handling all the request URL (eg., /, /about) and points to root index.html. It accepts forceRefresh props to support legacy browsers that don’t support HTML 5 pushState API
+
+**Syntax:** 
+
+```
+import { BrowserRouter as Router } from 'react-router-dom';
+
+```
+
+**Example:**
+
+```
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './home';
+import About from './about';
+import Contact from './contact';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <ul className="App-header">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+          </ul>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </Router>
+    );
+  }
+}
+export default App;
+
+```
+
+Output:
+
+![router](/images/router.png)
+
+![router](/images/router1.png)
+
+Here in this Output if u click back or forward button in the browser it will work.
+
+### Hash Router
+
+**Hash Router:** Hash router uses client-side hash routing. It uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL. The hash portion of the URL won’t be handled by the server, the server will always send the index.html for every request and ignore the hash value. It doesn’t need any configuration in the server to handle routes. It is used to support legacy browsers which usually don’t support HTML pushState API. It is very useful for legacy browsers or you don’t have a server logic to handle the client-side. This route isn’t recommended to be used by the react-router-dom team.
+
+**Syntax:** 
+
+```
+import { HashRouter as Router } from 'react-router-dom';
+```
+**Example:**
+
+```
+import React, { Component } from 'react';
+import { HashRouter as Router , Route, Routes, Link } from 'react-router-dom';
+import Home from './home';
+import About from './about';
+import Contact from './contact';
+import './App.css';
+
+class App extends Component {
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <ul className="App-header">
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">About Us</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">Contact Us</Link>
+                        </li>
+                    </ul>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </div>
+            </Router>
+        );
+    }
+}
+
+export default App;
+
+```
+**Output:**
+
+![router](/images/router4.png)
+
+## Adding Navigation using Link component
+
+Sometimes, we want to need multiple links on a single page. When we click on any of that particular Link, it should load that page which is associated with that path without reloading the web page. To do this, we need to import `<Link>` component in the index.js file.
+
+**What is `<Link>` component?**
+
+This component is used to create links which allow to navigate on different URLs and render its content without reloading the webpage.
+
+**Example:**
+
+**Index.js**
 
 ```markdown
 import React from 'react';  
@@ -2785,14 +3008,12 @@ const routing = (
 )  
 ReactDOM.render(routing, document.getElementById('root'));  
 ```
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/react-router4.png)
 
-After adding Link, you can see that the routes are rendered on the screen. Now, if you click on the About, 
-
-you will see URL is changing and About component is rendered.
+After adding Link, you can see that the routes are rendered on the screen. Now, if you click on the About, you will see URL is changing and About component is rendered.
 
 ![image](images/react-router5.png)
 
@@ -3072,21 +3293,25 @@ The benefits of React Router is given below:
 * In this, every component is specified in .
 
 
-# React Forms
 
-Just like in HTML, React uses forms to allow users to interact with the web page.
 
-<!--style="font-size:30px"-->
-* Adding Forms in React
+
+
+
+## React Forms
+
+Forms are really important in any website for login, signup, or whatever. It is easy to make a form in HTML but forms in React work a little differently. In HTML the form data is usually handled by the DOM itself but in the case of react the form data is handled by the react components. All the form data is stored in the react’s component state, so it can handle the form submission and retrieve data that the user entered. To do this we use controlled components.
+
+
+**Adding Forms in React**
 
 You add a form with React like any other element:
 
-<!--style="font-size:30px"-->
-Example
+**Example**
 
 Add a form that allows users to enter their name:
 
-```markdown
+```
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -3104,8 +3329,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+**Output**
 
 ![image](images/form1.png)
 
@@ -3115,29 +3339,27 @@ But this is generally not what we want to happen in React.
 
 We want to prevent this default behavior and let React control the form.
 
-<!--style="font-size:30px"-->
-* Handling Forms
 
-Handling forms is about how you handle the data when it changes value or gets submitted.
+**Handling Forms**
 
-In HTML, form data is usually handled by the DOM.
+* Handling forms is about how you handle the data when it changes value or gets submitted.
 
-In React, form data is usually handled by the components.
+* In HTML, form data is usually handled by the DOM.
 
-When the data is handled by the components, all the data is stored in the component state.
+* In React, form data is usually handled by the components.
 
-You can control changes by adding event handlers in the onChange attribute.
+* When the data is handled by the components, all the data is stored in the component state.
 
-We can use the useState Hook to keep track of each inputs value and provide a "single source of truth" for
+* You can control changes by adding event handlers in the onChange attribute.
 
-the entire application.
+* We can use the useState Hook to keep track of each inputs value and provide a "single source of truth" for the entire application.
 
-<!--style="font-size:30px"-->
-Example
+
+**Example:**
 
 Use the useState Hook to manage the input:
 
-```markdown
+```
 
 import { useState } from "react";
 import ReactDOM from 'react-dom/client';
@@ -3162,23 +3384,20 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/form2.png)
 
-
-<!--style="font-size:30px"-->
-* Submitting Forms
+**Submitting Forms**
 
 You can control the submit action by adding an event handler in the onSubmit attribute for the `<form>`:
 
-<!--style="font-size:30px"-->
-Example
+**Example:**
 
 Add a submit button and an event handler in the onSubmit attribute:
 
-```markdown
+```
 import { useState } from "react";
 import ReactDOM from 'react-dom/client';
 
@@ -3206,28 +3425,26 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+**Output:**
 
 ![image](images/form3.png)
 
-<!--style="font-size:30px"-->
-* Multiple Input fields
 
-You can control the values of more than one input field by adding a name attribute to each element.
+**Multiple Input fields**
 
-We will initialize our state with an empty object.
+* You can control the values of more than one input field by adding a name attribute to each element.
 
-To access the fields in the event handler use the event.target.name and event.target.value syntax.
+* We will initialize our state with an empty object.
 
-To update the state, use square brackets [bracket notation] around the property name.
+* To access the fields in the event handler use the event.target.name and event.target.value syntax.
 
-<!--style="font-size:30px"-->
-Example
+* To update the state, use square brackets [bracket notation] around the property name.
+
+**Example:**
 
 Write a form with two input fields:
 
-```JavaScript
+```
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
 
@@ -3273,15 +3490,218 @@ root.render(<MyForm />);
 
 ```
 
-<!--style="font-size:30px"-->
-Output
+**Output:**
 
 ![image](images/form4.png)
 
-Note: We use the same event handler function for both input fields, we could write one event handler for 
+>Note: We use the same event handler function for both input fields, we could write one event handler for each, but this gives us much cleaner code and is the preferred way in React.
 
-each, but this gives us much cleaner code and is the preferred way in React.
+## Controlled Components
 
+* In simple HTML elements like input tags, the value of the input field is changed whenever the user type. 
+
+* But, In React, whatever the value the user types we save it in state and pass the same value to the input tag as its value, so here DOM does not change its value, it is controlled by react state.
+
+**Example:**
+
+```
+import React, { Component } from 'react';  
+class App extends React.Component {  
+  constructor(props) {  
+      super(props);  
+      this.state = {value: ''};  
+      this.handleChange = this.handleChange.bind(this);  
+      this.handleSubmit = this.handleSubmit.bind(this);  
+  }  
+  handleChange(event) {  
+      this.setState({value: event.target.value});  
+  }  
+  handleSubmit(event) {  
+      alert('You have submitted the input successfully: ' + this.state.value);  
+      event.preventDefault();  
+  }  
+  render() {  
+      return (  
+          <form onSubmit={this.handleSubmit}>  
+            <h1>Controlled Form Example</h1>  
+            <label>  
+                Name:  
+                <input type="text" value={this.state.value} onChange={this.handleChange} />  
+            </label>  
+            <input type="submit" value="Submit" />  
+         </form>  
+      );  
+  }  
+}  
+export default App;
+
+
+```
+
+**Output:**
+
+![Form](images/form.png)
+
+## Uncontrolled Components
+
+* The uncontrolled input is similar to the traditional HTML form inputs. 
+
+* The DOM itself handles the form data. Here, the HTML elements maintain their own state that will be updated when the input value changes. 
+* To write an uncontrolled component, you need to use a ref to get form values from the DOM. In other words, there is no need to write an event handler for every state update. 
+
+* You can use a ref to access the input field value of the form from the DOM.
+
+**Example:**
+
+In this example, the code accepts a field username and company name in an uncontrolled component.
+
+```
+import React, { Component } from 'react';  
+class App extends React.Component {  
+  constructor(props) {  
+      super(props);  
+      this.updateSubmit = this.updateSubmit.bind(this);  
+      this.input = React.createRef();  
+  }  
+  updateSubmit(event) {  
+      alert('You have entered the UserName and CompanyName successfully.');  
+      event.preventDefault();  
+  }  
+  render() {  
+    return (  
+      <form onSubmit={this.updateSubmit}>  
+        <h1>Uncontrolled Form Example</h1>  
+        <label>Name:  
+            <input type="text" ref={this.input} />  
+        </label>  
+        <label>  
+            CompanyName:  
+            <input type="text" ref={this.input} />  
+        </label>  
+        <input type="submit" value="Submit" />  
+      </form>  
+    );  
+  }  
+}  
+export default App;
+
+```
+
+**Output:**
+
+![Form](images/formm.png)
+
+
+
+# React Map
+
+* Map is a type of data structure or data collection that is used to store the data in the form of key and value pairs. 
+
+* Each pair has a unique key in a map, and the value stored in each pair must be mapped to its unique key.
+
+* Maps are useful when searching and looking up the data and the stored key’s uniqueness.
+
+* In ReactJs, the maps are used for traversing or displaying the list of similar objects of a component. 
+
+* The map method is a standard JavaScript function and not just a ReactJs feature that could be called on an array. 
+
+* A new array is made using the map() method, and a function is called on each element of the array.
+
+
+**Example:**
+
+
+Here, we have an array of numbers. The map.method() will take the array of numbers and make a square of each element of the array.
+
+Now, we will assign the new array created by the map to squareValue and then log the new array to it.
+
+```
+Let us see the code implementation:
+var arrayOfNumbers = [1, 2, 3, 4, 5];  
+const squareValue = arrayOfNumbers.map((number)=>{  
+    return (number * number);  
+});  
+console.log(squareValue);
+
+```
+
+**Map Method in ReactJS: Usage**
+
+**Traverse a List of Elements**
+
+Let us see an example of how to traverse a list of elements using the map method.
+
+**Example:**
+
+```
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+function FoodListComponent(props) {  
+
+  const foodLists = props.foodLists; 
+  const foodItems = foodLists.map((foodItem) =>  
+    <li>{foodItem}</li>  
+  );  
+  return (  
+    <div>  
+          <h2>Example of React Map</h2>  
+              <ul>{foodItems}</ul>  
+    </div>  
+  );  
+}  
+const foodLists = ["Pizza", "Burger", "Pasta", "Noodles", "Brownie"];  
+ReactDOM.render(  
+  <FoodListComponent foodLists={foodLists} />,  
+  document.getElementById('app')  
+);  
+export default App;
+
+```
+
+**Output:**
+
+![map](images/map.png)
+
+In the above example, we saw how we could use the map method on an array of strings called foodLists and return each array item to a new unordered list.
+
+**Traverse a List of Elements Using Keys**
+
+Now let us go through an example to see how we can traverse through the list of elements using keys.
+
+**Example:**
+
+```
+
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+function ListItem(props) {  
+  return <li>{props.value}</li>;  
+} 
+function NumberList(props) {  
+  const numbers = props.numbers;  
+  const numberItems = numbers.map((number) =>  
+    <ListItem key={number.toString()}  
+              value={number} />  
+  );  
+  return (  
+    <div>  
+      <h2>Example of using React Map with keys</h2>  
+          <ul> {numberItems} </ul>  
+    </div>  
+  );  
+}  
+const numbers = [1, 2, 3, 4, 5];  
+ReactDOM.render(  
+  <NumberList numbers={numbers} />,  
+  document.getElementById('app')  
+);  
+export default App;
+
+```
+
+**Output:**
+
+![map](images/map1.png)
 
 # React CSS
 
@@ -3303,319 +3723,257 @@ Components, which are given below:
 
 4. Styled Components
 
+<br>
 
-<!--style="font-size:30px"-->
-1. Inline Styling
+* 1. **Inline Styling**: In order to apply the inline styles to the elements, we use the style prop. We pass an object with key as CSS properties in camelCase and value as the values that can be assigned to these CSS properties.
 
-The inline styles are specified with a JavaScript object in camelCase version of the style name. Its value is 
+**Syntax:** The syntax to assign inline styles to CSS elements is mentioned below.
 
-the style?s value, which we usually take in a string.
-
-<!--style="font-size:30px"-->
-Example
-
-<!--style="font-size:30px"-->
-App.js
-
-```markdown
-
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-  
-class App extends React.Component {  
-  render() {  
-    return (  
-      <div>  
-      <h1 style={{color: "Green"}}>Hello JavaTpoint!</h1>  
-      <p>Here, you can find all CS tutorials.</p>  
-      </div>  
-    );  
-  }  
-}  
-export default App; 
+```
+<div style={{backgroundColor: 'red'}}></div>
 ```
 
+**Example**
 
-Note: You can see in the above example, we have used two curly braces in:
+**App.js**
 
-`<h1 style={{color: "Green"}}>Hello JavaTpoint!</h1>.`
-
-It is because, in JSX, JavaScript expressions are written inside curly braces, and JavaScript objects also 
-
-use curly braces, so the above styling is written inside two sets of curly braces {{}}.
-
-<!--style="font-size:30px"-->
-Output
-
-![image](images/react-css-output1.png)
-
-<!--style="font-size:30px"-->
-Using JavaScript Object
-
-The inline styling also allows us to create an object with styling information and refer it in the style 
-
-attribute.
-
-<!--style="font-size:30px"-->
-Example
-
-<!--style="font-size:30px"-->
-App.js
-
-```markdown
-
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-  
-class App extends React.Component {  
-  render() {  
-    const mystyle = {  
-      color: "Green",  
-      backgroundColor: "lightBlue",  
-      padding: "10px",  
-      fontFamily: "Arial"  
-    };  
-    return (  
-      <div>  
-      <h1 style={mystyle}>Hello JavaTpoint</h1>  
-      <p>Here, you can find all CS tutorials.</p>  
-      </div>  
-    );  
-  }  
-}  
-export default App; 
 ```
 
-<!--style="font-size:30px"-->
-Output
+const App = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        backgroundImage:
+          "linear-gradient(to right, #427ceb, #1dad6f)",
+      }}
+    >
+      <h1 style={{ color: "white" }}>Welcome to React CSS</h1>
+    </div>
+  );
+};
 
-![image](images/react-css-output3.png)
+export default App;
 
-<!--style="font-size:30px"-->
-2. CSS Stylesheet
-
-You can write styling in a separate file for your React application, and save the file with a .css extension. 
-
-Now, you can import this file in your application.
-
-<!--style="font-size:20px"-->
-Example
-
-<!--style="font-size:20px"-->
-App.js
-
-```markdown
-
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import './App.css';  
-  
-class App extends React.Component {  
-  render() {  
-    return (  
-      <div>  
-      <h1>Hello JavaTpoint</h1>  
-      <p>Here, you can find all CS tutorials.</p>  
-      </div>  
-    );  
-  }  
-}  
-export default App; 
 ```
 
-<!--style="font-size:20px"-->
+**Output:**
+
+![image](images/CSS1.png)
+
+ * **camelCase Property Name**
+If the properties have two names, like background-color, it must be written in camel case syntax.
+
+**Example**
+
+**App.js**
+
+```
+const App = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column", // This will stack the children vertically
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        backgroundImage:
+          "linear-gradient(to right, #427ceb, #1dad6f)",
+      }}
+    >
+      <h1 style={{ color: "white" }}>Welcome to React CSS</h1>
+      <p style={{ backgroundColor: "lightgreen" }}>Example for camelCase.</p>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+**Output:**
+
+![image](images/CSS2.png)
+
+* **Using JavaScript Object** : The inline styling also allows us to create an object with styling information and refer it in the style attribute.
+
+**Example**
+
+**App.js**
+
+```
+
+const App = () => {
+  const containerStyle = {
+    display: "flex",
+    flexDirection: "column", // Stack children vertically
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100vh",
+    backgroundImage: "linear-gradient(to right, #427ceb, #1dad6f)",
+  };
+  const headingStyle = {
+    color: "white",
+  };
+  return (
+    <div style={containerStyle}>
+      <h1 style={headingStyle}>Welcome to React CSS</h1>
+    </div>
+  );
+};
+
+export default App;
+ 
+```
+
+**Output**
+
+![image](images/CSS1.png)
+
+
+>Note: For all below-given examples, the output will remain as above only.
+
+* **2.Styling using CSS file** : To style the React elements using the CSS file, we first import the CSS file and then assign the classes contained in the CSS file to the className prop of React elements. 
+  
+**Syntax:** The syntax to assign the classes to the className prop is mentioned below. 
+
+```
+<div className="name_of_the_class"></div>
+```
+
+**Filename:** App.js The content of App.js and App.css files demonstrating the use of CSS files to style React elements is mentioned below.
+
+**Example:App.js**
+
+```
+import './App.css';
+ 
+const App = () => {
+    return (
+        <div className='container-div'>
+            <h1 className='heading'>Welcome to React CSS</h1>
+        </div>
+    );
+};
+ 
+export default App;
 App.css
+.container-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: linear-gradient(to right, #427ceb, #1dad6f);
+}
 
-```css
+.heading {
+	color: white;
+}
 
-body {  
-  background-color: #008080;  
-  color: yellow;  
-  padding: 40px;  
-  font-family: Arial;  
-  text-align: center;  
-}  
 ```
 
-
-<!--style="font-size:20px"-->
-Index.html
-
-```htm
-
-<!DOCTYPE html>  
-<html lang="en">  
-  <head>  
-    <meta charset="utf-8" />  
-    <meta name="viewport"  
-      content="width=device-width, initial-scale=1" />  
-    <title>React App</title>  
-  </head>  
-  <body>  
-    <div id="app"></div>  
-  </body>  
-</html>  
-```
-
-<!--style="font-size:20px"-->
-Output
-
-![image](images/react-css-output4.png)
-
-
-<!--style="font-size:30px"-->
-3. CSS Module
-
-CSS Module is another way of adding styles to your application. It is a CSS file where all class names and 
-
-animation names are scoped locally by default. It is available only for the component which imports it, means 
-
-any styling you add can never be applied to other components without your permission, and you never need to 
-
-worry about name conflicts. You can create CSS Module with the .module.css extension like a myStyles.module.
-
-css name.
-
-<!--style="font-size:20px"-->
-Example
-
-<!--style="font-size:20px"-->
-App.js
-
-```markdown
-
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import styles from './myStyles.module.css';   
+* 3. **Styling using CSS module** : CSS modules are a way to locally scope the content of your CSS file. We can create a CSS module file by naming our CSS file as App.modules.css and then it can be imported inside App.js file using the special syntax mentioned below.
   
-class App extends React.Component {  
-  render() {  
-    return (  
-      <div>  
-      <h1 className={styles.mystyle}>Hello JavaTpoint</h1>  
-      <p className={styles.parastyle}>It provides great CS tutorials.</p>  
-      </div>  
-    );  
-  }  
-}  
-export default App; 
+**Syntax:**
+
+```
+import styles from './App.module.css';
+Now we can easily assign the classes to the className properties mentioned below.
+<div className={styles['container-div']}> 
+    <h1 className={styles.heading}>GeeksForGeeks</h1>
+</div>
+
 ```
 
-<!--style="font-size:20px"-->
-myStyles.module.css
+The square bracket is used to access the class when it contains a hyphen or we can use it generally also. The dot can be used to access the class when it does not contain a hyphen. 
 
-```css
+**Filename:** App.js The content of App.js and App.css files demonstrating the use of CSS modules to style the React element is mentioned below.
 
-.mystyle {  
-  background-color: #cdc0b0;  
-  color: Red;  
-  padding: 10px;  
-  font-family: Arial;  
-  text-align: center;  
-}  
-  
-.parastyle{  
-  color: Green;  
-  font-family: Arial;  
-  font-size: 35px;  
-  text-align: center;  
-}  
+**App.js**
+
+```
+import styles from './App.module.css';
+
+const App = () => {
+	return (
+		<div className={styles['container-div']}>
+			<h1 className={styles.heading}>Welcome to React CSS</h1>
+		</div>
+	);
+};
+export default App;
+App.modules.css
+.container-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: linear-gradient(
+		to right, #427ceb, #1dad6f);
+}
+
+.heading {
+	color: white;
+}
+
 ```
 
-<!--style="font-size:20px"-->
-Output
-
-![image](images/react-css-output5.png)
-
-
-<!--style="font-size:30px"-->
-4. Styled Components
-
-Styled-components is a library for React. It uses enhance CSS for styling React component systems in your 
-
-application, which is written with a mixture of JavaScript and CSS.
-
-The styled-components provides:
-
-* Automatic critical CSS
-
-* No class name bugs
-
-* Easier deletion of CSS
-
-* Simple dynamic styling
-
-* Painless maintenance
-
-<!--style="font-size:20px"-->
-Installation
-
-The styled-components library takes a single command to install in your React application. which is:
-
----> $ npm install styled-components --save  
-
-<!--style="font-size:20px"-->
-Example
-
-Here, we create a variable by selecting a particular HTML element such as `<div>, <Title>, and <paragraph> `
-
-where we store our style attributes. Now we can use the name of our variable as a wrapper `<Div></Div>` kind 
-
-of React component.
-
-<!--style="font-size:20px"-->
-App.js
-
-```markdown
-
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import styled from 'styled-components';  
+* 4. **Styling using styled-components** : The styled-components is a third-party package that helps us create a new Styled component based on the React element and CSS styles provided to it. 
   
-class App extends React.Component {  
-  render() {  
-    const Div:any = styled.div`  
-            margin: 20px;  
-            border: 5px dashed green;  
-            &:hover {  
-            background-color: ${(props:any) => props.hoverColor};  
-            }  
-            `;  
-    const Title = styled.h1`  
-            font-family: Arial;  
-            font-size: 35px;  
-            text-align: center;  
-            color: palevioletred;  
-            `;  
-    const Paragraph = styled.p`  
-            font-size: 25px;  
-            text-align: center;  
-            background-Color: lightgreen;  
-            `;  
-    return (  
-       <div>            
-            <Title>Styled Components Example</Title>  
-            <p></p>  
-            <Div hoverColor="Orange">  
-                 <Paragraph>Hello JavaTpoint!!</Paragraph>  
-            </Div>  
-        </div>  
-    );  
-  }  
-}  
-export default App; 
-``` 
+**Module Installation:** In order to use the styled-components you must first install it as a dependency using the following command from the command line.
 
-<!--style="font-size:20px"-->
-Output
+```
+npm install styled-components
 
-Now, execute the App.js file, we will get the output as shown below.
+```
 
-![image](images/react-css-output6.png)
+**Syntax:** To create a styled component you can use the syntax mentioned below.
 
-When we move the mouse pointer over the image, its color will be changed, as shown in the below image.
+```
+import styled from 'styled-components';
+const WelcomeHeading = styled.h1`
+  color: white;
+`;
 
-![image](images/react-css-output7.png)
+```
+
+The code above will create a new component based on the h1 element and style it with the CSS properties passed to it. The content of the App.js file demonstrating the use of styled-components is mentioned below.
+
+**Example:**
+
+```
+import styled from 'styled-components';
+
+const PageDiv = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-image: linear-gradient(
+  to right, #427ceb, #1dad6f);
+`;
+
+const WelcomeHeading = styled.h1`
+color: white;
+`;
+
+const App = () => {
+  return (
+    <PageDiv>
+      <WelcomeHeading>Welcome to React CSS</WelcomeHeading>
+    </PageDiv>
+  );
+};
+
+export default App;
+
+```
+
+
 
 
 # React Animation
