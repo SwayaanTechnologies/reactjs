@@ -4163,18 +4163,12 @@ Once we insert the item and press Ok, the new item can be added in the list with
 
 # React Bootstrap
 
-Single-page applications gaining popularity over the last few years, so many front-end frameworks have 
+Single-page applications gaining popularity over the last few years, so many front-end frameworks have introduced such as Angular, React, Vue.js, Ember, etc. As a result, jQuery is not a necessary requirement for 
+building web apps. Today, React has the most used JavaScript framework for building web applications, and
+Bootstrap become the most popular CSS framework. So, it is necessary to learn various ways in which Bootstrap can be used in React apps, which is the main aim of this section.
 
-introduced such as Angular, React, Vue.js, Ember, etc. As a result, jQuery is not a necessary requirement for 
 
-building web apps. Today, React has the most used JavaScript framework for building web applications, and 
-
-Bootstrap become the most popular CSS framework. So, it is necessary to learn various ways in which Bootstrap 
-
-can be used in React apps, which is the main aim of this section.
-
-<!--style="font-size:30px"-->
-Adding Bootstrap for React
+**Adding Bootstrap for React**
 
 We can add Bootstrap to the React app in several ways. The three most common ways are given below:
 
@@ -4184,22 +4178,16 @@ We can add Bootstrap to the React app in several ways. The three most common way
 
 ![image](images/react-bootstrap.png)
 
-<!--style="font-size:30px"-->
- 1. Using the Bootstrap CDN
 
-It is the easiest way of adding Bootstrap to the React app. There is no need to install or download 
+1. Using the Bootstrap CDN
 
-Bootstrap. We can simply put an `<link>` into the `<head>` section of the index.html file of the React app as 
-
-shown in the following snippet.
+It is the easiest way of adding Bootstrap to the React app. There is no need to install or download Bootstrap. We can simply put an `<link>` into the `<head>` section of the index.html file of the React app as shown in the following snippet.
 
 ```htm
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
 ```
 
-If there is a need to use Bootstrap components which depend on JavaScript/jQuery in the React application, we 
-
-need to include jQuery, Popper.js, and Bootstrap.js in the document. Add the following imports in the 
+If there is a need to use Bootstrap components which depend on JavaScript/jQuery in the React application, we need to include jQuery, Popper.js, and Bootstrap.js in the document. Add the following imports in the 
 
 `<script>` tags near the end of the closing </body> tag of the index.html file.
 
@@ -4211,38 +4199,31 @@ need to include jQuery, Popper.js, and Bootstrap.js in the document. Add the fol
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 ```
 
-In the above snippet, we have used jQuery's slim version, although we can also use the full version as well. 
+In the above snippet, we have used jQuery's slim version, although we can also use the full version as well.Now, Bootstrap is successfully added in the React application, and we can use all the CSS utilities and UI components available from Bootstrap in the React application.
 
-Now, Bootstrap is successfully added in the React application, and we can use all the CSS utilities and UI 
 
-components available from Bootstrap in the React application.
-
-<!--style="font-size:30px"-->
 2. Bootstrap as Dependency
 
-If we are using a build tool or a module bundler such as Webpack, then importing Bootstrap as dependency is 
+If we are using a build tool or a module bundler such as Webpack, then importing Bootstrap as dependency is the preferred option for adding Bootstrap to the React application. We can install Bootstrap as a dependency for the React app. To install the Bootstrap, run the following commands in the terminal window.
 
-the preferred option for adding Bootstrap to the React application. We can install Bootstrap as a dependency 
+```
+npm install bootstrap --save  
 
-for the React app. To install the Bootstrap, run the following commands in the terminal window.
+```
 
----> $ npm install bootstrap --save  
-
-Once Bootstrap is installed, we can import it in the React application entry file. If the React project 
-
-created using the create-react-app tool, open the src/index.js file, and add the following code:
+Once Bootstrap is installed, we can import it in the React application entry file. If the React project created using the create-react-app tool, open the src/index.js file, and add the following code:
 
 ```markdown
 import 'bootstrap/dist/css/bootstrap.min.css';  
 ```
 
-* Now, we can use the CSS classes and utilities in the React application. Also, if we want to use the 
+Now, we can use the CSS classes and utilities in the React application. Also, if we want to use the JavaScript
+components, we need to install the jquery and popper.js packages from npm. To install the following packages, run the following command in the terminal window.
 
-JavaScript components, we need to install the jquery and popper.js packages from npm. To install the 
+```
+npm install jquery popper.js  
 
-following packages, run the following command in the terminal window.
-
----> $ npm install jquery popper.js  
+```
 
 Next, go to the src/index.js file and add the following imports.
 
@@ -4255,52 +4236,45 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 Now, we can use Bootstrap JavaScript Components in the React application.
 
-<!--style="font-size:30px"-->
+
 3. React Bootstrap Package
 
-The React Bootstrap package is the most popular way to add bootstrap in the React application. There are many 
+The React Bootstrap package is the most popular way to add bootstrap in the React application. There are many
+Bootstrap packages built by the community, which aim to rebuild Bootstrap components as React components. The two most popular Bootstrap packages are:
 
-Bootstrap packages built by the community, which aim to rebuild Bootstrap components as React components. The 
+* **react-bootstrap**: It is a complete re-implementation of the Bootstrap components as React components. It does not need any dependencies like bootstrap.js or jQuery. If the React setup and React-Bootstrap installed, we have everything which we need.
 
-two most popular Bootstrap packages are:
+* **reactstrap**: It is a library which contains React Bootstrap 4 components that favor composition and control. It does not depend on jQuery or Bootstrap JavaScript. However, react-popper is needed for advanced positioning of content such as Tooltips, Popovers, and auto-flipping Dropdowns.
 
-1. react-bootstrap: It is a complete re-implementation of the Bootstrap components as React components. It 
 
-does not need any dependencies like bootstrap.js or jQuery. If the React setup and React-Bootstrap installed, 
-
-we have everything which we need.
-
-2. reactstrap: It is a library which contains React Bootstrap 4 components that favor composition and 
-
-control. It does not depend on jQuery or Bootstrap JavaScript. However, react-popper is needed for advanced 
-
-positioning of content such as Tooltips, Popovers, and auto-flipping Dropdowns.
-
-<!--style="font-size:30px"-->
-React Bootstrap Installation
+**React Bootstrap Installation**
 
 Let us create a new React app using the create-react-app command as follows.
 
----> $ npx create-react-app react-bootstrap-app  
+```
+npx create-react-app react-bootstrap-app  
+
+```
 
 After creating the React app, the best way to install Bootstrap is via the npm package. To install Bootstrap, 
 
 navigate to the React app folder, and run the following command.
 
----> $ npm install react-bootstrap bootstrap --save  
+```
+npm install react-bootstrap bootstrap --save  
 
-<!--style="font-size:30px"-->
-Importing Bootstrap
+```
+
+**Importing Bootstrap**
 
 Now, open the src/index.js file and add the following code to import the Bootstrap file.
 
----> import 'bootstrap/dist/css/bootstrap.min.css';  
+```
+import 'bootstrap/dist/css/bootstrap.min.css';  
 
-We can also import individual components like import { SplitButton, Dropdown } from 'react-bootstrap'; 
+```
 
-instead of the entire library. It provides the specific components which we need to use, and can 
-
-significantly reduce the amount of code.
+We can also import individual components like import { SplitButton, Dropdown } from 'react-bootstrap'; instead of the entire library. It provides the specific components which we need to use, and can significantly reduce the amount of code.
 
 In the React app, create a new file named ThemeSwitcher.js in the src directory and put the following code.
 
@@ -4361,8 +4335,7 @@ export default ThemeSwitcher;
 
 Now, update the src/index.js file with the following snippet.
 
-<!--style="font-size:30px"-->
-App.js
+**App.js**
 
 ```markdown
 import 'bootstrap/dist/css/bootstrap.min.css';  
@@ -4374,8 +4347,8 @@ import ThemeSwitcher from './ThemeSwitcher';
   
 ReactDOM.render(<ThemeSwitcher />, document.getElementById('root'));  
 ```
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 When we execute the React app, we should get the output as below.
 
@@ -4390,77 +4363,82 @@ Now, if we choose the Success Theme, we will get the below screen.
 ![image](images/react-bootstrap4.png)
 
 
-<!--style="font-size:30px"-->
-Using reactstrap
+**Using reactstrap**
 
 Let us create a new React app using the create-react-app command as follows.
 
----> $ npx create-react-app reactstrap-app  
+```
+npx create-react-app reactstrap-app  
+
+```
 
 Next, install the reactstrap via the npm package. To install reactstrap, navigate to the React app folder, 
 
 and run the following command.
 
----> $ npm install bootstrap reactstrap --save  
+```
+npm install bootstrap reactstrap --save  
+```
 
-<!--style="font-size:20px"-->
-Importing Bootstrap
+
+**Importing Bootstrap**
 
 Now, open the src/index.js file and add the following code to import the Bootstrap file.
 
----> import 'bootstrap/dist/css/bootstrap.min.css'; 
-
+```
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+```
 
 # React Table
 
-A table is an arrangement which organizes information into rows and columns. It is used to store and display 
+* A table is an arrangement which organizes information into rows and columns. It is used to store and display data in a structured format.
 
-data in a structured format.
+* The react-table is a lightweight, fast, fully customizable (JSX, templates, state, styles, callbacks), and extendable Datagrid built for React. It is fully controllable via optional props and callbacks.
 
-The react-table is a lightweight, fast, fully customizable (JSX, templates, state, styles, callbacks), and 
+**Features**
 
-extendable Datagrid built for React. It is fully controllable via optional props and callbacks.
+*  It is lightweight at 11kb (and only need 2kb more for styles).
 
-<!--style="font-size:30px"-->
-Features
+*  It is fully customizable (JSX, templates, state, styles, callbacks).
 
-1. It is lightweight at 11kb (and only need 2kb more for styles).
+*  It is fully controllable via optional props and callbacks.
 
-2. It is fully customizable (JSX, templates, state, styles, callbacks).
+*  It has client-side & Server-side pagination.
 
-3. It is fully controllable via optional props and callbacks.
+*  It has filters.
 
-4. It has client-side & Server-side pagination.
+*  Pivoting & Aggregation
 
-5. It has filters.
+*  Minimal design & easily themeable
 
-6. Pivoting & Aggregation
 
-7. Minimal design & easily themeable
-
-<!--style="font-size:30px"-->
-Installation
+**Installation**
 
 Let us create a React app using the following command.
 
----> $ npx create-react-app myreactapp  
+```
+npx create-react-app myreactapp  
+```
 
 Next, we need to install react-table. We can install react-table via npm command, which is given below.
 
----> $ npm install react-table  
+```
+$ npm install react-table  
+```
 
 Once, we have installed react-table, we need to import the react-table into the react component. To do this, 
 
 open the src/App.js file and add the following snippet.
 
----> import ReactTable from "react-table";  
+```
+import ReactTable from "react-table";  
+```
 
-Example 1: Here App.js is the default component. At first, we will see how to create a table using the 
-
+**Example 1:** Here `App.js` is the default component. At first, we will see how to create a table using the
 hardcoded values. Later we will see how to dynamically render the data from an array inside the table. 
 
-<!--style="font-size:20px"-->
-Filename: App.js
+
+**Filename: App.js**
 
 
 ```markdown
@@ -4500,21 +4478,13 @@ export default App;
 ```
 
 In the above example, we just simply used the HTML table elements which are `<table>`, `<tr>`, `<th>`, and `<td> `
-
 elements. 
 
-Example 2: Now lets us see how we can dynamically render data from an array. Instead of manually iterating 
+**Example 2**: Now lets us see how we can dynamically render data from an array. Instead of manually iterating
+over the array using a loop, we can simply use the inbuilt Array.map() method. The Array.map() method allows you to iterate over an array and modify its elements using a callback function. The callback function will then be executed on each of the array’s elements. In this case, we will just return a table row on each iteration.
 
-over the array using a loop, we can simply use the inbuilt Array.map() method. The Array.map() method allows 
 
-you to iterate over an array and modify its elements using a callback function. The callback function will 
-
-then be executed on each of the array’s elements. In this case, we will just return a table row on each 
-
-iteration.
-
-<!--style="font-size:20px"-->
-Filename: App.js
+**Filename: App.js**
 
 ```markdown
 
@@ -4554,7 +4524,7 @@ function App() {
 export default App;
 ```
 
-Filename: App.css Now, let’s edit the file named App.css to style the table.
+**Filename:** App.css Now, let’s edit the file named App.css to style the table.
 
 ```css
 .App {
@@ -4580,75 +4550,52 @@ td {
 }
 ```
 
-![image](images/Screenshot20211017145400.png)
+**Output:**
 
+![image](images/Screenshot20211017145400.png)
 
 
 # React Code Splitting
 
 * First you need to understand how most frameworks work.
 
-Since many bundle all dependencies into one large file, which makes it easy to add JavaScript to an HTML page.
+* Since many bundle all dependencies into one large file, which makes it easy to add JavaScript to an HTML page.
 
-In theory, bundling JavaScript in this way should speed up page loading and reduce the amount of traffic 
+* In theory, bundling JavaScript in this way should speed up page loading and reduce the amount of traffic pages have to handle.
 
-pages have to handle.
+* But as an application grows, the size of its bundles also grows and, at some point, its bundles will be so large that they will take a long time to load.
 
-* But as an application grows, the size of its bundles also grows and, at some point, its bundles will be so 
+* This is where the code splitting technique comes in. Code splitting consists of separating the code into several packages or components that can be loaded on demand or in parallel. This means that they are not loaded until they are needed.
 
-large that they will take a long time to load.
 
-* This is where the code splitting technique comes in. Code splitting consists of separating the code into  
+**The benefits of code splitting are:**
 
-several packages or components that can be loaded on demand or in parallel. This means that they are not 
+* The speed at which a website loads and displays content becomes faster.
 
-loaded until they are needed.
+* The interaction time improves.
 
-<!--style="font-size:20px"-->
-* The benefits of code splitting are:
+* The percentage of users who abandon the web page without interacting with it decreases.
 
-1. The speed at which a website loads and displays content becomes faster.
 
-2. The interaction time improves.
+**Drawback of code splitting:**
 
-3. The percentage of users who abandon the web page without interacting with it decreases.
+* Although you may not realize it, code splitting requires downloading some data after the page is initialized.
 
-<!--style="font-size:20px"-->
-* Drawback of code splitting:
+* When the internet connection is down, additional modules cannot be loaded. You need to ensure the user receives an appropriate message in this situation.
 
-1. Although you may not realize it, code splitting requires downloading some data after the page is 
+* Additional logic is required to load multiple modules when needed.
 
-initialized.
+* To inject each of the bundles into the application, it is necessary to have a header file.
 
-2. When the internet connection is down, additional modules cannot be loaded. You need to ensure the user 
-
-receives an appropriate message in this situation.
-
-3. Additional logic is required to load multiple modules when needed.
-
-4. To inject each of the bundles into the application, it is necessary to have a header file.
-
-5. As a result, loading additional code chunks causes a slight delay (especially when the page or website is 
-
-loading for the first time).
+* As a result, loading additional code chunks causes a slight delay (especially when the page or website is
+ loading for the first time).
 
 
 ![image](images/codesplitting.jpg)
 
+1. **Dynamic imports**
 
-<!--style="font-size:30px"-->
-* Dynamic imports
-
-
- Perhaps the simplest way to split code in React is with the dynamic “import” syntax. Some bundlers can 
-
-parse dynamic import statements natively, while others require some configuration. The dynamic import syntax 
-
-works for both static site generation and server-side rendering.
-
- Dynamic imports use the then function to import only the code that is needed. Any call to the imported code 
-
-must be inside that function.
+Perhaps the simplest way to split code in React is with the dynamic “import” syntax. Some bundlers can parse dynamic import statements natively, while others require some configuration. The dynamic import syntax works for both static site generation and server-side rendering.Dynamic imports use the then function to import only the code that is needed. Any call to the imported code must be inside that function.
 
 ```markdown
 
@@ -4657,25 +4604,12 @@ import("./parseText").then(parseText => {
 });
 ```
 
-<!--style="font-size:30px"-->
-* React.lazy
+2. **React.lazy**
 
-React.lazy allows for lazy loading of imports in many contexts. It is not yet available for server-side 
+React.lazy allows for lazy loading of imports in many contexts. It is not yet available for server-side rendering, but its diversity of functions makes up for that. The React.lazy function allows you to dynamically import a dependency and render that dependency as a component in a single line of code. The component must be rendered inside another component that shows fallback content if the dynamic import fails.This can include error content, although this is not required. If error content is included, it must be included in a special type of component called an Error Boundary. The Error Boundary component must be above any components that are dynamically loaded to make sure they display properly.
 
-rendering, but its diversity of functions makes up for that. The React.lazy function allows you to 
 
-dynamically import a dependency and render that dependency as a component in a single line of code. The 
-
-component must be rendered inside another component that shows fallback content if the dynamic import fails.
-
-This can include error content, although this is not required. If error content is included, it must be 
-
-included in a special type of component called an Error Boundary. The Error Boundary component must be above 
-
-any components that are dynamically loaded to make sure they display properly.
-
-<!--style="font-size:20px"-->
-Before
+**Before**
 
 ```markdown
 
@@ -4690,8 +4624,8 @@ function MyComponent() {
 }
 ```  
 
-<!--style="font-size:20px"-->
-After
+
+**After**
 
 ```markdown
 const ExampleComponent = React.lazy(() => import('./ExampleComponent'));  
@@ -4705,18 +4639,12 @@ function MyComponent() {
 } 
 ``` 
 
-<!--style="font-size:30px"-->
-* Suspense
 
-If the module which contains the ExampleComponent is not yet loaded by the function component(MyComponent), 
+3. **Suspense**
 
-then we need to show some fallback content while we are waiting for it to load. We can do this using the 
+If the module which contains the ExampleComponent is not yet loaded by the function component(MyComponent), then we need to show some fallback content while we are waiting for it to load. We can do this using the suspense component. In other words, the suspense component is responsible for handling the output when the lazy component is fetched and rendered.
 
-suspense component. In other words, the suspense component is responsible for handling the output when the 
-
-lazy component is fetched and rendered.
-
-```markdown
+```
 
 const ExampleComponent = React.lazy(() => import('./ ExampleComponent'));  
   
@@ -4731,13 +4659,9 @@ function MyComponent() {
 }  
 ```
 
-The fallback prop accepts the React elements which you want to render while waiting for the component to 
+The fallback prop accepts the React elements which you want to render while waiting for the component to load. We can combine multiple lazy components with a single Suspense component. It can be seen in the below example.
 
-load. We can combine multiple lazy components with a single Suspense component. It can be seen in the below 
-
-example.
-
-```markdown
+```
 
 const ExampleComponent = React.lazy(() => import('./ ExampleComponent'));  
 const ExamComponent = React.lazy(() => import('./ ExamComponent'));  
@@ -4756,20 +4680,14 @@ function MyComponent() {
 }  
 ```
 
-Note: React.lazy and Suspense components are not yet available for server-side rendering. For code-splitting 
+Note: React.lazy and Suspense components are not yet available for server-side rendering. For code-splitting in a server-rendered app, it is recommended to use Loadable Components.
 
-in a server-rendered app, it is recommended to use Loadable Components.
 
-<!--style="font-size:30px"-->
-* Error boundaries
+4. **Error boundaries**
 
-If any module fails to load, for example, due to network failure, we will get an error. We can handle these 
+If any module fails to load, for example, due to network failure, we will get an error. We can handle these errors with Error Boundaries. Once we have created the Error Boundary, we can use it anywhere above our lazy components to display an error state.
 
-errors with Error Boundaries. Once we have created the Error Boundary, we can use it anywhere above our lazy 
-
-components to display an error state.
-
-```markdown
+```
 
 import MyErrorBoundary from './MyErrorBoundary';  
 const ExampleComponent = React.lazy(() => import('./ ExampleComponent'));  
@@ -4789,18 +4707,10 @@ const MyComponent = () => (
 );  
 ```
 
-<!--style="font-size:30px"-->
-* Route-based code splitting
 
-It is very tricky to decide where we introduce code splitting in the app. For this, we have to make sure that 
+5. **Route-based code splitting**
 
-we choose the place which will split the bundles evenly without disrupting the user experience.
-
-The route is the best place to start the code splitting. Route based code splitting is essential during the 
-
-page transitions on the web, which takes some amount of time to load. Here is an example of how to setup 
-
-route-based code splitting into the app using React Router with React.lazy.
+It is very tricky to decide where we introduce code splitting in the app. For this, we have to make sure that we choose the place which will split the bundles evenly without disrupting the user experience.The route is the best place to start the code splitting. Route based code splitting is essential during the page transitions on the web, which takes some amount of time to load. Here is an example of how to setup route-based code splitting into the app using React Router with React.lazy.
 
 ```markdown
 
@@ -4824,28 +4734,28 @@ const App = () => (
 );  
 ```
 
-<!--style="font-size:30px"-->
-* Named Export
+
+6. **Named Export**
 
 Currently, React.lazy supports default exports only. If any module you want to import using named exports, you need to create an intermediate module that re-exports it as the default. We can understand it from the below example.
 
-<!--style="font-size:20px"-->
-ExampleComponents.js
+
+**ExampleComponents.js**
 
 ```markdown
 export const MyFirstComponent = /* ... */;  
 export const MySecondComponent = /* ... */;  
 ```
 
-<!--style="font-size:20px"-->
-MyFirstComponent.js
+
+**MyFirstComponent.js**
 
 ```markdown
 export { MyFirstComponent as default } from "./ExampleComponents.js";  
 ```
 
-<!--style="font-size:20px"-->
-MyApp.js
+
+**MyApp.js**
 
 ```markdown
 import React, { lazy } from 'react';  
@@ -4854,9 +4764,7 @@ const MyFirstComponent = lazy(() => import("./MyFirstComponent.js"));
 
 # React Context API
 
-The React Context API is a component structure, which allows us to share data across all levels of the 
-
-application. The main aim of Context API is to solve the problem of prop drilling (also called "Threading"). 
+The React Context API is a component structure, which allows us to share data across all levels of the application. The main aim of Context API is to solve the problem of prop drilling (also called "Threading"). 
 
 The Context API in React are given below.
 
@@ -4868,62 +4776,43 @@ The Context API in React are given below.
 
 * Class.contextType
 
-<!--style="font-size:30px"-->
-React.createContext
+1.**React.createContext**
 
 It creates a context object. When React renders a component which subscribes to this context object, then it 
 
 will read the current context value from the matching provider in the component tree.
 
-<!--style="font-size:20px"-->
-Syntax
+
+**Syntax**
 
 ```markdown
 const MyContext = React.createContext(defaultValue);  
 ```
 
-When a component does not have a matching Provider in the component tree, it returns the defaultValue 
-
-argument. It is very helpful for testing components isolation (separately) without wrapping them.
+When a component does not have a matching Provider in the component tree, it returns the defaultValue argument. It is very helpful for testing components isolation (separately) without wrapping them.
 
 
-<!--style="font-size:30px"-->
-Context.Provider
 
-Every Context object has a Provider React component which allows consuming components to subscribe to context 
+2. **Context.Provider**
 
-changes. It acts as a delivery service. When a consumer component asks for something, it finds it in the 
+Every Context object has a Provider React component which allows consuming components to subscribe to context changes. It acts as a delivery service. When a consumer component asks for something, it finds it in the context and provides it to where it is needed.
 
-context and provides it to where it is needed.
 
-<!--style="font-size:20px"-->
-Syntax
+**Syntax**
 
 ```markdown
 <MyContext.Provider value={/* some value */}>  
 ```
 
-It accepts the value prop and passes to consuming components which are descendants of this Provider. We can 
+It accepts the value prop and passes to consuming components which are descendants of this Provider. We can connect one Provider with many consumers. Context Providers can be nested to override values deeper within the component tree. All consumers that are descendants of a Provider always re-render whenever the Provider's value prop is changed. The changes are determined by comparing the old and new values using the same algorithm as Object.is algorithm.
 
-connect one Provider with many consumers. Context Providers can be nested to override values deeper within 
 
-the component tree. All consumers that are descendants of a Provider always re-render whenever the Provider's 
+3. **Context.Consumer**
 
-value prop is changed. The changes are determined by comparing the old and new values using the same 
+It is the React component which subscribes to the context changes. It allows us to subscribe to the context within the function component. It requires the function as a component. A consumer is used to request data through the provider and manipulate the central data store when the provider allows it.
 
-algorithm as Object.is algorithm.
 
-<!--style="font-size:30px"-->
-Context.Consumer
-
-It is the React component which subscribes to the context changes. It allows us to subscribe to the context 
-
-within the function component. It requires the function as a component. A consumer is used to request data 
-
-through the provider and manipulate the central data store when the provider allows it.
-
-<!--style="font-size:20px"-->
-Syntax
+**Syntax**
 
 ```markdown
 <MyContext.Consumer>  
@@ -4931,40 +4820,31 @@ Syntax
 </MyContext.Consumer> 
 ``` 
 
+The function component receives the current context value and then returns a React node. The value argument which passed to the function will be equal to the value prop of the closest Provider for this context in the component tree. If there is no Provider for this context, the value argument will be equal to the defaultValue which was passed to createContext().
 
-The function component receives the current context value and then returns a React node. The value argument 
 
-which passed to the function will be equal to the value prop of the closest Provider for this context in the 
+4. **Class.contextType**
 
-component tree. If there is no Provider for this context, the value argument will be equal to the 
+The contextType property on a class used to assign a Context object which is created by React.createContext(). It allows you to consume the closest current value of that Context type using this.context. We can reference this in any of the component life-cycle methods, including the render function.
 
-defaultValue which was passed to createContext().
+>Note: We can only subscribe to a single context using this API. If we want to use the experimental public class field's syntax, we can use a static class field to initialize the contextType.
 
-<!--style="font-size:30px"-->
-Class.contextType
 
-The contextType property on a class used to assign a Context object which is created by React.createContext
+**React Context API Example**
 
-(). It allows you to consume the closest current value of that Context type using this.context. We can 
+`Step1` Create a new React app using the following command.
 
-reference this in any of the component life-cycle methods, including the render function.
+```
+npx create-react-app mycontextapi  
+```
 
-Note: We can only subscribe to a single context using this API. If we want to use the experimental public 
+`Step2` Install bootstrap CSS framework using the following command.
 
-class field's syntax, we can use a static class field to initialize the contextType.
+```
+npm install react-bootstrap bootstrap --save    
+```
 
-<!--style="font-size:20px"-->
-React Context API Example
-
-Step1 Create a new React app using the following command.
-
----> $ npx create-react-app mycontextapi  
-
-Step2 Install bootstrap CSS framework using the following command.
-
----> $ npm install react-bootstrap bootstrap --save    
-
-Step3 Add the following code snippet in the src/APP.js file.
+`Step3` Add the following code snippet in the src/APP.js file.
 
 
 ```markdown
@@ -5003,14 +4883,11 @@ class ThemedButton extends Component {
 export default App;  
 ```
 
-In the above code snippet, we have created the context using React.createContext(), which returns the Context 
+In the above code snippet, we have created the context using React.createContext(), which returns the Context
+object. After that, we have created the wrapper component which returns the Provider component, and then add all the elements as children from which we want to access the context.
 
-object. After that, we have created the wrapper component which returns the Provider component, and then add 
 
-all the elements as children from which we want to access the context.
-
-<!--style="font-size:20px"-->
-Output
+**Output:**
 
 When we run the React app, we will get the following screen.
 
@@ -5019,108 +4896,67 @@ When we run the React app, we will get the following screen.
 
 # React Hooks
 
-React Hooks open up a completely new approach to constructing functional components, enabling us to include 
+**What are Hooks?**
 
-capabilities like stateful logic that are only available for class components.
+Hooks are used to give functional components an access to use the states and are used to manage side-effects in React. They were introduced React 16.8. They let developers use state and other React features without writing a class For example- State of a component It is important to note that hooks are not used inside the classes.
 
-React mostly makes use of its built−in hooks, useState and useEffect Hooks, to do this. These hooks j
+>Note: Hooks cannot be used with class components
 
-In this article, we will go over what hooks are and how they can be used to create applications with React. 
+**When to use a Hooks**
 
-We will also see how they simplify everyday development workflows.
+If you write a function component, and then you want to add some state to it, previously you do this by converting it to a class. But, now you can do it by using a Hook inside the existing function component.
 
-<!--style="font-size:30px"-->
-All About React Hooks
+**Rules for using hooks**
 
-As quoted by team React−
+*	Only functional components can use hooks
 
-* “React Hooks are a new feature of React.js that makes it possible to use state and other React features without writing a class.”
+*	Calling of hooks should always be done at top level of components
 
-They simplify the way we use React.js by removing the need for class components and render methods, and instead enable us to use functions as hooks.
+*	Hooks should not be inside conditional statements
 
-They were announced at the end of 2018 with version 16.7 of React and were officially released in version 16.8, which was released in March 2019.
-
-React Hooks act as a replacement for the class system. It is an alternative approach to React’s component model that allows us to avoid unnecessary abstraction and to provide an alternative way of handling stateful logic that doesn't require inheritance or higher−order components (HOC).
-
-They eliminate the requirement to construct a class, which was the sole option in the past, and enable developers to access state and other React capabilities.
-
-However, here are some general rules for hooks that every developer must keep in mind −
-
-* Hooks should be used in the topmost scope of the code and never to be used within loops, conditions, or nested functions.
-
-* Hooks should only be used by React function components.
-
-* Don't use ordinary JavaScript methods to call Hook
-
-Note − These rules are also applicable for custom hooks.
-
-<!--style="font-size:30px"-->
-Benefits with React Hooks
+**Benefits with React Hooks**
 
 
-<!--style="font-size:20px"-->
-* Easy−to−understand complex components
 
-In the past, the developers had to maintain parts that at first were straightforward but eventually turned 
-
-into an unmanageable jumble of stateful logic. As a result, getting errors and inconsistencies became a 
-
-normal thing. Instead of requiring a split based on lifecycle methods, hooks allow you to divide a single 
-
-component into separate functions based on how its constituent parts are related.
-
-<!--style="font-size:20px"-->
-* Reduced Complexity without Classes (with functions!)
-
-Learning React can be quite difficult because of classes. Props, state, and the downward data flow are 
-
-concepts that people can grasp very well, but still have difficulty understanding in classes. Even among 
-
-seasoned React developers, arguments over the distinction between function and class components can be seen 
-
-frequently.
-
-Contrarily, hooks allow you to embrace functions and use more React capabilities without the need to 
-
-understand intricate functional or reactive programming techniques.
-
-<!--style="font-size:20px"-->
-* Easy to reuse Stateful Logic
-
-You can remove stateful logic from a component using hooks so that it can be tested separately and used 
-
-again. You can reuse stateful logic with hooks without altering the component structure which was very 
-
-difficult earlier even the higher−order components and render props couldn’t manage to do it.
-
-Sharing Hooks amongst numerous components or with the community is now way too simple.
-
-<!--style="font-size:30px"-->
-* Rules of Hooks
-
-Hooks are similar to JavaScript functions, but you need to follow these two rules when using them. Hooks rule 
-
-ensures that all the stateful logic in a component is visible in its source code. These rules are:-
+* **Easy−to−understand complex components**:In the past, the developers had to maintain parts that at first were straightforward but eventually turned into an unmanageable jumble of stateful logic. As a result, getting errors and inconsistencies became a normal thing. Instead of requiring a split based on lifecycle methods, hooks allow you to divide a single component into separate functions based on how its constituent parts are related.
 
 
-<!--style="font-size:20px"-->
-1. Only call Hooks at the top level
+* **Reduced Complexity without Classes (with functions!)**:Learning React can be quite difficult because of classes. Props, state, and the downward data flow are concepts that people can grasp very well, but still have difficulty understanding in classes. Even among seasoned React developers, arguments over the distinction between function and class components can be seen frequently.
 
-Do not call Hooks inside loops, conditions, or nested functions. Hooks should always be used at the top level 
+Contrarily, hooks allow you to embrace functions and use more React capabilities without the need to understand intricate functional or reactive programming techniques.
 
-of the React functions. This rule ensures that Hooks are called in the same order each time a components 
 
-renders.
+* **Easy to reuse Stateful Logic**:You can remove stateful logic from a component using hooks so that it can be tested separately and used again. You can reuse stateful logic with hooks without altering the component structure which was very difficult earlier even the higher−order components and render props couldn’t manage to do it Sharing Hooks amongst numerous components or with the community is now way too simple.
 
-<!--style="font-size:20px"-->
-2. Only call Hooks from React functions
 
-You cannot call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function 
+* **Rules of Hooks**:Hooks are similar to JavaScript functions, but you need to follow these two rules when using them. Hooks rule ensures that all the stateful logic in a component is visible in its source code. These rules are:-
 
-components. Hooks can also be called from custom Hooks.
 
-<!--style="font-size:30px"-->
-Pre-requisites for React Hooks
+
+1. **Only call Hooks at the top level**
+Do not call Hooks inside loops, conditions, or nested functions. Hooks should always be used at the top level of the React functions. This rule ensures that Hooks are called in the same order each time a components renders.
+
+
+2. **Only call Hooks from React functions**
+You cannot call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function components. Hooks can also be called from custom Hooks.
+
+**Important things to remember while using hooks:**
+
+*	Hooks are available for React version 16.8 or higher.
+
+*	Hooks are completely opt-in. Use it partially for a few components or base the whole project on it as per your needs without rewriting any existing code.
+
+*	Hooks don’t contain any breaking changes and are 100% backward-compatible.
+
+*	The react team has no plan to remove classes from React.
+
+*	Hooks can’t be used inside class components but the app can definitely mix class-based components and functional components with Hooks.
+
+*	Hooks doesn’t violate any existing React concepts. Instead, Hooks provide a direct API to react concepts such as props, state, context, refs and life-cycle.
+
+
+
+**Pre-requisites for React Hooks**
 
 1. Node version 6 or above
 
@@ -5128,8 +4964,7 @@ Pre-requisites for React Hooks
 
 3. Create-react-app tool for running the React App
 
-<!--style="font-size:30px"-->
-React Hooks Installation
+**React Hooks Installation**
 
 To use React Hooks, we need to run the following commands:
 
