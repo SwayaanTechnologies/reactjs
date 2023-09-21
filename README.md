@@ -3017,17 +3017,13 @@ After adding Link, you can see that the routes are rendered on the screen. Now, 
 
 ![image](images/react-router5.png)
 
-Now, we need to add some styles to the Link. So that when we click on any particular link, it can be easily 
-
+Now, we need to add some styles to the Link. So that when we click on any particular link, it can be easily
 identified which Link is active. To do this react router provides a new trick NavLink instead of Link. Now, 
-
 in the index.js file, replace Link from Navlink and add properties activeStyle. The activeStyle properties 
-
-mean when we click on the Link, it should have a specific style so that we can differentiate which one is 
-
+mean when we click on the Link, it should have a specific style so that we can differentiate which one is
 currently active.
 
-```markdown
+```
 
 import React from 'react';  
 import ReactDOM from 'react-dom';  
@@ -3067,8 +3063,8 @@ const routing = (
 ReactDOM.render(routing, document.getElementById('root'));  
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 When we execute the above program, we will get the following screen in which we can see that Home link is of 
 
@@ -3080,24 +3076,21 @@ Now, when we click on About link, its color shown green that is the currently ac
 
 ![image](images/react-router7.png)
 
-<!--style="font-size:30px"-->
-`<Link>` vs `<NavLink>`
+
+**`<Link>` vs `<NavLink>`**
 
 The Link component allows navigating the different routes on the websites, whereas NavLink component is used 
-
 to add styles to the active routes.
 
-<!--style="font-size:30px"-->
-React Router Switch
+
+**React Router Switch**
 
 The `<Switch> `component is used to render components only when the path will be matched. Otherwise, it 
-
 returns to the not found component.
 
 To understand this, first, we need to create a notfound component.
 
-<!--style="font-size:30px"-->
-notfound.js
+**notfound.js**
 
 ```markdown
 
@@ -3108,10 +3101,9 @@ export default Notfound
 
 Now, import component in the index.js file. It can be seen in the below code.
 
-<!--style="font-size:30px"-->
-Index.js
+**Index.js**
 
-```markdown
+```
 
 import React from 'react';  
 import ReactDOM from 'react-dom';  
@@ -3155,33 +3147,27 @@ const routing = (
 ReactDOM.render(routing, document.getElementById('root'));  
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 If we manually enter the wrong path, it will give the not found error.
 
 ![image](images/react-router8.png)
 
-
-<!--style="font-size:30px"-->
-React Router `<Redirect>`
+**React Router `<Redirect>`**
 
 A `<Redirect>` component is used to redirect to another route in our application to maintain the old URLs. It 
-
 can be placed anywhere in the route hierarchy.
 
-<!--style="font-size:20px"-->
-Nested Routing in React
+**Nested Routing in React**
 
 Nested routing allows you to render sub-routes in your application. It can be understood in the below example.
 
-<!--style="font-size:20px"-->
-Example
+**Example**
 
-<!--style="font-size:20px"-->
-Index.js
+**Index.js**
 
-```markdown
+```
 
 import React from 'react';  
 import ReactDOM from 'react-dom';  
@@ -3227,10 +3213,10 @@ ReactDOM.render(routing, document.getElementById('root'));
 
 In the contact.js file, we need to import the React Router component to implement the subroutes.
 
-<!--style="font-size:30px"-->
-contact.js
 
-```markdown
+**contact.js**
+
+```
 
 import React from 'react'  
 import { Route, Link } from 'react-router-dom'  
@@ -3266,23 +3252,20 @@ class Contact extends React.Component {
 export default Contact  
 ```
 
-<!--style="font-size:30px"-->
-Output
+**Output:**
 
 When we execute the above program, we will get the following output.
 
 ![image](images/react-router9.png)
 
-After clicking the Contact link, we will get the contact list. Now, selecting any contact, we will get the 
-
+After clicking the Contact link, we will get the contact list. Now, selecting any contact, we will get the
 corresponding output. It can be shown in the below example.
 
 
 ![image](images/react-router10.png)
 
 
-<!--style="font-size:30px;color:red;"-->
-* Benefits Of React Router
+**Benefits Of React Router**
 
 The benefits of React Router is given below:
 
@@ -3978,36 +3961,34 @@ export default App;
 
 # React Animation
 
-* The animation is a technique in which images are manipulated to appear as moving images. It is one of the 
+* The animation is a technique in which images are manipulated to appear as moving images. 
 
-most used technique to make an interactive web application. In React, we can add animation using an explicit 
+* It is one of the most used technique to make an interactive web application. 
 
-group of components known as the React Transition Group.
+* In React, we can add animation using an explicit group of components known as the React Transition Group.
 
-* React Transition Group is an add-on component for managing component states and useful for defining 
+* React Transition Group is an add-on component for managing component states and useful for defining entering and exiting transitions. 
 
-entering and exiting transitions. It is not able to animate styles by itself. Instead, it exposes transition 
+* It is not able to animate styles by itself. Instead, it exposes transition states manages classes and group elements, and manipulates the DOM in useful ways. 
 
-states, manages classes and group elements, and manipulates the DOM in useful ways. It makes the 
-
-implementation of visual transitions much easier.
+* It makes the implementation of visual transitions much easier.
 
 * React Transition group has mainly two APIs to create transitions. These are:
 
 1. ReactTransitionGroup: It uses as a low-level API for animation.
 2. ReactCSSTransitionGroup: It uses as a high-level API for implementing basic CSS transitions and animations.
 
-<!--style="font-size:30px"-->
-Installation
+**Installation**
 
-We need to install react-transition-group for creating animation in React Web application. You can use the 
+We need to install react-transition-group for creating animation in React Web application. You can use the below command.
 
-below command.
+```
 
----> $ npm install react-transition-group --save  
+$ npm install react-transition-group --save  
 
-<!--style="font-size:30px"-->
-React Transition Group Components
+```
+
+**React Transition Group Components**
 
 React Transition Group API provides three main components. These are:
 
@@ -4015,14 +3996,14 @@ React Transition Group API provides three main components. These are:
 2. CSSTransition
 3. Transition Group
 
-<!--style="font-size:30px"-->
-Transition
 
-It has a simple component API to describe a transition from one component state to another over time. It is 
+* **Transition**
 
-mainly used to animate the mounting and unmounting of a component. It can also be used for in-place 
+* It has a simple component API to describe a transition from one component state to another over time. 
 
-transition states as well.
+* It is mainly used to animate the mounting and unmounting of a component. 
+
+* It can also be used for in-place transition states as well.
 
 We can access the Transition component into four states:
 
@@ -4034,14 +4015,16 @@ We can access the Transition component into four states:
 
 * exited
 
-<!--style="font-size:30px"-->
-CSSTransition
 
-The CSSTransition component uses CSS stylesheet classes to write the transition and create animations. It is 
+**CSSTransition**
 
-inspired by the ng-animate library. It can also inherit all the props of the transition component. We can 
+* The CSSTransition component uses CSS stylesheet classes to write the transition and create animations. 
 
-divide the "CSSTransition" into three states. These are:
+* It is inspired by the ng-animate library. 
+
+* It can also inherit all the props of the transition component. 
+
+We can divide the "CSSTransition" into three states. These are:
 
 * Appear
 
@@ -4050,43 +4033,33 @@ divide the "CSSTransition" into three states. These are:
 * Exit
 
 CSSTransition component must be applied in a pair of class names to the child components. The first class is 
-
 in the form of name-stage and the second class is in the name-stage-active. For example, you provide the name 
-
 fade, and when it applies to the 'enter' stage, the two classes will be fade-enter and fade-enter-active. It 
-
 may also take a prop as Timeout which defines the maximum time to animate.
 
-<!--style="font-size:30px"-->
-TransitionGroup
 
-This component is used to manage a set of transition components (Transition and CSSTransition) in a list. It 
+**TransitionGroup**
 
-is a state machine that controls the mounting and unmounting of components over time. The Transition 
+* This component is used to manage a set of transition components (Transition and CSSTransition) in a list.
+   
+* It is a state machine that controls the mounting and unmounting of components over time. 
 
-component does not define any animation directly. Here, how 'list' item animates is based on the individual 
+* The Transition component does not define any animation directly. 
 
-transition component. It means, the "TransitionGroup" component can have different animation within a 
-component.
+* Here, how 'list' item animates is based on the individual transition component. 
+
+* It means, the "TransitionGroup" component can have different animation within a component.
 
 Let us see the example below, which clearly help to understand the React Animation.
 
-<!--style="font-size:20px"-->
-Example
+**Example:**
 
-<!--style="font-size:20px"-->
-App.js
+**App.js**
 
-In the App.js file, import react-transition-group component, and create the CSSTransition component that uses 
+In the App.js file, import react-transition-group component, and create the CSSTransition component that uses
+as a wrapper of the component you want to animate. We are going to use transitionEnterTimeout and transitionLeaveTimeout for CSS Transition. The Enter and Leave animations used when we want to insert or delete elements from the list.
 
-as a wrapper of the component you want to animate. We are going to use transitionEnterTimeout and 
-
-transitionLeaveTimeout for CSS Transition. The Enter and Leave animations used when we want to insert or 
-
-delete elements from the list.
-
-
-```markdown
+```
 
 import React, { Component } from 'react';  
 import { CSSTransitionGroup } from 'react-transition-group';  
@@ -4134,10 +4107,10 @@ class App extends React.Component {
 }  
 export default App;  
 ```
-<!--style="font-size:20px"-->
-Main.js
 
-```javascript
+**Main.js**
+
+```
 
 import React from 'react';  
 import ReactDOM from 'react-dom';  
@@ -4145,12 +4118,10 @@ import App from './App.js';
   
 ReactDOM.render(<App />, document.getElementById('app'));  
 ```
-<!--style="font-size:20px"-->
-style.css
 
-Add style.css file in your application, and add the following CSS styles. Now, to use this CSS file, you need 
+**style.css**
 
-to add the link of this file in your HTML file.
+Add style.css file in your application, and add the following CSS styles. Now, to use this CSS file, you need to add the link of this file in your HTML file.
 
 ```css
 
@@ -4173,14 +4144,10 @@ to add the link of this file in your HTML file.
 }  
 ```
 
-In the above example, the animation durations are specified in both the CSS and render method. It tells React 
-
-component when to remove the animation classes from the list and if it is leaving when to remove the element 
-
+In the above example, the animation durations are specified in both the CSS and render method. It tells React component when to remove the animation classes from the list and if it is leaving when to remove the element 
 from the DOM.
 
-<!--style="font-size:20px"-->
-Output
+**Output:**
 
 When we execute the above program, it gives the below output.
 
@@ -4190,9 +4157,7 @@ Click on 'Insert Item' button, the following screen appears.
 
 ![image](images/react-animation-output2.png)
 
-Once we insert the item and press Ok, the new item can be added in the list with fade in style. Here, we can 
-
-also delete any item from the list by clicking on the particular link.
+Once we insert the item and press Ok, the new item can be added in the list with fade in style. Here, we can also delete any item from the list by clicking on the particular link.
 
 ![image](images/react-animation-output3.png)
 
