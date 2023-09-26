@@ -19,7 +19,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 `Command Line Interface (CLI):` CLI is a text-based user interface where users interact with a program or system by typing commands in a terminal or console. It is commonly used by developers, system administrators, and power users for tasks that require precise control and automation. Popular CLI environments include the Windows Command Prompt, macOS Terminal, and various Linux shells.
 
 
-![reactjsLogo](/images/react-js-icon.png)
+![reactjsLogo](/images/logoo.png)
 
 #  what is React?
 
@@ -216,8 +216,8 @@ In React application, there are several files and folders in the root directory.
 
 React uses ES6, and you should be familiar with some of the new features like:
 
-1. Classes
-   
+1. Classes 
+
 2. Arrow Functions
 
 3. Variables (let, const, var)
@@ -234,9 +234,9 @@ React uses ES6, and you should be familiar with some of the new features like:
 
 ## ES6 Classes
 
-ES6 introduced classes.
+* ES6 introduced classes.
 
-A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+* A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
 
 `Example:`
 
@@ -331,9 +331,9 @@ As you can see in the example above, you call the method by referring to the obj
 
 `Class Inheritance`
 
-To create a class inheritance, use the extends keyword.
+* To create a class inheritance, use the extends keyword.
 
-A class created with a class inheritance inherits all the methods from another class:
+* A class created with a class inheritance inherits all the methods from another class:
 
 `Example:`
 
@@ -387,7 +387,7 @@ The super() method refers to the parent class.
 
 By calling the super() method in the constructor method, we call the parent's constructor method and get access to the parent's properties and methods.
 
-### ES6 Arrow Functions
+## ES6 Arrow Functions
 
 * The arrow function is a new feature of ES6, introduced in ReactJS 16. It allows the developer to create a function that has lexical “this” binding and no arguments.
 
@@ -455,7 +455,9 @@ document.getElementById("demo").innerHTML = hello();
 </html>
 ```
 
-![image](images/withoutarrow.png)
+`Output:`
+
+![image](images/ES6.png)
 
 
 `Example:`
@@ -487,7 +489,9 @@ document.getElementById("demo").innerHTML = hello();
 </html>
 ```
 
-![image](images/arrowfunction.png)
+`Output:`
+
+![image](images/ES6Arrow.png)
 
 
 `Example: `
@@ -517,9 +521,9 @@ document.getElementById("demo").innerHTML = hello("World");
 </html>
 ```
 
-![image](images/arrowp.png)
+![image](images/ES6Arrow1.png)
 
-### ES6 Variable
+## ES6 Variable
 
 Before ES6 there was only one way of defining your variables: with the var keyword. If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.
 
@@ -593,7 +597,7 @@ let x = 5.6;
 const x = 5.6;
 ```
 
-### ES6 Array Method
+## ES6 Array Method
 
 There are many JavaScript array methods.
 
@@ -626,7 +630,7 @@ ReactDOM.render(myList, document.getElementById('root'));
 ![image](images/arraymethod.png)
 
 
-### ES6 Destructuring
+## ES6 Destructuring
 
 * To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
 
@@ -716,7 +720,7 @@ My car is a red Ford Mustang.
 ```
 
 
-### ES6 Spread Operator
+## ES6 Spread Operator
 
 * ES6 introduced a new operator referred to as a spread operator, which consists of three dots (...). It allows an iterable to expand in places where more than zero arguments are expected. It gives us the privilege to obtain the parameters from an array.
 
@@ -752,7 +756,9 @@ document.write(numbersCombined);
 </html>
 ```
 
-![image](images/spreadopera1.png)
+`Output:`
+
+![image](images/spread1.png)
 
 The spread operator is often used in combination with destructuring.
 
@@ -780,7 +786,9 @@ document.write("<p>" + rest + "</p>");
 </html>
 ```
 
-![image](images/spreadopera2.png)
+`Output:`
+
+![image](images/spread2.png)
 
 
 `We can use the spread operator with objects too:`
@@ -820,11 +828,13 @@ console.log(myUpdatedVehicle);
 </html>
 ```
 
-![image](images/spreadopera3.png)
+`Output:`
+
+![image](images/spread3.png)
 
 >Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle.
 
-### ES6 Rest Parameter
+## ES6 Rest Parameter
 
 * The rest parameter is introduced in ECMAScript 2015 or ES6, which improves the ability to handle parameters. 
 
@@ -907,7 +917,7 @@ console.log(num(10, 20, 30));
 ```
 
 
-### ES6 Ternary Operator
+## ES6 Ternary Operator
 
 The ternary operator is a simplified conditional operator like if / else.
 
@@ -954,6 +964,12 @@ if (authenticated) {
 </html>
 ```
 
+`Output:`
+
+![image](images/ternary.png)
+
+The `Output` changes when the `authenticated` variable is changed to false
+
 ![image](images/ternary1.png)
 
 `Example with Ternary Operator:`
@@ -986,7 +1002,13 @@ authenticated ? renderApp() : renderLogin();
 </html>
 ```
 
-![image](images/ternary2.png)
+`Output:`
+
+![image](images/ternary.png)
+
+The `Output` changes when the `authenticated` variable is changed to false
+
+![image](images/ternary1.png)
 
 `Example Of Rendering Condition (Using Ternary Operator on React)`
 
@@ -1028,6 +1050,12 @@ function App() {
 export default App;
 ```
 ![image](images/ternary3.png)
+
+* If u change the useState to  true One will get the above result
+
+* Here i have changed the loginID usestate to 1.
+
+![image](images/ternarytrue.png)
 
 # Modify the React Application
 
@@ -4878,18 +4906,17 @@ If you write a function component, and then you want to add some state to it, pr
 * `Easy to reuse Stateful Logic:`You can remove stateful logic from a component using hooks so that it can be tested separately and used again. You can reuse stateful logic with hooks without altering the component structure which was very difficult earlier even the higher−order components and render props couldn’t manage to do it Sharing Hooks amongst numerous components or with the community is now way too simple.
 
 
-* **Rules of Hooks**:Hooks are similar to JavaScript functions, but you need to follow these two rules when using them. Hooks rule ensures that all the stateful logic in a component is visible in its source code. These rules are:-
+* `Rules of Hooks:`Hooks are similar to JavaScript functions, but you need to follow these two rules when using them. Hooks rule ensures that all the stateful logic in a component is visible in its source code. These rules are:-
 
 
-
-1. **Only call Hooks at the top level**
+1. `Only call Hooks at the top level`
 Do not call Hooks inside loops, conditions, or nested functions. Hooks should always be used at the top level of the React functions. This rule ensures that Hooks are called in the same order each time a components renders.
 
 
-2. **Only call Hooks from React functions**
+2. `Only call Hooks from React functions`
 You cannot call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function components. Hooks can also be called from custom Hooks.
 
-**Important things to remember while using hooks:**
+`Important things to remember while using hooks:`
 
 *	Hooks are available for React version 16.8 or higher.
 
@@ -4905,7 +4932,7 @@ You cannot call Hooks from regular JavaScript functions. Instead, you can call H
 
 
 
-**Pre-requisites for React Hooks**
+`Pre-requisites for React Hooks`
 
 1. Node version 6 or above
 
@@ -4913,7 +4940,7 @@ You cannot call Hooks from regular JavaScript functions. Instead, you can call H
 
 3. Create-react-app tool for running the React App
 
-**React Hooks Installation**
+`React Hooks Installation`
 
 To use React Hooks, we need to run the following commands:
 
@@ -4938,7 +4965,7 @@ sure the package.json file lists the React and React-DOM dependencies as given b
 This hook lets you add state to your functional components. It returns a state variable and a function to update that variable.so basically useState is the ability to encapsulate local state in a functional component.  The  useState hook is a special function that takes the initial state as an argument and returns an array of two entries.  UseState encapsulate only singular value from the state, for multiple state need to have useState calls.
 
 
-**Syntax: **
+`Syntax: `
 
 The first element is the initial state and the second one is a function that is used for updating the state.
 
@@ -4955,7 +4982,7 @@ const [sum, setsum] = useState(function generateRandomInteger(){5+7);})
 The above function is oneline function which computes the sum of two numbers and will be set as the initial state.
 
 
-**Importing:**
+`Importing:`
 
 To use useState you need to import useState from react as shown below:
 
@@ -4964,7 +4991,7 @@ import React, { useState } from "react"
 ```
 
 
-**Example:**
+`Example:`
 
 Below is the implementation of useState() function.
 
@@ -4996,7 +5023,7 @@ return (
 export default App
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/usestate.png)
 
@@ -5015,7 +5042,7 @@ Side effects have common features which the most web applications need to perfor
 3. Setting up a subscription, etc.
 
 
-**Example:**
+`Example:`
 
 ```markdown
 import { useState, useEffect } from "react";
@@ -5043,7 +5070,7 @@ root.render(<Counter />);
 ```
 
 
-**Output:**
+`Output:`
 
 ![image](images/useeffect1.png)
 
@@ -5054,17 +5081,17 @@ root.render(<Counter />);
 
 2. Effects With Cleanup
 
-**Effects without Cleanup**
+`Effects without Cleanup`
 
 It is used in useEffect which does not block the browser from updating the screen. It makes the app more responsive. The most common example of effects which don't require a cleanup are manual DOM mutations, Network requests, Logging, etc.
 
 
-**Effects with Cleanup**
+`Effects with Cleanup`
 
 Some effects require cleanup after DOM updation. For example, if we want to set up a subscription to some external data source, it is important to clean up memory so that we don't introduce a memory leak. React performs the cleanup of memory when the component unmounts. However, as we know that, effects run for every render method and not just once. Therefore, React also cleans up effects from the previous render before running the effects next time.
 
 
-**Example:**
+`Example:`
 
 ```markdown
 import { useState, useEffect } from "react";
@@ -5088,53 +5115,33 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Timer />);
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/useeffect2.png)
 
 
 ## useContext
 
-Context provides a way to pass data or state through the component tree without having to pass props down 
+Context provides a way to pass data or state through the component tree without having to pass props down manually through each nested component. It is designed to share data that can be considered as global data for a tree of React components, such as the current authenticated user or theme(e.g. color, paddings, margins, font-sizes).Context API uses Context. Provider and Context. Consumer Components pass down the data but it is very cumbersome to write the long functional code to use this Context API. So useContext hook helps to make the code more readable, less verbose and removes the need to introduce Consumer Component. The useContext hook is the new addition in React 16.8. 
 
-manually through each nested component. It is designed to share data that can be considered as global data 
 
-for a tree of React components, such as the current authenticated user or theme(e.g. color, paddings, 
-
-margins, font-sizes).
-
-Context API uses Context. Provider and Context. Consumer Components pass down the data but it is very 
-
-cumbersome to write the long functional code to use this Context API. So useContext hook helps to make the 
-
-code more readable, less verbose and removes the need to introduce Consumer Component. The useContext hook is 
-
-the new addition in React 16.8. 
-
-<!--style="font-size:20px"-->
-Syntax:
+`Syntax:`
 
 ```markdown
 const authContext = useContext(initialValue);
 ```
 
-The useContext accepts the value provided by React.createContext and then re-render the component whenever 
-
-its value changes but you can still optimize its performance by using memoization.
-
-<!--style="font-size:20px"-->
-Example: 
-
-In this example, we are going to build an authentication React application that logs in or logs out users in 
-
-the children component and updates the state accordingly.
-
-We will build an App Component which has two LogIn and LogOut Components which access the state provided by 
-
-the Context Provider and updates it accordingly.
+The useContext accepts the value provided by React.createContext and then re-render the component whenever its value changes but you can still optimize its performance by using memoization.
 
 
-AuthContext.js
+`Example:` 
+
+In this example, we are going to build an authentication React application that logs in or logs out users in the children component and updates the state accordingly.
+
+We will build an App Component which has two LogIn and LogOut Components which access the state provided by the Context Provider and updates it accordingly.
+
+
+`AuthContext.js`
 
 ```markdown
 import React from 'react';
@@ -5148,7 +5155,7 @@ export default authContext;
 ```
 
 
-App.js 
+`App.js `
 
 
 ```markdown
@@ -5181,7 +5188,7 @@ export default App;
 ```
 
 
-Login.js
+`Login.js`
 
 ```json
 import React, { useContext } from 'react';
@@ -5198,7 +5205,7 @@ const Login = () => {
 export default Login;
 ```
 
-Logout.js
+`Logout.js`
 
 ```markdown
 import React, { useContext } from 'react';
@@ -5215,30 +5222,27 @@ const Logout = () => {
 export default Logout;
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+`Output:`
 
 ![image](images/usecontext1.png)
 
 ## useRef
 
-The useRef Hook allows you to persist values between renders.
+* The useRef Hook allows you to persist values between renders.
 
-It can be used to store a mutable value that does not cause a re-render when updated.
+* It can be used to store a mutable value that does not cause a re-render when updated.
 
-It can be used to access a DOM element directly.
+* It can be used to access a DOM element directly.
 
-<!--style="font-size:30px"-->
-Does Not Cause Re-renders
+`Does Not Cause Re-renders`
 
-If we tried to count how many times our application renders using the useState Hook, we would be caught in an 
-
-infinite loop since this Hook itself causes a re-render.
+If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite loop since this Hook itself causes a re-render.
 
 To avoid this, we can use the useRef Hook.
 
-<!--style="font-size:20px"-->
-Example:
+
+`Example:`
 
 Use useRef to track application renders.
 
@@ -5269,8 +5273,8 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
-<!--style="font-size:30px"-->
-Output
+
+`Output`
 
 ![image](images/useRef1.png)
 
@@ -5282,8 +5286,8 @@ It's like doing this: const count = {current: 0}. We can access the count by usi
 
 Run this on your computer and try typing in the input to see the application render count increase.
 
-<!--style="font-size:30px"-->
-Accessing DOM Elements
+
+`Accessing DOM Elements`
 
 In general, we want to let React handle all DOM manipulation.
 
@@ -5291,8 +5295,8 @@ But there are some instances where useRef can be used without causing issues.
 
 In React, we can add a ref attribute to an element to access it directly in the DOM.
 
-<!--style="font-size:20px"-->
-Example:
+
+`Example:`
 
 Use useRef to focus the input:
 
@@ -5319,20 +5323,20 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+`Output`
 
 ![image](images/useref2.png)
 
-<!--style="font-size:30px"-->
-Tracking State Changes
+
+`Tracking State Changes`
 
 The useRef Hook can also be used to keep track of previous state values.
 
 This is because we are able to persist useRef values between renders.
 
-<!--style="font-size:20px"-->
-Example:
+
+`Example:`
 
 Use useRef to keep track of previous state values:
 
@@ -5365,29 +5369,25 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+`Output`
 
 ![image](images/useref3.png)
 
 This time we use a combination of useState, useEffect, and useRef to keep track of the previous state.
 
-In the useEffect, we are updating the useRef current value each time the inputValue is updated by entering 
-
-text into the input field.
+In the useEffect, we are updating the useRef current value each time the inputValue is updated by entering text into the input field.
 
 ## useReducer
 
-The useReducer Hook is similar to the useState Hook.
+* The useReducer Hook is similar to the useState Hook.
 
-It allows for custom state logic.
+* It allows for custom state logic.
 
-If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be 
+* If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be useful.
 
-useful.
 
-<!--style="font-size:20px"-->
-Syntax
+`Syntax`
 
 The useReducer Hook accepts two arguments.
 
@@ -5403,8 +5403,7 @@ The useReducer Hook returns the current stateand a dispatchmethod.
 
 Here is an example of useReducer in a counter app:
 
-<!--style="font-size:20px"-->
-Example
+`Example`
 
 ```markdown
 import { useReducer } from "react";
@@ -5467,26 +5466,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Todos />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+`Output`
 
 ![image](images/usereducer1.png)
 
 
 ## useCallback
 
-The useCallback hook is used when you have a component in which the child is rerendering again and again 
+* The useCallback hook is used when you have a component in which the child is rerendering again and again without need.
 
-without need.
+* Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed. 
 
-Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the 
+* This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
 
-callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to 
 
-optimized child components that rely on reference equality to prevent unnecessary renders.
-
-<!--style="font-size:20px"-->
-Syntax:
+`Syntax:`
 
 ```markdown
 const memoizedCallback = useCallback(
@@ -5497,13 +5492,11 @@ const memoizedCallback = useCallback(
 );
 ```
 
-<!--style="font-size:30px"-->
-Without useCallback Hook:
+
+`Without useCallback Hook:`
 
 The problem is that once the counter is updated, all three functions are recreated again. The alert increases 
-
 by three at a time but if we update some states all the functions related to that states should only 
-
 re-instantiated. If another state value is unchanged, it should not be touched. Here, the filename is App.js
 
 ```markdown
@@ -5551,13 +5544,13 @@ return (
 export default App;
 ```
 
-<!--style="font-size:20px"-->
-Output
+
+`Output`
 
 ![image](images/callback1.png)
 
-<!--style="font-size:30px"-->
-With useCallback hook: 
+
+`With useCallback hook:` 
 
 To solve this problem we can use the useCallback hook. Here, the filename is App.js.
 
@@ -5605,46 +5598,24 @@ return (
 export default App;
 ```
 
-<!--style="font-size:20px"-->
-Output:
+`Output:`
 
-As we can see from the below output when we change the state ‘count’ then two functions will re-instantiated 
-
-so the set size will increase by 2 and when we update the state ‘number’ then only one function will 
-
-re-instantiated and the size of the set will increase by only one.
+As we can see from the below output when we change the state ‘count’ then two functions will re-instantiated so the set size will increase by 2 and when we update the state ‘number’ then only one function will re-instantiated and the size of the set will increase by only one.
 
 ![image](images/callback2.png)
 
 ## useMemo
 
-The useMemo is a hook used in the functional component of react that returns a memoized value. In Computer 
+The useMemo is a hook used in the functional component of react that returns a memoized value. In Computer Science, memoization is a concept used in general when we don’t need to recompute the function with a given argument for the next time as it returns the cached result. A memoized function remembers the results of output for a given set of inputs. For example, if there is a function to add two numbers, and we give the parameter as 1 and 2 for the first time the function will add these two numbers and return 3, but if the same inputs come again then we will return the cached value i.e 3 and not compute with the add function again. In react also, we use this concept, whenever in the React component, the state and props do not change the component and the component does not re-render, it shows the same output. The useMemo hook is used to improve performance in our React application.
 
-Science, memoization is a concept used in general when we don’t need to recompute the function with a given 
 
-argument for the next time as it returns the cached result. A memoized function remembers the results of 
-
-output for a given set of inputs. For example, if there is a function to add two numbers, and we give the 
-
-parameter as 1 and 2 for the first time the function will add these two numbers and return 3, but if the same 
-
-inputs come again then we will return the cached value i.e 3 and not compute with the add function again. In 
-
-react also, we use this concept, whenever in the React component, the state and props do not change the 
-
-component and the component does not re-render, it shows the same output. The useMemo hook is used to improve 
-
-performance in our React application.
-
-<!--style="font-size:20px"-->
-Syntax:
+`Syntax:`
 
 ```markdown
 const memoizedValue = useMemo(functionThatReturnsValue, arrayDependencies)
 ```
 
-<!--style="font-size:20px"-->
-Example: 
+`Example:` 
 
 When we don’t use the useMemo Hook.
 
@@ -5688,21 +5659,15 @@ return Math.pow(number, 2);
 export default App;
 ```
 
-<!--style="font-size:20px"-->
-Output: 
+
+`Output: `
 
 ![image](images/memo1.png)
 
-In the above example, we have an App component and this component is doing two things one is squaring a 
+In the above example, we have an App component and this component is doing two things one is squaring a number on the given input and incrementing the counter. We have two states here number and counter, whenever any of the states change the component re-renders. For example, if we change the input value of the number the function squareNum runs, and if increment the counter again the function squareNum runs. 
 
-number on the given input and incrementing the counter. We have two states here number and counter, whenever 
 
-any of the states change the component re-renders. For example, if we change the input value of the number 
-
-the function squareNum runs, and if increment the counter again the function squareNum runs. 
-
-<!--style="font-size:20px"-->
-Example: 
+`Example: `
 
 When we use useMemo Hook
 
@@ -5749,43 +5714,29 @@ return Math.pow(number, 2);
 export default App;
 ```
 
-<!--style="font-size:20px"-->
-Output: 
+
+`Output: `
 
 ![image](images/memo2.png)
 
-Now in the above example, we have used the user memo hook, here the function that returns the value i.e 
-
-squareNum is passed inside the useMemo and inside the array dependencies, we have used the number as the 
-
-squareNum will run only when the number changes. If we increase the counter and the number remains the same 
-
-in the input field the squareNum doesn’t run again
+Now in the above example, we have used the user memo hook, here the function that returns the value i.e squareNum is passed inside the useMemo and inside the array dependencies, we have used the number as the squareNum will run only when the number changes. If we increase the counter and the number remains the same in the input field the squareNum doesn’t run again
 
 
-Now we can see in the console that the squareNum is running only when there is a change in the input box and 
+Now we can see in the console that the squareNum is running only when there is a change in the input box and not when the button of the increment counter is clicked.
 
-not when the button of the increment counter is clicked.
-
-Note: Memorization is never free, we are trading space for time. 
+>Note: Memorization is never free, we are trading space for time. 
 
 ## custom hook
 
-Using custom hooks is an effective option in a case where we want to implement the derived functionality of 
+* Using custom hooks is an effective option in a case where we want to implement the derived functionality of both the useState and useEffect Hooks across many components.
 
-both the useState and useEffect Hooks across many components.
+*  We can simply reuse stateful behaviour across several components using custom React Hooks in a style that is both efficient and scalable. 
 
-We can simply reuse stateful behaviour across several components using custom React Hooks in a style that is 
+* Additionally, custom hooks result in a clear and organized codebase, which lessens complexity and duplication in your React project.
 
-both efficient and scalable. Additionally, custom hooks result in a clear and organized codebase, which 
+* As long as they adhere to the React Hooks standards, you are free to develop whatever custom hook you want to handle various logical scenarios.
 
-lessens complexity and duplication in your React project.
-
-As long as they adhere to the React Hooks standards, you are free to develop whatever custom hook you want to 
-
-handle various logical scenarios.
-
-Custom Hooks start with "use". Example: useFetch.
+* Custom Hooks start with "use". Example: useFetch.
 
 All the rules and usage guidelines are the same as that of the predefined ReactJS hooks like −
 
@@ -5793,15 +5744,13 @@ All the rules and usage guidelines are the same as that of the predefined ReactJ
 
 * Call Hooks from React Functions only
 
-<!--style="font-size:20px"-->
-Example
 
-In this example, we will build an input validator application that will display some text based on the 
+`Example`
 
-user-defined conditions in the custom hook.
+In this example, we will build an input validator application that will display some text based on the user-defined conditions in the custom hook.
 
-<!--style="font-size:20px"-->
-App.jsx
+
+`App.jsx`
 
 ```markdown
 import React from 'react';
@@ -5819,7 +5768,7 @@ const App = () => {
 export default App;
 ```
 
-customHook.jsx
+`customHook.jsx`
 
 ```markdown
 import React, { useState } from 'react';
@@ -5838,27 +5787,23 @@ const useForm = () => {
 export default useForm;
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+`Output`
 
 ![image](images/customhook1.png)
 
-In the above example, when the user types in the input field, then the custom hook is called which decides 
-
-whether the text is valid or not based on certain conditions.
+In the above example, when the user types in the input field, then the custom hook is called which decides whether the text is valid or not based on certain conditions.
 
 
 # React Flux 
 
-Flux is an application architecture that Facebook uses internally for building the client-side web 
+* Flux is an application architecture that Facebook uses internally for building the client-side web application with React. 
 
-application with React. It is not a library nor a framework. It is neither a library nor a framework. It is a 
+* It is not a library nor a framework. It is neither a library nor a framework. 
 
-kind of architecture that complements React as view and follows the concept of Unidirectional Data Flow 
+* It is a kind of architecture that complements React as view and follows the concept of Unidirectional Data Flow model. 
 
-model. It is useful when the project has dynamic data, and we need to keep the data updated in an effective 
-
-manner. It reduces the runtime errors.
+* It is useful when the project has dynamic data, and we need to keep the data updated in an effective manner. It reduces the runtime errors.
 
 Flux applications have three major roles in dealing with data:
 
@@ -5868,73 +5813,47 @@ Flux applications have three major roles in dealing with data:
 
 3. Views (React components)
 
-Here, you should not be confused with the Model-View-Controller (MVC) model. Although, Controllers exists in 
+Here, you should not be confused with the Model-View-Controller (MVC) model. Although, Controllers exists in both, but Flux controller-views (views) found at the top of the hierarchy. It retrieves data from the stores and then passes this data down to their children. Additionally, action creators - dispatcher helper methods used to describe all changes that are possible in the application. It can be useful as a fourth part of the Flux update cycle.
 
-both, but Flux controller-views (views) found at the top of the hierarchy. It retrieves data from the stores 
 
-and then passes this data down to their children. Additionally, action creators - dispatcher helper methods 
-
-used to describe all changes that are possible in the application. It can be useful as a fourth part of the 
-
-Flux update cycle.
-
-<!--style="font-size:30px"-->
-Structure and Data Flow
+`Structure and Data Flow`
 
 ![image](images/react-flux-concept.png)
 
-In Flux application, data flows in a single direction(unidirectional). This data flow is central to the flux 
+In Flux application, data flows in a single direction(unidirectional). This data flow is central to the flux pattern. The dispatcher, stores, and views are independent nodes with inputs and outputs. The actions are simple objects that contain new data and type property. Now, let us look at the various components of flux architecture one by one.
 
-pattern. The dispatcher, stores, and views are independent nodes with inputs and outputs. The actions are 
 
-simple objects that contain new data and type property. Now, let us look at the various components of flux 
+`Dispatcher`
 
-architecture one by one.
+* It is a central hub for the React Flux application and manages all data flow of your Flux application. It is a registry of callbacks into the stores. 
 
-<!--style="font-size:30px"-->
-Dispatcher
+* It has no real intelligence of its own, and simply acts as a mechanism for distributing the actions to the stores. 
 
-It is a central hub for the React Flux application and manages all data flow of your Flux application. It is 
+* All stores register itself and provide a callback. It is a place which handled all events that modify the store. 
 
-a registry of callbacks into the stores. It has no real intelligence of its own, and simply acts as a 
-
-mechanism for distributing the actions to the stores. All stores register itself and provide a callback. It 
-
-is a place which handled all events that modify the store. When an action creator provides a new action to 
-
-the dispatcher, all stores receive that action via the callbacks in the registry.
+* When an action creator provides a new action to the dispatcher, all stores receive that action via the callbacks in the registry.
 
 The dispatcher's API has five methods. These are:
 
 ![image](images/dispatcher.png)
 
-<!--style="font-size:30px"-->
-Stores
 
-It primarily contains the application state and logic. It is similar to the model in a traditional MVC. It is 
+`Stores`
 
-used for maintaining a particular state within the application, updates themselves in response to an action, 
+It primarily contains the application state and logic. It is similar to the model in a traditional MVC. It is used for maintaining a particular state within the application, updates themselves in response to an action, and emit the change event to alert the controller view.
 
-and emit the change event to alert the controller view.
 
-<!--style="font-size:30px"-->
-Views
+`Views`
 
-It is also called as controller-views. It is located at the top of the chain to store the logic to generate 
+It is also called as controller-views. It is located at the top of the chain to store the logic to generate actions and receive new data from the store. It is a React component listen to change events and receives the data from the stores and re-render the application.
 
-actions and receive new data from the store. It is a React component listen to change events and receives the 
 
-data from the stores and re-render the application.
+`Actions`
 
-<!--style="font-size:30px"-->
-Actions
+The dispatcher method allows us to trigger a dispatch to the store and include a payload of data, which we call an action. It is an action creator or helper methods that pass the data to the dispatcher.
 
-The dispatcher method allows us to trigger a dispatch to the store and include a payload of data, which we 
 
-call an action. It is an action creator or helper methods that pass the data to the dispatcher.
-
-<!--style="font-size:30px"-->
-Advantage of Flux
+`Advantage of Flux`
 
 * It is a unidirectional data flow model which is easy to understand.
 
@@ -5946,21 +5865,15 @@ Advantage of Flux
 
 # React Redux
 
-* Redux is an open-source JavaScript library used to manage application state. React uses Redux for building 
+* Redux is an open-source JavaScript library used to manage application state. React uses Redux for building the user interface. It was first introduced by Dan Abramov and Andrew Clark in 2015.
 
-the user interface. It was first introduced by Dan Abramov and Andrew Clark in 2015.
+* React Redux is the official React binding for Redux. It allows React components to read data from a Redux Store, and dispatch Actions to the Store to update data. 
 
-* React Redux is the official React binding for Redux. It allows React components to read data from a Redux 
+* Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model. React Redux is conceptually simple. 
 
-Store, and dispatch Actions to the Store to update data. Redux helps apps to scale by providing a sensible 
+* It subscribes to the Redux store, checks to see if the data which your component wants have changed, and re-renders your component.
 
-way to manage state through a unidirectional data flow model. React Redux is conceptually simple. It 
-
-subscribes to the Redux store, checks to see if the data which your component wants have changed, and 
-
-re-renders your component.
-
-Redux was inspired by Flux. Redux studied the Flux architecture and omitted unnecessary complexity.
+* Redux was inspired by Flux. Redux studied the Flux architecture and omitted unnecessary complexity.
 
 * Redux does not have Dispatcher concept.
 
@@ -5968,65 +5881,51 @@ Redux was inspired by Flux. Redux studied the Flux architecture and omitted unne
 
 * The Action objects will be received and handled directly by Store.
 
-<!--style="font-size:30px"-->
-Why Use React Redux?
+
+`Why Use React Redux?`
 
 The main reason to use React Redux are:
 
-1. React Redux is the official UI bindings for react Application. It is kept up-to-date with any API changes 
-
-to ensure that your React components behave as expected.
+1. React Redux is the official UI bindings for react Application. It is kept up-to-date with any API changes to ensure that your React components behave as expected.
 
 2. It encourages good 'React' architecture.
 
-3. It implements many performance optimizations internally, which allows to components re-render only when it 
+3. It implements many performance optimizations internally, which allows to components re-render only when actually needs.
 
-actually needs.
 
-<!--style="font-size:30px"-->
-Redux Architecture
+`Redux Architecture`
 
 ![image](images/react-redux-architecture.png)
 
 The components of Redux architecture are explained below.
 
-STORE: A Store is a place where the entire state of your application lists. It manages the status of the 
+`STORE:` A Store is a place where the entire state of your application lists. It manages the status of the application and has a dispatch(action) function. It is like a brain responsible for all moving parts in Redux.
 
-application and has a dispatch(action) function. It is like a brain responsible for all moving parts in Redux.
+`ACTION:` Action is sent or dispatched from the view which are payloads that can be read by Reducers. It is a pure object created to store the information of the user's event. It includes information such as type of action, time of occurrence, location of occurrence, its coordinates, and which state it aims to change.
 
-ACTION: Action is sent or dispatched from the view which are payloads that can be read by Reducers. It is a 
+`REDUCER:` Reducer read the payloads from the actions and then updates the store via the state accordingly. It is a pure function to return a new state from the initial state.
 
-pure object created to store the information of the user's event. It includes information such as type of 
 
-action, time of occurrence, location of occurrence, its coordinates, and which state it aims to change.
+`Redux Installation`
 
-REDUCER: Reducer read the payloads from the actions and then updates the store via the state accordingly. It 
-
-is a pure function to return a new state from the initial state.
-
-<!--style="font-size:30px"-->
-Redux Installation
-
-Requirements: React Redux requires React 16.8.3 or later version.
+`Requirements:` React Redux requires React 16.8.3 or later version.
 
 To use React Redux with React application, you need to install the below command.
 
----> $ npm install redux react-redux --save  
+```
+ $ npm install redux react-redux --save 
+``` 
 
 # React Error Boundaries
 
-A JavaScript error in a part of the UI shouldn’t break the whole app. To solve this problem for React users, 
+* A JavaScript error in a part of the UI shouldn’t break the whole app. To solve this problem for React users, React 16 introduces a new concept of an “error boundary”.
 
-React 16 introduces a new concept of an “error boundary”.
+* Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. 
 
-Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, 
+* Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
 
-log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries 
 
-catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
-
-<!--style="font-size:20px;color-blue;"-->
-Note:
+`Note:`
 
 Error boundaries do not catch errors for:
 
@@ -6038,36 +5937,22 @@ Error boundaries do not catch errors for:
 
 * Errors thrown in the error boundary itself (rather than its children)
 
-<!--style="font-size:30px"-->
-* Error boundary in class
 
-A class component can becomes an error boundary if it defines a new lifecycle methods either static 
+* `Error boundary in class`
 
-getDerivedStateFromError() or componentDidCatch(error, info). We can use static getDerivedStateFromError() to 
+A class component can becomes an error boundary if it defines a new lifecycle methods either static getDerivedStateFromError() or componentDidCatch(error, info). We can use static getDerivedStateFromError() to render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.An error boundary can?t catch the error within itself. If the error boundary fails to render the error message, the error will go to the closest error boundary above it. It is similar to the catch {} block in JavaScript.
 
-render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.
 
-An error boundary can?t catch the error within itself. If the error boundary fails to render the error 
+`How to implement error boundaries`
 
-message, the error will go to the closest error boundary above it. It is similar to the catch {} block in 
+`Step-1` Create a class which extends React component and passes the props inside it.
 
-JavaScript.
+`Step-2` Now, add componentDidCatch() method which allows you to catch error in the components below them in the tree.
 
-<!--style="font-size:20px"-->
-How to implement error boundaries
+`Step-3` Next add render() method, which is responsible for how the component should be rendered. For example, it will display the error message like "Something is wrong."
 
-Step-1 Create a class which extends React component and passes the props inside it.
 
-Step-2 Now, add componentDidCatch() method which allows you to catch error in the components below them in 
-
-the tree.
-
-Step-3 Next add render() method, which is responsible for how the component should be rendered. For example, 
-
-it will display the error message like "Something is wrong."
-
-<!--style="font-size:20px"-->
-Example
+`Example`
 
 ```markdown
 class ErrorBoundary extends React.Component {  
@@ -6094,9 +5979,7 @@ class ErrorBoundary extends React.Component {
 }  
 ```
 
-Step-4 Now, we can use it as a regular component. Add the new component in HTML, which you want to include in 
-
-the error boundary. In this example, we are adding an error boundary around a MyWidgetCounter component.
+`Step-4` Now, we can use it as a regular component. Add the new component in HTML, which you want to include in the error boundary. In this example, we are adding an error boundary around a MyWidgetCounter component.
 
 ```htm
 <ErrorBoundary>  
@@ -6104,14 +5987,12 @@ the error boundary. In this example, we are adding an error boundary around a My
 </ErrorBoundary> 
 ``` 
 
-<!--style="font-size:30px"-->
-* Where to Place Error Boundaries
 
-An error boundary entirely depends on you. You can use error boundaries on the top-level of the app 
+* `Where to Place Error Boundaries`
 
-components or wrap it on the individual components to protect them from breaking the other parts of the app.
+An error boundary entirely depends on you. You can use error boundaries on the top-level of the app components or wrap it on the individual components to protect them from breaking the other parts of the app.
 
-Let us see an example.
+`Example.`
 
 ```markdown
 import React from 'react';  
@@ -6189,15 +6070,9 @@ function App() {
 export default App  
 ```
 
-In the above code snippet, when we click on the numbers, it increases the counters. The counter is programmed 
+In the above code snippet, when we click on the numbers, it increases the counters. The counter is programmed to throw an error when it reaches 3. It simulates a JavaScript error in a component. Here, we used an error boundary in two ways, which are given below.
 
-to throw an error when it reaches 3. It simulates a JavaScript error in a component. Here, we used an error 
-
-boundary in two ways, which are given below.
-
-First, these two counters are inside the same error boundary. If anyone crashes, the error boundary will 
-
-replace both of them.
+First, these two counters are inside the same error boundary. If anyone crashes, the error boundary will replace both of them.
 
 ```markdown
 <ErrorBoundary>  
@@ -6206,17 +6081,15 @@ replace both of them.
 </ErrorBoundary>  
 ```
 
-Second, these two counters are inside of their individual error boundary. So if anyone crashes, the other is 
-
-not affected.
+Second, these two counters are inside of their individual error boundary. So if anyone crashes, the other is not affected.
 
 ```htm
 <ErrorBoundary><BuggyCounter /></ErrorBoundary>  
 <ErrorBoundary><BuggyCounter /></ErrorBoundary>  
 ```
 
-<!--style="font-size:20px"-->
-Output:
+
+`Output:`
 
 When we execute the above code, we will get the following output.
 
@@ -6227,24 +6100,20 @@ When the counter has reached at 3, it gives the following output.
 ![image](images/react-error-boundaries2.png)
 
 
-<!--style="font-size:20px"-->
-New Behavior for Uncaught error
 
-It is an important implication related to error boundaries. If the error does not catch by any error 
+`New Behavior for Uncaught error`
 
-boundary, it will result in unmounting of the whole React application.
+It is an important implication related to error boundaries. If the error does not catch by any error boundary, it will result in unmounting of the whole React application.
 
 
-<!--style="font-size:30px"-->
-* Error Boundary in Event Handler
 
-Error boundaries do not allow catching errors inside event handlers. React does not need any error boundary 
+* `Error Boundary in Event Handler`
 
-to recover from errors in the event handler. If there is a need to catch errors in the event handler, you can 
-
-use JavaScript try-catch statement.
+Error boundaries do not allow catching errors inside event handlers. React does not need any error boundary to recover from errors in the event handler. If there is a need to catch errors in the event handler, you can use JavaScript try-catch statement.
 
 In the below example, you can see how an event handler will handle the errors.
+
+`Example:`
 
 ```markdown
 class MyComponent extends React.Component {  
@@ -6275,50 +6144,26 @@ class MyComponent extends React.Component {
 
 # Unit Testing in React
 
-Unit testing is a method of testing that tests the individual software unit in theprocess of isolation. Check 
+* Unit testing is a method of testing that tests the individual software unit in theprocess of isolation. Check the output of a function for any given input.
 
-the output of a function for any given input.
+* It means verifying that the component renders for any specific accessory to react components.
 
-It means verifying that the component renders for any specific accessory to react components.
-
-In other words, to writing a unit tests is also alike writing code that verifies the code works as expected.
+* In other words, to writing a unit tests is also alike writing code that verifies the code works as expected.
 
 
-<!--style="font-size:20px"-->
-What is the Distinction between Unit Testing, Integration Testing, and End-to-end Testing?
 
-A unit test tests the smallest code unit, which is possible, and any dependencies the component may have.
+`What is the Distinction between Unit Testing, Integration Testing, and End-to-end Testing?`
 
-Integration tests test the work of multiple components that work together. The tests give the best 
-
-understanding of user experiences with the application.
-
-The downside of testing is that finding the component that caused the test to break is more complicated. 
-
-While we failed in unit tests that indicate a problem in a particular component, a broken integration test 
-
-can be caused by many components, and it's not an explicit component that caused it.
-
-End-to-end testing is called user interface testing, which takes integration testing by testing the entire 
-
-system from the user's point of view.
-
-The tests cannot know the system, and it focuses on the system from the point ofview of users.
-
-The tests click by the application and verify the user interface matches the expected results, and it is the 
-
-result of manual and automation testing.
+A unit test tests the smallest code unit, which is possible, and any dependencies the component may have.Integration tests test the work of multiple components that work together. The tests give the best understanding of user experiences with the application.The downside of testing is that finding the component that caused the test to break is more complicated. While we failed in unit tests that indicate a problem in a particular component, a broken integration test can be caused by many components, and it's not an explicit component that caused it.End-to-end testing is called user interface testing, which takes integration testing by testing the entire system from the user's point of view.The tests cannot know the system, and it focuses on the system from the point ofview of users.The tests click by the application and verify the user interface matches the expected results, and it is the result of manual and automation testing.
 
 The straightforward thing is to look at the pyramid oftests to explain the tests which will work together:
 
 ![image](images/unit-testing-in-react.jpg)
 
-Unit test is the base of the pyramidbecause it is supposed to lay the foundation of tests. Itis easier to 
+Unit test is the base of the pyramidbecause it is supposed to lay the foundation of tests. Itis easier to write and is the best written for writing code and fixingbugs.
 
-write and is the best written for writing code and fixingbugs.
 
-<!--style="font-size:20px"-->
-What is the purpose of unit tests?
+`What is the purpose of unit tests?`
 
 There are many reasons why unit tests will be helpful. Some of them are below:
 
@@ -6328,38 +6173,21 @@ There are many reasons why unit tests will be helpful. Some of them are below:
 
 * Faster feedback in the development
 
-These are valid points, but the main advantages of writing unit tests are to improving the coding style.
+These are valid points, but the main advantages of writing unit tests are to improving the coding style.Writing the tests during or before implementing the feature gives us a better idea of the requirements. Write the code that is loosely coupled and easier to test. It was with refactoring a code snippet to make it easier to test in the first place.For example, we extract the functions into the separate file to make the code easier to test. After that, the result is less coupled.
 
-Writing the tests during or before implementing the feature gives us a better idea of the requirements. Write 
 
-the code that is loosely coupled and easier to test. It was with refactoring a code snippet to make it easier 
-
-to test in the first place.
-
-For example, we extract the functions into the separate file to make the code easier to test. After that, the 
-
-result is less coupled.
-
-<!--style="font-size:20px"-->
-* The primary intent of unit tests:
+* `The primary intent of unit tests`
 
 It has prevented us from sending bugs to production on a few occasions.
 
 Unit tests help us with all points. They form the foundation of any solid test suite for a good reason.
 
 
-<!--style="font-size:20px"-->
-When should you write a unit test?
+`When should you write a unit test?`
 
-There are so many opinions about when to write the unit tests. We can write by Test-Driven Development (TDD) 
+There are so many opinions about when to write the unit tests. We can write by Test-Driven Development (TDD) which tells us to write test cases before writing the code, and prefer to write the unit tests when the code has been written.
 
-which tells us to write test cases before writing the code, and prefer to write the unit tests when the code 
-
-has been written.
-
-The most significant advantage of unit testing is when you write tests during the actual deployment, that 
-
-doesn't mean we have to follow the advice.
+The most significant advantage of unit testing is when you write tests during the actual deployment, that doesn't mean we have to follow the advice.
 
 It is the best idea to write test cases in the following situations:
 
@@ -6370,12 +6198,9 @@ It is the best idea to write test cases in the following situations:
 * Before correcting a mistake
 
 
-<!--style="font-size:30px"-->
-What tools do we need to get started with unit testing in React?
+`What tools do we need to get started with unit testing in React?`
 
-So now we know that unit tests are, used to start writing the first test. Let's see at the tools that will 
-
-use to write automated tests.
+So now we know that unit tests are, used to start writing the first test. Let's see at the tools that will use to write automated tests.
 
 To start writing unit tests in React, you only need the below two types of tools.
 
@@ -6383,76 +6208,44 @@ To start writing unit tests in React, you only need the below two types of tools
 
 * Testing utilities
 
-<!--style="font-size:30px"-->
-Testing a component involving state
 
-Note that there are two sets of testing where we can testour class component.
+`Testing a component involving state`
 
-* Behavioral.
+>Note that there are two sets of testing where we can testour class component.
 
-We can simulate a click on the button and see the button's text has changed. We are seeing the 
+* `Behavioral`.
 
-behavior of user and testing the expected change.
+We can simulate a click on the button and see the button's text has changed. We are seeing the behavior of user and testing the expected change.
 
 * Component-based.
 
- It tests the toggle method of the component and looks if it does then what we expect it to 
-
-do. Itis helpful when the toggle function is more complicated, and wants to test different scenarios of unit 
-
-testing.
+It tests the toggle method of the component and looks if it does then what we expect it to do. Itis helpful when the toggle function is more complicated, and wants to test different scenarios of unit testing.
 
 The combination of two gives us higher confidence.
 
+`Prerequisites for React unit testing`
 
-<!--style="font-size:30px"-->
-Prerequisites for React unit testing
-
-We use two viral libraries named Jest and Enzyme to do the unit testing. Jest is a very popular librarywhich 
-
-is written by Facebook and itbecamepopular in the sometimes (You could use other libraries such as mocha or 
-
-chai in place of Jest).
-
-Jest helps us do all the assertions, and Enzyme helps usrender React components in testing mode. We will see 
-
-both in detail below.
+We use two viral libraries named Jest and Enzyme to do the unit testing. Jest is a very popular librarywhich is written by Facebook and itbecamepopular in the sometimes (You could use other libraries such as mocha or chai in place of Jest).Jest helps us do all the assertions, and Enzyme helps usrender React components in testing mode. We will see both in detail below.
 
 Let's take a look at the widely used tools for testing React apps:
 
+`Jest`
 
-<!--style="font-size:30px"-->
-Jest
+In React, the most often used test runner is Jest. We can run Jest in watch mode, which can run our tests every time we save the file.Jest is a test runner that runs all our test suites and test cases. Jest is previously introduced in testing JavaScript and React applications. We have to call Jest from the command line to run the test cases. We can have additional configurations for Jest custom setup.
 
-In React, the most often used test runner is Jest. We can run Jest in watch mode, which can run our tests 
-
-every time we save the file.
-
-Jest is a test runner that runs all our test suites and test cases. Jest is previously introduced in testing 
-
-JavaScript and React applications. We have to call Jest from the command line to run the test cases. We can 
-
-have additional configurations for Jest custom setup.
-
-
-<!--style="font-size:30px"-->
-Installation
+`Installation`
 
 ```markdown
 npm install --save-dev Jest  
 ```
 
-Jest provides the configuration file to mention the additional configurations. We provide the file path in 
-
-the package, and the JSON file is below:
+Jest provides the configuration file to mention the additional configurations. We provide the file path in the package, and the JSON file is below:
 
 ```markdown
 --config <path/to/file.js/mjs/cjs/json>  
 ```
 
-Let us create a jest.config.json file in the root folder and sum the script in the package.json file to run 
-
-our tests:
+Let us create a jest.config.json file in the root folder and sum the script in the package.json file to run our tests:
 
 ```markdown
 {  
@@ -6465,42 +6258,30 @@ our tests:
 ```
 
 
-Let us create a jest.config.json file in the root folder and sum the script in the package.json file to run 
+Let us create a jest.config.json file in the root folder and sum the script in the package.json file to run our tests:
 
-our tests:
 
-<!--style="font-size:30px"-->
-Enzyme
+`Enzyme`
 
-The Enzyme came into the field in December 2015. It is an addition to react, simplifying the output testing 
+* The Enzyme came into the field in December 2015. It is an addition to react, simplifying the output testing in React components.
 
-in React components.
+* The Enzyme is a library used with the Jest in so many test libraries, and it is used to render components and traverse the DOM.
 
-The Enzyme is a library used with the Jest in so many test libraries, and it is used to render components and 
+* If we build a React app, Jest and Enzyme are the best combinations for testing React apps.
 
-traverse the DOM.
+* Jest is a test runner which is mainly used to execute the test cases with assertions. And, at the same, Enzyme is a library that is used with Jest library, that provides the rendering techniques like (shallow, mount, etc.) for React components and traverses the rendered output of the DOM.
 
-If we build a React app, Jest and Enzyme are the best combinations for testing React apps.
 
-Jest is a test runner which is mainly used to execute the test cases with assertions. And, at the same, 
+`Let's look at the enzyme setup:`
 
-Enzyme is a library that is used with Jest library, that provides the rendering techniques like (shallow, 
 
-mount, etc.) for React components and traverses the rendered output of the DOM.
-
-<!--style="font-size:30px"-->
-Let's look at the enzyme setup:
-
-<!--style="font-size:20px"-->
-Installation
+`Installation`
 
 ```markdown
 npm install --save-dev Enzyme 
 ``` 
 
-Enzymes provide the adapters to work with many versions of React.So, install the adapter in theReact. Next, 
-
-we are installing React16below.
+Enzymes provide the adapters to work with many versions of React.So, install the adapter in theReact. Next, we are installing React16below.
 
 ```markdown
 npm install --save-dev enzyme-adapter-react-16  
@@ -6527,22 +6308,13 @@ You have to installed an enzyme in your environment.
 
 It is essential to decide what is required for the test and what should be left out of it.
 
-So that, considering the next person after you to manage those test cases, there aren't a lot of unnecessary 
+So that, considering the next person after you to manage those test cases, there aren't a lot of unnecessary test and snapshot files left behind.
 
-test and snapshot files left behind.
+For each component for unit testing, start with small and stateless components and then move on to rigid components. So that if any complex reacts component includes another minor component already tested, that will make the process easier.
 
-For each component for unit testing, start with small and stateless components and then move on to rigid 
+However, in thetest-driven development (TDD) process, you should first decide and write test cases that initially fail and eventually develop the functionality of the test cases that will pass.
 
-components. So that if any complex reacts component includes another minor component already tested, that 
-
-will make the process easier.
-
-However, in thetest-driven development (TDD) process, you should first decide and write test cases that 
-
-initially fail and eventually develop the functionality of the test cases that will pass.
-
-<!--style="font-size:30px"-->
-Consider a small example to understand:
+`Consider a small example to understand:`
 
 1. 
 
@@ -6590,14 +6362,12 @@ export default User;
 
 A Display Name component that receives a Name property as props and renders it.
 
-The User component in the text input as the Name property validates the username for setting the error if an 
-
-error is found.
+The User component in the text input as the Name property validates the username for setting the error if an error is found.
 
 We have exported two components and the validation function use in our further tests.
 
-<!--style="font-size:30px"-->
-Unit testing the above example:
+
+`Unit testing the above example:`
 
 There aretwo main approaches to test the React components:
 
@@ -6605,24 +6375,16 @@ There aretwo main approaches to test the React components:
 
 * Logical/functional testing
 
+1. `Snapshot Testing`
 
-<!--style="font-size:30px"-->
-1. Snapshot Testing
-
-Snapshot Test generates a snapshot of the component in the current state and stores it in a folder named 
-
-"__snapshots__."when you run the test.
+Snapshot Test generates a snapshot of the component in the current state and stores it in a folder named "__snapshots__."when you run the test.
 
 So, next time we change the component or modify it to rerun the test;
 
-A new snapshot is taken If it fails, which is clearly shows the difference between snapshots provided by the 
+A new snapshot is taken If it fails, which is clearly shows the difference between snapshots provided by the output of the component. If a test fails, we can either accept or reject the change and modify the component accordingly.
 
-output of the component. If a test fails, we can either accept or reject the change and modify the component 
 
-accordingly.
-
-<!--style="font-size:30px"-->
-How is Snapshot Testing done?
+`How is Snapshot Testing done?`
 
 Previously, we need to install the react-test-rendererutility to render the component atthe test.
 
@@ -6646,13 +6408,7 @@ describe('DisplayName', () => {
 ```
 
 
-Previously, we rendered the component displayName,converted it to JSON, and checked if it matched the 
-
-previous snapshot. Let's run the test by the "npm run test" command on cmd and see.
-
-For the first time, if you run the test, it generates a snapshot of the components' output and store it in 
-
-a"__snapshots__" folder. Wesee what kind of structure it stores.
+Previously, we rendered the component displayName,converted it to JSON, and checked if it matched the previous snapshot. Let's run the test by the "npm run test" command on cmd and see.For the first time, if you run the test, it generates a snapshot of the components' output and store it in a"__snapshots__" folder. Wesee what kind of structure it stores.
 
 Now, Replace Display Name component and run the test again:
 
@@ -6670,19 +6426,13 @@ export default DisplayName;
 
 ![image](images/unit-testing-in-react2.png)
 
-We can see that it shows the changes in the component, and the test fails because it cannot match the last 
+We can see that it shows the changes in the component, and the test fails because it cannot match the last snapshot.
 
-snapshot.
-
-Here is an implementation changeto fix it.You need to update the snapshot it represents a bug is found in the 
-
-component to fix it. We can update the snapshot by using the "-u" option.
+Here is an implementation changeto fix it.You need to update the snapshot it represents a bug is found in the component to fix it. We can update the snapshot by using the "-u" option.
 
 Similarly, we add a snapshot test for the parent component.
 
-
-<!--style="font-size:30px"-->
-2. Logical/Functional Testing
+1. `Logical/Functional Testing`
 
 We can add some test cases and more tests in our code for testing the validation function.
 
@@ -6712,34 +6462,27 @@ describe('Validation',()=>{
 })  
 ```
 
-<!--style="font-size:20px"-->
-We have added two test cases here:
+
+`We have added two test cases here`
 
 * It checks if any error message will send if the user passes any number of inputsofthe name.
 
 * It checks the error message if it reactswith false where input box is empty at the name property.
 
-So,it covers the possible outcomes where the application has crashed in logic that we have forgotten to 
-
-handle at the development time.
+So,it covers the possible outcomes where the application has crashed in logic that we have forgotten to handle at the development time.
 
 Now, we can see the below-given output if we run the tests.
 
 ![image](images/unit-testing-in-react3.png)
 
-If the validation fails, the running tests will inform you; all tests will pass. Keeping the logic separate 
-
-helps a lot in complex code to be tested in possible cases and seems like cleaner way to understand the code.
+If the validation fails, the running tests will inform you; all tests will pass. Keeping the logic separate helps a lot in complex code to be tested in possible cases and seems like cleaner way to understand the code.
 
 
-<!--style="font-size:30px"-->
-Reaction test library
+`Reaction test library`
 
 Unlike Enzyme, react-testing-library focuses on the user behavior rather than the implementation.
 
-The focus is on checking for correct output for a set of props, by using the react test library which is 
-
-writing end-to-end tests for the components in Enzyme:
+The focus is on checking for correct output for a set of props, by using the react test library which is writing end-to-end tests for the components in Enzyme:
 
 ```markdown
 render(<Login />)  
@@ -6763,24 +6506,16 @@ render(<Login />)
 
 If you're not sure what you have to test,test what you expect the component to render.
 
-Test all the different states of this component(s). If you expect different things to be rendered based on 
-
-the props passed in, render the external component with different props and make the appropriate assertions.
+Test all the different states of this component(s). If you expect different things to be rendered based on the props passed in, render the external component with different props and make the appropriate assertions.
 
 For example, when you click or hover a button test, you have something to happen.
 
-If you are providing a custom button component and pass a color prop with a value of red, then you can test 
+If you are providing a custom button component and pass a color prop with a value of red, then you can test it, and it give you the confidence that the component meets the design requirements.
 
-it, and it give you the confidence that the component meets the design requirements.
 
-<!--style="font-size:30px"-->
-Conclusion
+`Conclusion`
 
-It is very important to write unit tests, which is the simplest type of tests, and project to increase 
-
-confidence and the code correctness. We have to aim for a higher percentage of code coverage to make it the 
-
-part of workflow to write the unit test cases.
+It is very important to write unit tests, which is the simplest type of tests, and project to increase confidence and the code correctness. We have to aim for a higher percentage of code coverage to make it the part of workflow to write the unit test cases.
 
 
 # Reference Notes Link:
@@ -6794,8 +6529,6 @@ part of workflow to write the unit test cases.
 
 * https://www.geeksforgeeks.org/reactjs-tutorials/
 
-<!--style="font-size:30px"-->
-Video Reference
 
 * https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3
 
