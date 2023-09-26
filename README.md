@@ -1,16 +1,22 @@
 # React
 
-React is a JavaScript library for building user interfaces.
+* React is a JavaScript library for building user interfaces.
 
-React is used to build single-page applications.
+* React allows us to create reusable UI components.
 
-React allows us to create reusable UI components.
+* It was developed by Facebook and is often used for creating single-page applications (SPAs) and mobile applications.
 
+* React is known for its efficiency and flexibility in managing the UI of web applications.
 
-**Define UI**
+`Define UI`
 
 The User Interface (UI) is the point of human-computer interaction and communication in a device. UI encompasses all the visual and interactive elements through which users interact with software, websites, applications, and devices to perform tasks, access information, or achieve specific goals.
 
+`There are two primary types of user interfaces:`
+
+`Graphical User Interface (GUI):` GUI is the most common type of user interface and is characterized by graphical elements such as icons, buttons, windows, and menus. Users interact with GUIs by using input devices like a mouse, keyboard, or touch screen. Operating systems like Windows, macOS, and most mobile apps use GUIs.
+
+`Command Line Interface (CLI):` CLI is a text-based user interface where users interact with a program or system by typing commands in a terminal or console. It is commonly used by developers, system administrators, and power users for tasks that require precise control and automation. Popular CLI environments include the Windows Command Prompt, macOS Terminal, and various Linux shells.
 
 
 ![reactjsLogo](/images/react-js-icon.png)
@@ -26,7 +32,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 * React is used to create modular user interfaces and promotes the development of reusable UI components that display dynamic data.
 
 
-**Why React?**
+`Why React?`
 
 * Created and Maintained By facebook.
 
@@ -38,7 +44,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * Offers performance optimization, JSX, and wide adoption, making it a top choice for dynamic web applications.
 
-### How does React works?
+## How does React works?
 
 * React works by creating a virtual representation of the UI called the Virtual DOM in memory.
 
@@ -50,7 +56,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * React finds out what changes have been made, and changes only what needs to be changed.
 
-### React.js History
+## React.js History
 
 * Current version of React.JS is V18.0.0 (April 2022).
 
@@ -64,29 +70,29 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * create-react-app includes built tools such as webpack, Babel, and ESLint.
 
-## React Features
+# React Features
 
-* **Component-Based Architecture:** Building UIs using reusable and self-contained components for easier development and maintenance.
+* `Component-Based Architecture:` Building UIs using reusable and self-contained components for easier development and maintenance.
 
-* **Virtual DOM:** Efficiently updates the actual DOM by minimizing direct manipulations, resulting in better performance.
+* `Virtual DOM:` Efficiently updates the actual DOM by minimizing direct manipulations, resulting in better performance.
 
-* **Declarative Syntax:** Describes UI based on state, making it easier to manage and understand.
+* `Declarative Syntax:` Describes UI based on state, making it easier to manage and understand.
 
-* **Unidirectional Data Flow:** Ensures predictable updates by flowing data in one direction.
+* `Unidirectional Data Flow:` Ensures predictable updates by flowing data in one direction.
 
-* **JSX:** Embeds HTML-like syntax within JavaScript for intuitive UI representation.
+* `JSX:` Embeds HTML-like syntax within JavaScript for intuitive UI representation.
 
-* **Component Lifecycle:** Allows control over component creation, update, and destruction.
+* `Component Lifecycle:` Allows control over component creation, update, and destruction.
 
-* **State and Props:** Manages component-specific and passed data for dynamic UIs.
+* `State and Props:` Manages component-specific and passed data for dynamic UIs.
 
-* **Hooks:** Offers state and lifecycle functionalities to functional components.
+* `Hooks:` Offers state and lifecycle functionalities to functional components.
 
-* **Context API:** Facilitates state sharing across components without prop drilling.
+* `Context API:`Facilitates state sharing across components without prop drilling.
 
-* **Ecosystem:** Rich collection of libraries and tools for diverse functionalities.
+* `Ecosystem:` Rich collection of libraries and tools for diverse functionalities.
 
-* **License:** React is licensed under the Facebook Inc. Documentation is licensed under CC BY 4.0.
+* `License:` React is licensed under the Facebook Inc. Documentation is licensed under CC BY 4.0.
 
 ## React Advantages
 
@@ -126,7 +132,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 •	UI Focus (may require additional libraries for non-UI features)
 
 
-**Prerequisites for React?**
+`Prerequisites for React?`
 
 1: Basic Knowledge of Html , css and Javascript.
 
@@ -135,17 +141,17 @@ The User Interface (UI) is the point of human-computer interaction and communica
 3: Basic Understanding of how to use npm(Node Package Manager).
 
 
-## React JS Environment Setup
+# React JS Environment Setup
 
 To run any React application, we need to first setup a ReactJS Development Environment.
 
-**Pre-requisite:** We must have NodeJS and npx installed on our PC.
+`Pre-requisite:` We must have NodeJS and npx installed on our PC.
 
-ReactJS Installation:Using create-react-app(faster method)
+`ReactJS Installation:`Using create-react-app(faster method)
 
-**Step 1:** Navigate to the folder where you want to create the project and open it in terminal
+`Step 1:` Navigate to the folder where you want to create the project and open it in terminal
 
-**Step 2:** In the terminal of the application directory type the following command
+`Step 2:` In the terminal of the application directory type the following command
 
 ```
 npx create-react-app <<Application_Name>>
@@ -156,7 +162,7 @@ npx create-react-app <<Application_Name>>
 
 ![environment](/images/ES2.png)
 
-**Step 3:** Navigate to the newly created folder using the command
+`Step 3:` Navigate to the newly created folder using the command
 
 ```
 cd <<Application_Name>>
@@ -164,16 +170,16 @@ cd <<Application_Name>>
 ```
 ![environment](/images/ES3.png)
 
-**Step 4:** A default application will be created with the following project structure and dependencies.
+`Step 4:` A default application will be created with the following project structure and dependencies.
 
-**Step 5:** To run this application type the following command in terminal.
+`Step 5:` To run this application type the following command in terminal.
 
 ```
 npm start
 
 ```
 
-**Step 6:** The following output will be displayed in the browser.
+`Step 6:` The following output will be displayed in the browser.
 
 ![environment](/images/ES4.png)
 
@@ -181,47 +187,49 @@ npm start
 
 In React application, there are several files and folders in the root directory. Some of them are as follows:
 
-1. node_modules: It contains the React library and any other third party libraries needed.
+1. `node_modules:` It contains the React library and any other third party libraries needed.
 
-2. public: It holds the public assets of the application. It contains the index.html where React will mount 
+2. `public:` It holds the public assets of the application. It contains the index.html where React will mount the application by default on the   
+  ` <div id="root"></div>` element.
 
-the application by default on the` <div id="root"></div>` element.
+3. `src:` It contains the App.css, App.js, App.test.js, index.css, index.js, and serviceWorker.js files. Here, the App.js file always responsible for displaying the output screen in React.
 
-3. src: It contains the App.css, App.js, App.test.js, index.css, index.js, and serviceWorker.js files. Here, 
+4. `package-lock.json:` It is generated automatically for any operations where npm package modifies either the node_modules tree or package.json. It cannot be published. It will be ignored if it finds any other place rather than the top-level package.
 
-the App.js file always responsible for displaying the output screen in React.
+5. `package.json:` It holds various metadata required for the project. It gives information to npm, which allows to identify the project as well as handle the project?s dependencies.
 
-4. package-lock.json: It is generated automatically for any operations where npm package modifies either the 
+6. `README.md:` It provides the documentation to read about React topics.
 
-node_modules tree or package.json. It cannot be published. It will be ignored if it finds any other place 
+# React ES6
 
-rather than the top-level package.
+`What is ES6?`
 
-5. package.json: It holds various metadata required for the project. It gives information to npm, which 
+* ES6 stands for ECMAScript 6.
 
-allows to identify the project as well as handle the project?s dependencies.
+* ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.
 
-6. README.md: It provides the documentation to read about React topics.
+* ECMAScript is a scripting language specification that defines the core features of JavaScript, the most widely used programming language for web development. 
 
-## React ES6
+* ES6 introduced significant enhancements and new features to the JavaScript language, making it more powerful, expressive, and developer-friendly.
 
-What is ES6?
-
-ES6 stands for ECMAScript 6.
-
-ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.
-
-Why should I learn ES6?
+`Why should I learn ES6?`
 
 React uses ES6, and you should be familiar with some of the new features like:
 
 1. Classes
+   
 2. Arrow Functions
+
 3. Variables (let, const, var)
+
 4. Array Methods like .map()
+
 5. Destructuring
+
 6. Modules
+
 7. Ternary Operator
+
 8. Spread Operator
 
 ## ES6 Classes
@@ -230,9 +238,22 @@ ES6 introduced classes.
 
 A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
 
-Example:
+`Example:`
 
-```markdown
+```
+A simple class constructor:
+
+class Car {
+  constructor(name) {
+    this.brand = name;
+  }
+}
+
+```
+
+`Example:`
+
+```
 
 <!DOCTYPE html>
 <html>
@@ -256,20 +277,24 @@ document.write(mycar.brand);
 ```
 
 
-![image](images/Es6classes1.png)
+`Output:`
 
-Note: The constructor function is called automatically when the object is initialized.
+```bash   +@output
+Ford
+```
 
-<!--style="font-size:30px;color:blue;"-->
-Method in classes
+>Note: The constructor function is called automatically when the object is initialized.
+
+
+`Method in classes`
 
 You can add your own methods in a class:
 
-Example
+`Example:`
 
 Create a method named "present":
 
-```markdown
+```
 
 <!DOCTYPE html>
 <html>
@@ -294,28 +319,27 @@ document.write(mycar.present());
 </body>
 </html>
 ```
-<!--style="font-size:30px"-->
-Output 
 
-```markdown
+`Output:`
+
+```bash   +@output
 I have a Ford
 ```
 
-
 As you can see in the example above, you call the method by referring to the object's method name followed by parentheses (parameters would go inside the parentheses).
 
-<!--style="font-size:30px;color:Red;"-->
- Class Inheritance
+
+`Class Inheritance`
 
 To create a class inheritance, use the extends keyword.
 
 A class created with a class inheritance inherits all the methods from another class:
 
-Example
+`Example:`
 
 Create a class named "Model" which will inherit the methods from the "Car" class:
 
-```markdown
+```
 
 <!DOCTYPE html>
 <html>
@@ -351,51 +375,38 @@ document.write(mycar.show());
 </html>
 ```
 
-<!--style="font-size:30px"-->
-Output 
 
-```console
+`Output:`
+
+```bash   +@output
 I have a Ford, it is a Mustang
 ```
 
+
 The super() method refers to the parent class.
 
-By calling the super() method in the constructor method, we call the parent's constructor method and get 
-
-access to the parent's properties and methods.
+By calling the super() method in the constructor method, we call the parent's constructor method and get access to the parent's properties and methods.
 
 ### ES6 Arrow Functions
 
-The arrow function is a new feature of ES6, introduced in ReactJS 16. It allows the developer to create a 
+* The arrow function is a new feature of ES6, introduced in ReactJS 16. It allows the developer to create a function that has lexical “this” binding and no arguments.
 
-function that has lexical “this” binding and no arguments.
+* Arrow functions offer a compressed and short version of a function expression and need fewer keystrokes than regular JavaScript functions from the developer and can be used as a simpler alternative to functions within class components and functional components and event handlers in React.
 
-Arrow functions offer a compressed and short version of a function expression and need fewer keystrokes than 
+* Arrow functions are always anonymous, meaning there is no need to use the keyword “function” when defining them. 
 
-regular JavaScript functions from the developer and can be used as a simpler alternative to functions within 
+* They also do not have their own this value, meaning that this inside an arrow function will refer to the one where it was created rather than where it was called from.
 
-class components and functional components and event handlers in React.
+* The third difference between regular JavaScript functions and arrow functions is that all arguments passed into an arrow function must be pre−defined, because there is no need for them to be assigned as default values like with regular JavaScript functions.
 
-Arrow functions are always anonymous, meaning there is no need to use the keyword “function” when defining 
+* Arrow functions allow us to write shorter function syntax
 
-them. They also do not have their own this value, meaning that this inside an arrow function will refer to 
 
-the one where it was created rather than where it was called from.
+`When to use Arrow Functions?`
 
-The third difference between regular JavaScript functions and arrow functions is that all arguments passed 
+1. Arrow functions are great for performance and making declarative code more readable.
 
-into an arrow function must be pre−defined, because there is no need for them to be assigned as default 
-
-values like with regular JavaScript functions.
-
-Arrow functions allow us to write shorter function syntax
-
-<!--style="font-size:30px"-->
-When to use Arrow Functions?
-
-Arrow functions are great for performance and making declarative code more readable.
-
-Although they are not always the best choice, they do have some advantages that make them worth considering.
+2. Although they are not always the best choice, they do have some advantages that make them worth considering.
 
 In answer to the question, When to use them?, here are some scenarios −
 
@@ -405,27 +416,21 @@ In answer to the question, When to use them?, here are some scenarios −
 
 * When you want to use a callback function
 
-<!--style="font-size:30px"-->
-Why Should You Use Arrow Functions in React?
 
-* First, they are much simpler to write and understand than traditional function expressions. This can make 
+`Why Should You Use Arrow Functions in React?`
 
-your code more readable and easier to debug.
+* First, they are much simpler to write and understand than traditional function expressions. This can make your code more readable and easier to debug.
 
-* Second, arrow functions do not create a new scope, so they can be used in ReactJS without polluting the 
+* Second, arrow functions do not create a new scope, so they can be used in ReactJS without polluting the global scope.
 
-global scope.
+* Finally, arrow functions can be used as arguments to other functions, which can make your code more flexible and expressive.
 
-* Finally, arrow functions can be used as arguments to other functions, which can make your code more 
 
-flexible and expressive.
+`Example:`
 
-<!--style="font-size:30px"-->
-Example 
+**Before without an arrow function**
 
-Before:
-
-```markdown
+```
 
 <!DOCTYPE html>
 <html>
@@ -452,12 +457,12 @@ document.getElementById("demo").innerHTML = hello();
 
 ![image](images/withoutarrow.png)
 
-<!--style="font-size:30px"-->
-Example 
 
-With Arrow Function:
+`Example:`
 
-```markdown
+**With Arrow Function:**
+
+```
 
 <!DOCTYPE html>
 <html>
@@ -485,12 +490,11 @@ document.getElementById("demo").innerHTML = hello();
 ![image](images/arrowfunction.png)
 
 
-<!--style="font-size:30px"-->
-Example 
+`Example: `
 
-Arrow Function With Parameters:
+**Arrow Function With Parameters**
 
-```markdown
+```
 
 <!DOCTYPE html>
 <html>
@@ -521,78 +525,89 @@ Before ES6 there was only one way of defining your variables: with the var keywo
 
 Now, with ES6, there are three ways of defining your variables: var, let, and const.
 
-<!--style="font-size:30px"-->
-* Var
+>Note:
+>
+>* The var keyword was used in all JavaScript code from 1995 to 2015.
+>
+>* The let and const keywords were added to JavaScript in 2015.
+>
+>* The var keyword should only be used in code written for older browsers.
 
-If you use var outside of a function, it belongs to the global scope.
+`Var`
 
-If you use var inside of a function, it belongs to that function.
+* If you use var outside of a function, it belongs to the global scope.
 
-If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.
+* If you use var inside of a function, it belongs to that function.
 
-var has a function scope, not a block scope.
+* If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.
 
-Example:
+* var has a function scope, not a block scope.
 
+`Example:`
+
+```
 var x = 5.6;
+```
 
-<!--style="font-size:30px"-->
-* let
 
-let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
+`let`
 
-If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+* let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
 
-let has a block scope.
+* If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
 
-Example
+* let has a block scope.
 
+`Example:`
+
+```
 let x = 5.6;
+```
 
-<!--style="font-size:30px"-->
-* const
 
-const is a variable that once it has been created, its value can never change.
+`const`
 
-const has a block scope.
+* const is a variable that once it has been created, its value can never change.
 
-The keyword const is a bit misleading.
+* const has a block scope.
 
-It does not define a constant value. It defines a constant reference to a value.
+* The keyword const is a bit misleading.It does not define a constant value. It defines a constant reference to a value.
 
-Because of this you can NOT:
+* Because of this you can NOT:
 
-Reassign a constant value
+  * Reassign a constant value
 
-Reassign a constant array
+  * Reassign a constant array
 
-Reassign a constant object
+  * Reassign a constant object
 
-But you CAN:
+* But you CAN:
 
-Change the elements of constant array
+  * Change the elements of constant array.
 
-Change the properties of constant object
+  * Change the properties of constant object.
 
-Example:
+`Example:`
 
+```
 const x = 5.6;
+```
 
 ### ES6 Array Method
 
 There are many JavaScript array methods.
 
-One of the most useful in React is the .map() array method.
+* One of the most useful in React is the .map() array method.
 
-The .map() method allows you to run a function on each item in the array, returning a new array as the result.
+* The .map() method allows you to run a function on each item in the array, returning a new array as the result.
 
-In React, map() can be used to generate lists.
+* In React, map() can be used to generate lists.
 
-Example:
+`Example:`
 
-Generate a list of items from an array:
+**Generate a list of items from an array:**
 
-```markdown
+```
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -605,29 +620,29 @@ ReactDOM.render(myList, document.getElementById('root'));
 
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+`Output:`
 
 ![image](images/arraymethod.png)
 
 
 ### ES6 Destructuring
 
-To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
+* To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
 
-Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.
+* Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.
 
-Destructuring makes it easy to extract only what is needed.
+* Destructuring makes it easy to extract only what is needed.
 
-Destructuring Arrays 
+`Destructuring Arrays` 
 
 Here is the old way of assigning array items to a variable:
 
-Example:
+`Example:`
 
-Before
+**Before**
 
-```markdown
+```
 const vehicles = ['mustang', 'f-150', 'expedition'];
 
 // old way
@@ -636,28 +651,27 @@ const truck = vehicles[1];
 const suv = vehicles[2];
 ```
 
-Example:
+`Example:`
 
-With Destructuring
+**With Destructuring**
 
-```markdown
+```
 const vehicles = ['mustang', 'f-150', 'expedition'];
 
 const [car, truck, suv] = vehicles;
 ```
 
-When destructuring arrays, the order that variables are declared is important.
+>When destructuring arrays, the order that variables are declared is important.
 
----> Destructuring Objects
+`Destructuring Objects`
 
 Here is the old way of using an object inside a function:
 
+`Example:`
 
-Example:
+**Before**
 
-Before
-
-```markdown
+```
 const vehicleOne = {
   brand: 'Ford',
   model: 'Mustang',
@@ -674,9 +688,9 @@ function myVehicle(vehicle) {
 }
 ```
 
-Example:
+`Example:`
 
-With Destructuring
+**With Destructuring**
 
 ```markdown
 const vehicleOne = {
@@ -694,34 +708,33 @@ function myVehicle({type, color, brand, model}) {
 }
 ```
 
-<!--style="font-size:30px"-->
-Output
 
-```markdown
+`Output:`
+
+```bash  +@output
 My car is a red Ford Mustang.
 ```
 
 
 ### ES6 Spread Operator
 
-ES6 introduced a new operator referred to as a spread operator, which consists of three dots (...). It allows an iterable to expand in places where more than zero arguments are expected. It gives us the privilege to obtain the parameters from an array.
+* ES6 introduced a new operator referred to as a spread operator, which consists of three dots (...). It allows an iterable to expand in places where more than zero arguments are expected. It gives us the privilege to obtain the parameters from an array.
 
-Spread operator syntax is similar to the rest parameter, but it is entirely opposite of it. Let's understand the syntax of the spread operator.
+* Spread operator syntax is similar to the rest parameter, but it is entirely opposite of it. 
 
-<!--style="font-size:30px;color:red;"-->
-Syntax
+Let's understand the syntax of the spread operator.
 
-```markdown
+`Syntax`
+
+```
 
 var variablename1 = [...value];  
 ```
-The three dots (...) in the above syntax are the spread operator, which targets the entire values in the 
+The three dots (...) in the above syntax are the spread operator, which targets the entire values in the particular variable.
 
-particular variable.
+`Example:`
 
-Example:
-
-```markdown
+```
 <!DOCTYPE html>
 <html>
 
@@ -743,11 +756,11 @@ document.write(numbersCombined);
 
 The spread operator is often used in combination with destructuring.
 
-Example:
+`Example:`
 
 Assign the first and second items from numbers to variables and put the rest in an array:
 
-```markdown
+```
 <!DOCTYPE html>
 <html>
 
@@ -770,13 +783,13 @@ document.write("<p>" + rest + "</p>");
 ![image](images/spreadopera2.png)
 
 
----> We can use the spread operator with objects too:
+`We can use the spread operator with objects too:`
 
-Example:
+`Example:`
 
-Combines these Two Objects
+**Combines these Two Objects**
 
-```markdown
+```
 <!DOCTYPE html>
 <html>
 
@@ -809,39 +822,32 @@ console.log(myUpdatedVehicle);
 
 ![image](images/spreadopera3.png)
 
-Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle.
+>Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle.
 
 ### ES6 Rest Parameter
 
-The rest parameter is introduced in ECMAScript 2015 or ES6, which improves the ability to handle parameters. 
+* The rest parameter is introduced in ECMAScript 2015 or ES6, which improves the ability to handle parameters. 
 
-The rest parameter allows us to represent an indefinite number of arguments as an array. By using the rest 
+* The rest parameter allows us to represent an indefinite number of arguments as an array. By using the rest parameter, a function can be called with any number of arguments.
 
-parameter, a function can be called with any number of arguments.
+* Before ES6, the arguments object of the function was used. The arguments object is not an instance of the Array type. Therefore, we can't use the filter() method directly.
 
-Before ES6, the arguments object of the function was used. The arguments object is not an instance of the 
+* The rest parameter is prefixed with three dots (...). Although the syntax of the rest parameter is similar to the spread operator, it is entirely opposite from the spread operator. 
 
-Array type. Therefore, we can't use the filter() method directly.
+* The rest parameter has to be the last argument because it is used to collect all of the remaining elements into an array.
 
-The rest parameter is prefixed with three dots (...). Although the syntax of the rest parameter is similar to 
+`Syntax`
 
-the spread operator, it is entirely opposite from the spread operator. The rest parameter has to be the last 
-
-argument because it is used to collect all of the remaining elements into an array.
-
-<!--style="font-size:30px;color:red;"-->
-Syntax
-
-```markdown
+```
 function fun(a, b, ...theArgs) {  
   // statements  
 }  
 
 ```
-<!--style="font-size:30px"-->
-Example
 
-```markdown
+`Example`
+
+```
 
 function show(...args) {  
   let sum = 0;  
@@ -854,42 +860,29 @@ function show(...args) {
 show(10, 20, 30);  
 ```
 
-* All the arguments that we have passed in the function will map to the parameter list. As stated above, the 
+* All the arguments that we have passed in the function will map to the parameter list. As stated above, the rest parameter (...) should always be at last in the list of arguments. If we place it anywhere else, it will cause an error.
 
-rest parameter (...) should always be at last in the list of arguments. If we place it anywhere else, it will 
+`Difference between Rest Parameter and arguments object`
 
-cause an error.
+The rest parameter and arguments object are different from each other. Let's see the difference between the rest parameter and the arguments object:
 
-<!--style="font-size:30px"-->
-Difference between Rest Parameter and arguments object
+* The arguments object is an array-like (but not array), while the rest parameters are array instances. 
 
-The rest parameter and arguments object are different from each other. Let's see the difference between the 
+* The arguments object does not include methods such as sort, map, forEach, or pop, but these methods can be directly used in rest parameters.
 
-rest parameter and the arguments object:
+`Rest Parameters and Destructuring`
 
-* The arguments object is an array-like (but not array), while the rest parameters are array instances. The 
+* Destructuring means to break down a complex structure into simpler parts. We can define an array as the rest parameter. 
 
-arguments object does not include methods such as sort, map, forEach, or pop, but these methods can be 
+* The passed-in arguments will be broken down into the array. Rest parameter supports array destructuring only.
 
-directly used in rest parameters.
-
-<!--style="font-size:30px"-->
-Rest Parameters and Destructuring
-
-Destructuring means to break down a complex structure into simpler parts. We can define an array as the rest 
-
-parameter. The passed-in arguments will be broken down into the array. Rest parameter supports array 
-
-destructuring only.
-
-By using the rest parameter, we can put all the remaining elements of an array in a new array.
+* By using the rest parameter, we can put all the remaining elements of an array in a new array.
 
 Let's see an illustration of the same.
 
-<!--style="font-size:30px"-->
-Example
+`Example`
 
-```markdown
+```
 
 var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];    
     
@@ -900,17 +893,14 @@ console.log(b);
 console.log(args);  
 ```
 
-<!--style="font-size:30px"-->
-Rest Parameter in a dynamic function
 
-JavaScript allows us to create dynamic functions by using the function constructor. We can use the rest 
+`Rest Parameter in a dynamic function`
 
-parameter within a dynamic function.
+JavaScript allows us to create dynamic functions by using the function constructor. We can use the rest parameter within a dynamic function.
 
-<!--style="font-size:30px"-->
-Example
+`Example`
 
-```markdown
+```
 
 let num = new Function('...args','return args');  
 console.log(num(10, 20, 30)); 
@@ -921,22 +911,18 @@ console.log(num(10, 20, 30));
 
 The ternary operator is a simplified conditional operator like if / else.
 
-<!--style="font-size:30px"-->
-Syntax:
+`Syntax:`
 
 
-```htm
+```
 condition ? <expression if true> : <expression if false>
 ```
- 
 
-Here is an example using if / else:
+`Here is an example using if / else:`
 
-Example 
+**Before:**
 
-Before:
-
-```markdown
+```
 <!DOCTYPE html>
 <html>
 
@@ -970,11 +956,9 @@ if (authenticated) {
 
 ![image](images/ternary1.png)
 
+`Example with Ternary Operator:`
 
-<!--style="font-size:30px"-->
-Example with Ternary Operator:
-
-```markdown
+```
 <!DOCTYPE html>
 <html>
 
@@ -1004,12 +988,11 @@ authenticated ? renderApp() : renderLogin();
 
 ![image](images/ternary2.png)
 
-<!--style="font-size:30px"-->
-Example Of Rendering Condition (Using Ternary Operator on React)
+`Example Of Rendering Condition (Using Ternary Operator on React)`
 
-Condition.js
+`Condition.js`
 
-```markdown
+```
 import{useState} from 'react'
 
 function Condition(){
@@ -1027,7 +1010,7 @@ function Condition(){
 export default Condition;
 ```
 
-App.js
+`App.js`
 
 ```markdown
 import logo from './logo.svg';
@@ -1046,11 +1029,11 @@ export default App;
 ```
 ![image](images/ternary3.png)
 
-## Modify the React Application
+# Modify the React Application
 
 * So far so good, but how do I change the content?
 
-* Look in the demoapp directory, and you will find a src folder. Inside the src folder there is a file called App.js, open it and it will look like this:
+* Look in the demoapp directory, and you will find a `src` folder. Inside the src folder there is a file called `App.js`, open it and it will look like this:
 
 ![modify](/images/modify.png)
 
@@ -1058,7 +1041,7 @@ Try changing the HTML content and save the file.
 
 Notice that the changes are visible immediately after you save the file, you do not have to reload the browser!.
 
-**Example:** Replace all the content inside the div className="App" with a h1 element.
+`Example:` Replace all the content inside the div className="App" with a h1 element.
 See the changes in the browser when you click Save.
 
 ```
@@ -1073,29 +1056,29 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![modify](/images/modify1.png)
 
-## React Rendering Elements
+# React Rendering Elements
 
 * React elements are different from DOM elements as React elements are simple JavaScript objects and are efficient to create. 
 
 * React elements are the building blocks of any React app and should not be confused with React components.
 
-**Rendering an Element in React**
+`Rendering an Element in React`
 
 * In order to render any element into the Browser DOM, we need to have a container or root DOM element. 
 
 * It is almost a convention to have a div element with the id=”root” or id=”app” to be used as the root DOM element. Let’s suppose our index.html file has the following statement inside it.
 
-**<div id="root"></div>**
+`<div id="root"></div>`
 
 Now, in order to render a simple React Element to the root node, we must write the following in the App.js file.
 
-**Example:**
+`Example:`
 
-**App.js**
+`App.js`
 
 ```
 import React, { Component } from 'react';
@@ -1117,21 +1100,21 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![render](/images/render.png)
 
 Now, you have created your first ever React Element and also have rendered it in place, but React was not developed to create static pages, the intention of using React is to create a more logical and active webpage. In order to do so, we will need to update the elements. This next section will guide us through the same.
 
-**Updating an Element in React**
+`Updating an Element in React`
 
 * React Elements are immutable i.e. once an element is created it is impossible to update its children or attribute. 
 
 * Thus, in order to update an element, we must use the render() method several times to update the value over time. 
 
-**Example:**
+`Example:`
 
-**App.js**
+`App.js`
 
 ```
 import React from 'react';
@@ -1157,46 +1140,43 @@ export default App
 
 ```
 
-**Output:** 
+`Output:`
 
 ![render](/images/renderr2.png)
 
 In the above example, we have created a function showTime() that displays the current time, and we have set an interval of 1000ms or 1 sec that recalls the function each second thus updating the time in each call. For simplicity, we have only shown the timespan of one second in the given image.
 
-**Important Points to Note:**
+`Important Points to Note:`
 
-•	Calling the render() method multiple times may serve our purpose for this example, but in general, it is never used instead a stateful component is used which we will cover in further articles.
+* Calling the render() method multiple times may serve our purpose for this example, but in general, it is never used instead a stateful component is used which we will cover in further articles.
 
-•	A React Element is almost never used isolated, we can use elements as the building blocks of creating a component in React.
+* A React Element is almost never used isolated, we can use elements as the building blocks of creating a component in React.
 
+# React Render HTML
 
-## React Render HTML
+* React's goal is in many ways to render HTML in a web page.
 
-React's goal is in many ways to render HTML in a web page.
+* React renders HTML to the web page by using a function called ReactDOM.render().
 
-React renders HTML to the web page by using a function called ReactDOM.render().
-
-
-**The createRoot Function**
+`The createRoot Function`
 
 * The createRoot() function takes one argument, an HTML element.
 
 * The purpose of the function is to define the HTML element where a React component should be displayed.
 
+`The Render Function`
 
-**The Render Function**
+* The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
 
-The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
+* The purpose of the function is to display the specified HTML code inside the specified HTML element.
 
-The purpose of the function is to display the specified HTML code inside the specified HTML element.
+`But render where?`
 
-But render where?
+* There is another folder in the root directory of your React project, named `"public"`. In this folder, there is an index.html file.
 
-There is another folder in the root directory of your React project, named "public". In this folder, there is an index.html file.
+* You'll notice a single `<div>` in the body of this file. This is where our React application will be rendered.
 
-You'll notice a single `<div>` in the body of this file. This is where our React application will be rendered.
-
-**Example**
+`Example:`
 
 Display a paragraph inside an element with the id of "root":
 
@@ -1207,21 +1187,19 @@ import ReactDOM from 'react-dom/client';
 ReactDOM.render(<p>Hello</p>, document.getElementById('root'));
 ```
 
-
-**Output:**
+`Output:`
 
 ![image](images/render1.png)
 
-Note that the element id does not have to be called "root", but this is the standard convention.
+>Note: That the element id does not have to be called "root", but this is the standard convention.
 
+`The HTML Code`
 
-**The HTML Code**
+* The HTML code in this tutorial uses JSX which allows you to write HTML tags inside the JavaScript code:
 
-The HTML code in this tutorial uses JSX which allows you to write HTML tags inside the JavaScript code:
+* Do not worry if the syntax is unfamiliar, you will learn more about JSX in the next chapter.
 
-Do not worry if the syntax is unfamiliar, you will learn more about JSX in the next chapter.
-
-**Example**
+`Example:`
 
 Create a variable that contains HTML code and display it in the "root" node:
 
@@ -1247,20 +1225,19 @@ ReactDOM.render(myelement, document.getElementById('root'));
 ```
 
 
-**Output:**
+`Output:`
 
 ![image](images/render2.png)
 
+`The Root Node`
 
-**The Root Node**
+* The root node is the HTML element where you want to display the result.
 
-The root node is the HTML element where you want to display the result.
+* It is like a container for content managed by React.
 
-It is like a container for content managed by React.
+* It does NOT have to be a `<div>` element and it does NOT have to have the id='root':
 
-It does NOT have to be a `<div>` element and it does NOT have to have the id='root':
-
-**Example:**
+`Example:`
 
 The root node can be called whatever you like:
 
@@ -1277,12 +1254,11 @@ id="sandy" on your "index.html" page.
 */
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/render3.png)
 
-
-## React Jsx
+# React Jsx
 
 * JSX stands for JavaScript XML.
 
@@ -1297,7 +1273,7 @@ id="sandy" on your "index.html" page.
 * It is transformed into JavaScript functions by the compiler at runtime.
 
 
-**Jsx Syntax**
+`Jsx Syntax`
 
 ```
 
@@ -1305,10 +1281,9 @@ const ele = <h1>This is sample JSX</h1>;
 
 ```
 
-
 The above code snippet somewhat looks like HTML and it also uses a JavaScript-like variable but is neither HTML nor JavaScript, it is JSX(JavaScript XML). With the help of JSX, we have directly written the HTML syntax in JavaScript.
 
-**Expressions in JSX**
+`Expressions in JSX`
 
 * In React we are allowed to use normal JavaScript expressions with JSX. 
 
@@ -1316,9 +1291,9 @@ The above code snippet somewhat looks like HTML and it also uses a JavaScript-li
 
 The below example specifies a basic use of JavaScript Expression in React.
 
-**Example:** This example wraps the JSX code in curly braces
+`Example:` This example wraps the JSX code in curly braces
 
-**App.js**
+`App.js`
 
 ```
 import React from 'react';
@@ -1334,7 +1309,7 @@ export default App;
 
 ```
 
-**Index.js**
+`Index.js`
 
 ```
 import React from 'react';
@@ -1350,17 +1325,17 @@ ReactDOM.render(
 
 ```
 
-Output:
+`Output:`
 
 ![jsx](/images/jsx.png)
 
-### Attributes in JSX
+## Attributes in JSX
 
 JSX allows us to use attributes with the HTML elements just like we do with normal HTML. But instead of the normal naming convention of HTML, JSX uses the camelcase convention for attributes.
 
-**App.js**
+`App.js`
 
-**Example:**
+`Example:`
 
 ```
 
@@ -1383,11 +1358,11 @@ ReactDOM.render(
 
 ```
 
-**Output:**
+`Output:`
 
 ![jsx](/images/jsx11.png)
 
-**Specifying attribute values:**
+`Specifying attribute values`
 
 JSX allows us to specify attribute values in two ways: 
 
@@ -1406,13 +1381,13 @@ const ele = <h1 className = {varName}>Hello!</h1>;
 
 
 
-### Wrapping elements or Children in JSX
+## Wrapping elements or Children in JSX
 
 Consider a situation where you want to render multiple tags at a time. To do this we need to wrap all of these tags under a parent tag and then render this parent element to the HTML. All the subtags are called child tags or children of this parent element.
 
-**Example:** In this example we have wrapped h1, h2, and h3 tags under a single div element and rendered them to HTML:
+`Example:` In this example we have wrapped h1, h2, and h3 tags under a single div element and rendered them to HTML:
 
-**App.js**
+`App.js`
 
 ```
 
@@ -1436,13 +1411,17 @@ ReactDOM.render(
 
 ```
 
-**Output:**
+`Output:`
 
 ![jsx](/images/jsx12.png)
 
-**Comments in JSX:** JSX allows us to use comments as it allows us to use JavaScript expressions. Comments in JSX begin with /* and ends with */. We can add comments by wrapping them in curly braces {} just like we did in the case of expressions.
+`Comments in JSX:` 
 
-**index.js**
+* JSX allows us to use comments as it allows us to use JavaScript expressions. 
+
+* Comments in JSX begin with`/* and ends with */.` We can add comments by wrapping them in curly braces {} just like we did in the case of expressions.
+
+`index.js`
 
 ```
 
@@ -1462,7 +1441,7 @@ ReactDOM.render(element, document.getElementById("root"));
 
 ```
 
-## React Components
+# React Components
 
 * A Component is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. 
 
@@ -1470,9 +1449,9 @@ ReactDOM.render(element, document.getElementById("root"));
 
 **In React, we mainly have two types of components:**
 
-**Functional Components:** Functional components are simply javascript functions. We can create a functional component in React by writing a javascript function. These functions may or may not receive data as parameters. The below example shows a valid functional component in React:
+`Functional Components:` Functional components are simply javascript functions. We can create a functional component in React by writing a javascript function. These functions may or may not receive data as parameters. The below example shows a valid functional component in React:
 
-**Note:** The name of a component should always start with a capital letter. This is done to differentiate a component tag from HTML tags.
+>**Note:** The name of a component should always start with a capital letter. This is done to differentiate a component tag from HTML tags.
 
 ```
 function demoComponent() {
@@ -1482,9 +1461,9 @@ function demoComponent() {
 }
 
 ```
-**Example:**
+`Example:`
 
-**App.js**
+`App.js`
 
 ```
 
@@ -1522,11 +1501,11 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![component](/images/compo.png)
 
-**Class Components:** The class components are a little more complex than the functional components. The functional components are not aware of the other components in your program whereas the class components can work with each other. We can pass data from one class component to another class component. We can use JavaScript ES6 classes to create class-based components in React. The below example shows a valid class-based component in React: 
+`Class Components:` The class components are a little more complex than the functional components. The functional components are not aware of the other components in your program whereas the class components can work with each other. We can pass data from one class component to another class component. We can use JavaScript ES6 classes to create class-based components in React. The below example shows a valid class-based component in React: 
 
 ```
 class Democomponent extends React.Component {
@@ -1538,10 +1517,10 @@ class Democomponent extends React.Component {
 ```
 
 
-**Example:**
+`Example:`
 In this example, we are creating the list of unordered elements, where we will dynamically insert StudentName for every object from the data array. Here, we are using ES6 arrow syntax (=>) which looks much cleaner than the old JavaScript syntax. It helps us to create our elements with fewer lines of code. It is especially useful when we need to create a list with a lot of items.
 
-**App.js**
+`App.js`
 
 ```
 import React, { Component } from 'react';  
@@ -1597,13 +1576,11 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![component](/images/compo2.png)
 
-
-
-## React State
+# React State
 
 * The state is an updatable structure that is used to contain data or information about the component. 
 
@@ -1621,26 +1598,20 @@ export default App;
 
 * To set an initial state before any interaction occurs, we need to use the getInitialState() method.
 
-For example, if we have five components that need data or information from the state, then we need to create 
+* For example, if we have five components that need data or information from the state, then we need to create one container component that will keep the state for all of them.
 
-one container component that will keep the state for all of them.
+`Defining state`
 
+* To define a state, you have to first declare a default set of values for defining the component's initial state. 
 
-**Defining state**
-
-To define a state, you have to first declare a default set of values for defining the component's initial 
-
-state. To do this, add a class constructor which assigns an initial state using this.state. The 'this.state' 
-
-property can be rendered inside render() method.
+* To do this, add a class constructor which assigns an initial state using this.state. The `'this.state'` property can be rendered inside render() method.
 
 
-**Example:**
+`Example:`
 
 The below sample code shows how we can create a stateful component using ES6 syntax.
 
-**App.js**
-
+`App.js`
 
 ```
 
@@ -1682,13 +1653,11 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/state.png)
 
-
-
-## React Props
+# React Props
 
 * Props stand for "Properties." They are read-only components. 
 
@@ -1704,14 +1673,13 @@ export default App;
 main.js file of your ReactJS project and used it inside the component in which you need.
 
 
-**React Props**
+`React Props`
 
-React Props are like function arguments in JavaScript and attributes in HTML.
+* React Props are like function arguments in JavaScript and attributes in HTML.
 
-To send props into a component, use the same syntax as HTML attributes:
+* To send props into a component, use the same syntax as HTML attributes:
 
-
-**Example:**
+`Example:`
 
 ```markdown
 import React from 'react';
@@ -1728,18 +1696,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/props1.png)
 
 The component receives the argument as a props object:
 
-
-**Pass Data**
+`Pass Data`
 
 Props are also how you pass data from one component to another, as parameters.
 
-**Example:**
+`Example:`
 
 Send the "brand" property from the Garage component to the Car component:
 
@@ -1764,14 +1731,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/props2.png)
 
-Note : React Props are read-only! You will get an error if you try to change their value.
+>**Note**: React Props are read-only! You will get an error if you try to change their value.
 
 
-## React Props Validation
+# React Props Validation
 
 * Props are an important mechanism for passing the read-only attributes to React components. 
 
@@ -1785,19 +1752,14 @@ Note : React Props are read-only! You will get an error if you try to change the
 
 * It makes your code more readable. React components used special property PropTypes that help you to catch bugs by validating data types of values passed through props, although it is not necessary to define components with propTypes. 
 
-However, if you use propTypes with your components, it helps you to avoid unexpected bugs.
+* However, if you use propTypes with your components, it helps you to avoid unexpected bugs.
 
 
-* **Validating Props**
+`Validating Props`
 
-App.propTypes is used for props validation in react component. When some of the props are passed with an 
+App.propTypes is used for props validation in react component. When some of the props are passed with an invalid type, you will get the warnings on JavaScript console. After specifying the validation patterns, you will set the App.defaultProps.
 
-invalid type, you will get the warnings on JavaScript console. After specifying the validation patterns, you 
-
-will set the App.defaultProps.
-
-
-**Syntax**
+`Syntax`
 
 ```markdown
 class App extends React.Component {  
@@ -1806,24 +1768,20 @@ class App extends React.Component {
 Component.propTypes = { /*Definition */}; 
 ```
 
-
-* **ReactJS Props Validator**
+`ReactJS Props Validator`
 
 ReactJS props validator contains the following list of validators.
 
 ![image](images/propvalid1.png)
 
-
-
-**Example**
+`Example:`
 
 Here, we are creating an App component which contains all the props that we need. In this example, App.
 
 propTypes is used for props validation. For props validation, you must have to add this line: import 
-
 PropTypes from 'prop-types' in App.js file.
 
-**App.js**
+`App.js`
 
 ```markdown
 import React, { Component } from 'react';  
@@ -1886,7 +1844,7 @@ App.defaultProps = {
 export default App;  
 ```
 
-**Main.js**
+`Main.js`
 
 ```markdown
 import React from 'react';  
@@ -1897,23 +1855,23 @@ ReactDOM.render(<App/>, document.getElementById('app'));
 ```
 
 
-**Output**
+`Output:`
 
 ![image](images/reactjs-props-validation.png)
 
 
 
-* **ReactJS Custom Validators**
+`ReactJS Custom Validators`
 
-ReactJS allows creating a custom validation function to perform custom validation. The following argument is 
+ReactJS allows creating a custom validation function to perform custom validation. The following argument is used to create a custom validation function.
 
-used to create a custom validation function.
+* `props:` It should be the first argument in the component.
 
-* props: It should be the first argument in the component.
-* propName: It is the propName that is going to validate.
-* componentName: It is the componentName that are going to validated again.
+* `propName:` It is the propName that is going to validate.
 
-**Example:**
+* `componentName:` It is the componentName that are going to validated again.
+
+`Example:`
 
 ```markdown
 var Component = React.createClass({  
@@ -1927,9 +1885,9 @@ App.propTypes = {
 })  
 ```
 
-## State Vs. Props
+# State Vs. Props
 
-**State**
+`State`
 
 * The state is an updatable structure that is used to contain data or information about the component and can change over time. 
 
@@ -1939,7 +1897,7 @@ App.propTypes = {
 
 * It represents the component's local state or information. It can only be accessed or modified inside the component or by the component directly.
 
-**Props**
+`Props`
 
 * Props are read-only components. 
 
@@ -1951,7 +1909,7 @@ App.propTypes = {
 
 * Props are immutable so we cannot modify the props from inside the component.
 
-**Difference between State and Props**
+`Difference between State and Props`
 
 | Props              |          State         |
 |----------------------|------------------------|
@@ -1965,11 +1923,7 @@ App.propTypes = {
 |Props are external and controlled by whatever renders the component.	|The State is internal and controlled by the React Component itself.|
 
 
-
-
-
-
-## React Constructor
+# React Constructor
 
 * The constructor is a method used to initialize an object's state in a class. 
 
@@ -1981,7 +1935,7 @@ App.propTypes = {
 
 * If you do not call super() method, this.props will be undefined in the constructor and can lead to bugs.
 
-**Syntax:**
+`Syntax:`
 
 ```markdown
 Constructor(props){  
@@ -1991,7 +1945,7 @@ Constructor(props){
 
 In React, it has a few rules that you can follow when using them.
 
-**Step 1:** Call super(props) before using this.props
+`Step 1:` Call super(props) before using this.props
 
 Due to the nature of the constructor, this.props object is not accessible straight out of the gate, which can lead to errors. An error will be thrown by this constructor:
 
@@ -2014,7 +1968,7 @@ constructor(props) {
 
 When you call the super() function, the parent class constructor is called, which is in the case of a React is React.Component. 
 
-**Step 2:** Never call setState() inside constructor()
+`Step 2:` Never call setState() inside constructor()
 
 The constructor of your component is the ideal place to set the component’s initial state. You must set the initial state directly, rather than using setState() as you can in other methods in your class:
 
@@ -2031,7 +1985,7 @@ constructor(props) {
 
 The only place you can assign the local state directly like that is the constructor. You should depend on setState() somewhere else inside our component instead.
 
-**Step 3:** Avoid assigning values from this.props to this.state
+`Step 3:` Avoid assigning values from this.props to this.state
 
 You should try to avoid setting values from the properties when setting the initial component state in the constructor. We can do the following:
 
@@ -2046,7 +2000,7 @@ constructor(props) {
 
 You wouldn’t be allowed to use setState() to change the property later. You may easily reference the property directly in your code by naming this.props.name, instead of assigning the property directly to the state.
 
-**Step 4:** Bind events all in one place
+`Step 4:` Bind events all in one place
 
 We can easily bind your event handlers in the constructor:
 
@@ -2072,15 +2026,15 @@ In React, constructors are mainly used for two purposes:
 
 * Note: If you neither initialize state nor bind methods for your React component, there is no need to 
 
-**Implement a constructor for React component.**
+`Implement a constructor for React component`
 
 You cannot call setState() method directly in the constructor(). If the component needs to use local state you need directly to use 'this.state' to assign the initial state in the constructor. The constructor only uses this.state to assign initial state, and all other methods need to use set.state() method.
 
-**Example:**
+`Example:`
 
 The concept of the constructor can understand from the below example.
 
-App.js
+`App.js`
 
 ```markdown
 import React, { Component } from 'react';
@@ -2119,13 +2073,13 @@ export default App;
   
 ```
 
-**Output:**
+`Output:`
 
 When you execute the above code, you get the following output.
 
 ![image](images/constructor.png)
 
-## React Events
+# React Events
 
 * An action triggered as a result of the user action or system-generated event is termed as an event. 
 
@@ -2136,7 +2090,7 @@ When you execute the above code, you get the following output.
 * To prevent the default behaviour, the preventDefault event must be called explicitly in ReactJS instead of returning false.
 
 
-**Adding Events**
+`Adding Events`
 
 * React events are written in camelCase syntax:
 
@@ -2146,7 +2100,7 @@ When you execute the above code, you get the following output.
 
 * onClick={shoot}  instead of onClick="shoot()".
 
-**Example:**
+`Example:`
 
 
 ```markdown
@@ -2178,13 +2132,13 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/event.png)
 
 ![image](images/event12.png)
 
-## React List
+# React List
 
 * Lists are used to display data in an ordered format and mainly used to display menus on websites. 
 
@@ -2195,7 +2149,7 @@ export default App;
 * In the below example, the map() function takes an array of numbers and multiply their values with 5. We assign the new array returned by map() to the variable  multiplyNums and log it.
 
 
-**Example:**
+`Example:`
 
 ```markdown
 
@@ -2206,23 +2160,19 @@ const multiplyNums = numbers.map((number)=>{
 console.log(multiplyNums);
 ```
 
-**Output:**
+`Output:`
 
 The above JavaScript code will log the output on the console. The output of the code is given below.
 
-```console
+```bash  +@output
 
 [5, 10, 15, 20, 25]
 ```
 
-Now, let us see how we create a list in React. To do this, we will use the map() function for traversing the 
-
-list element, and for updates, we enclosed them between curly braces {}. Finally, we assign the array 
-
-elements to listItems. Now, include this new list inside <ul> </ul> elements and render it to the DOM.
+Now, let us see how we create a list in React. To do this, we will use the map() function for traversing the list element, and for updates, we enclosed them between curly braces {}. Finally, we assign the array elements to listItems. Now, include this new list inside` <ul> </ul>` elements and render it to the DOM.
 
 
-**Example:**
+`Example:`
 
 ```markdown
 
@@ -2241,9 +2191,9 @@ export default App;
 ``` 
 
 
-**Output:**
+`Output:`
 
-```console
+```bash  +@output
 
 * Peter
 
@@ -2257,14 +2207,14 @@ export default App;
 ```
 
 
-**Rendering Lists inside components**
+`Rendering Lists inside components`
 
 * In the previous example, we had directly rendered the list to the DOM. But it is not a good practice to render lists in React. 
 
 * In React, we had already seen that everything is built as individual components. Hence, we would need to render lists inside a component. We can understand it in the following code.
 
 
-**Example:**
+`Example:`
 
 ```markdown
 
@@ -2292,9 +2242,9 @@ export default App;
 ```
 
 
-**Output:**
+`Output:`
 
-```console
+```bash  +@output
 
 Rendering Lists inside component
 
@@ -2309,8 +2259,7 @@ Rendering Lists inside component
 * Alisa
 ```
 
-
-## React Keys
+# React Keys
 
 * A “key” is a special string attribute you need to include when creating lists of elements in React. 
 
@@ -2320,11 +2269,11 @@ Rendering Lists inside component
 
 * It is recommended to use a string as a key that uniquely identifies the items in the list. 
 
-**Assigning keys to the list**
+`Assigning keys to the list`
 
 You can assign the array indexes as keys to the list items. The below example assigns array indexes as keys to the elements. 
 
-**Syntax:**
+`Syntax:`
 
 ```
 const numbers = [1, 2, 3, 4, 5];
@@ -2336,13 +2285,17 @@ const updatedNums = numbers.map((number, index) =>
 
 ```
 
-**Using Keys with component**
+`Using Keys with component`
 
-Consider you have created a separate component for ListItem and extracting ListItem from that component. In this case, you should have to assign keys on the [<ListItem />]ListItem elements in the array, not to the [li]  elements in the ListItem itself. To avoid mistakes, you have to keep in mind that keys only make sense in the context of the surrounding array. So, anything you are returning from map() function is recommended to be assigned a key
+* Consider you have created a separate component for ListItem and extracting ListItem from that component. 
 
-###  Incorrect Key usage
+* In this case, you should have to assign keys on the [<ListItem />]ListItem elements in the array, not to the [li]  elements in the ListItem itself. 
 
-**Example:**
+* To avoid mistakes, you have to keep in mind that keys only make sense in the context of the surrounding array. So, anything you are returning from map() function is recommended to be assigned a key
+
+## Incorrect Key usage
+
+`Example:`
 
 ```
 
@@ -2385,13 +2338,13 @@ export default function App() {
 
 ```
 
-**Output:**You can see in the below output that the list is rendered successfully but a warning is thrown to the console that the elements inside the iterator are not assigned keys. This is because we had not assigned the key to the elements we are returning to the map() iterator.
+`Output:`You can see in the below output that the list is rendered successfully but a warning is thrown to the console that the elements inside the iterator are not assigned keys. This is because we had not assigned the key to the elements we are returning to the map() iterator.
 
 ![image](images/key.png)
 
-### Correct usage of keys
+## Correct usage of keys
 
-**Example:** The below example shows the correct usage of keys:
+`Example:` The below example shows the correct usage of keys:
 
 ```
 
@@ -2424,15 +2377,17 @@ export default function App() {
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/key1.png)
 
-### Uniqueness of Keys 
+## Uniqueness of Keys 
 
-We have told many times while discussing keys that keys assigned to the array elements must be unique. By this, we did not mean that the keys should be globally unique. All the elements in a particular array should have unique keys. That is, two different arrays can have the same set of keys.
+* We have told many times while discussing keys that keys assigned to the array elements must be unique. 
 
-**Example:**In the below code, we have created two different arrays.You can see in the below code that the keys for the first 5 items for both arrays are the same still the code runs successfully without any warning.
+* By this, we did not mean that the keys should be globally unique. All the elements in a particular array should have unique keys. That is, two different arrays can have the same set of keys.
+
+`Example:` In the below code, we have created two different arrays.You can see in the below code that the keys for the first 5 items for both arrays are the same still the code runs successfully without any warning.
 
 ```
 import React from "react";
@@ -2468,12 +2423,12 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/key2.png)
 
 
-## React Fragments
+# React Fragments
 
 * In React, whenever you want to render something on the screen, you need to use a render method inside the component. 
 
@@ -2483,9 +2438,9 @@ export default App;
 
 * However, if you want to return multiple elements, the render method will require a 'div' tag and put the entire content or elements inside it. This extra node to the DOM sometimes results in the wrong formatting of your HTML output
 
-**Example:**
+`Example:`
 
-**App.js**
+`App.js`
 
 ```
 import React from "react";
@@ -2509,13 +2464,13 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![fragments](/images/frag.png)
 
-**Reason to use Fragments:** As we saw in the above code when we are trying to render more than one root element we have to put the entire content inside the ‘div’ tag which is not loved by many developers. So in React 16.2 version, Fragments were introduced, and we use them instead of the extraneous ‘div’ tag. 
+`Reason to use Fragments:` As we saw in the above code when we are trying to render more than one root element we have to put the entire content inside the ‘div’ tag which is not loved by many developers. So in React 16.2 version, Fragments were introduced, and we use them instead of the extraneous ‘div’ tag. 
 
-**Syntax:**
+`Syntax:`
 
 ```
 <React.Fragment>  
@@ -2525,7 +2480,7 @@ export default App;
 
 ```
 
-**Example:** Open App.js and replace the code with the below code.
+`Example:` Open App.js and replace the code with the below code.
 
 ```
 import React from "react";
@@ -2546,15 +2501,15 @@ class App extends React.Component {
 export default App;
 ```
 
-**Output:**
+`Output:`
 
 ![fragments](/images/frag.png)
 
-**Shorthand Fragment:** The output of the first code and the code above is the same but the main reason for using is that it is a tiny bit faster when compared to the one with the ‘div’ tag inside it, as we didn’t create any DOM node. Also, it takes less memory. Another shorthand also exists for the above method in which we make use of ‘<>’ and ‘</>’ instead of the ‘React.Fragment’. 
+`Shorthand Fragment:` The output of the first code and the code above is the same but the main reason for using is that it is a tiny bit faster when compared to the one with the ‘div’ tag inside it, as we didn’t create any DOM node. Also, it takes less memory. Another shorthand also exists for the above method in which we make use of ‘<>’ and ‘</>’ instead of the ‘React.Fragment’. 
 
-Note: The shorthand syntax does not accept key attributes in that case you have to use the <React.Fragments> tag.
+>**Note:** The shorthand syntax does not accept key attributes in that case you have to use the <React.Fragments> tag.
 
-**Syntax:**
+`Syntax:`
 
 ```
 <>  
@@ -2564,7 +2519,7 @@ Note: The shorthand syntax does not accept key attributes in that case you have 
 
 ```
 
-**Example:**
+`Example:`
 
 ```
 import React from "react";
@@ -2587,19 +2542,23 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![fragments](/images/frag.png)
 
 
-**Keyed Fragments**
+`Keyed Fragments`
 
-The shorthand syntax does not accept key attributes. You need a key for mapping a collection to an array of fragments such as to create a description list. If you need to provide keys, you have to declare the  fragments with the explicit `<React.Fragment>`syntax.
+* The shorthand syntax does not accept key attributes. 
 
-**Note:** Key is the only attributes that can be passed with the Fragments.
+* You need a key for mapping a collection to an array of fragments such as to create a description list. 
+
+* If you need to provide keys, you have to declare the  fragments with the explicit `<React.Fragment>`syntax.
+
+>**Note:** Key is the only attributes that can be passed with the Fragments.
 
 
-**Example:**
+`Example:`
 
 ```markdown
 
@@ -2620,7 +2579,7 @@ Function  = (props) {
 
 ```
 
-## React Router
+# React Router
 
 * Routing is a process in which a user is directed to different pages based on their action or request. 
 
@@ -2630,47 +2589,47 @@ Function  = (props) {
 
 * React Router is a standard library system built on top of the React and used to create routing in the React application using React Router Package.
 
-**Installing React Router**
+`Installing React Router`
 
 React contains three different packages for routing. These are:
 
-**react-router:** It provides the core routing components and functions for the React Router applications.
+`react-router:` It provides the core routing components and functions for the React Router applications.
 
-**react-router-native:** It is used for mobile applications.
+`react-router-native:` It is used for mobile applications.
 
-**react-router-dom:** It is used for web applications design.
+`react-router-dom:` It is used for web applications design.
 
-To install react-router in your application write the following command in your terminal
+To `install` react-router in your application write the following command in your terminal
 
 ```
 // Installing
 npm i react-router-dom
 
 ```
-Importing React Router
+`Importing React Router`
 
 ```
 // Importing
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 ```
 
-### React Router Components:
+## React Router Components:
 
 The Main Components of React Router are:
 
-•	**BrowserRouter:** BrowserRouter is a router implementation that uses the HTML5 history API(pushState, replaceState, and the popstate event) to keep your UI in sync with the URL. It is the parent component that is used to store all of the other components.
+* `BrowserRouter:` BrowserRouter is a router implementation that uses the HTML5 history API(pushState, replaceState, and the popstate event) to keep your UI in sync with the URL. It is the parent component that is used to store all of the other components.
 
-•	**Routes:** It’s a new component introduced in the v6 and an upgrade of the component. The main advantages of Routes over Switch are:
+* `Routes:` It’s a new component introduced in the v6 and an upgrade of the component. The main advantages of Routes over Switch are:
 
-•	Relative s and s
+*	Relative s and s
 
-•	Routes are chosen based on the best match instead of being traversed in order.
+*	Routes are chosen based on the best match instead of being traversed in order.
 
-•	**Route:** Route is the conditionally shown component that renders some UI when its path matches the current URL.
+*	`Route:` Route is the conditionally shown component that renders some UI when its path matches the current URL.
 
-•	**Link:** The link component is used to create links to different routes and implement navigation around the application. It works like an HTML anchor tag.
+*	`Link:` The link component is used to create links to different routes and implement navigation around the application. It works like an HTML anchor tag.
 
-**Implementing React Router**
+`Implementing React Router`
 
 To use React Router, let us first create a few components in the React application. In your project directory, create a folder named component inside the src folder and now add 3 files named.
 
@@ -2680,9 +2639,9 @@ To use React Router, let us first create a few components in the React applicati
 
 •	contact.js
 
-**Note:** Remove/Comment the default styling provided with App.css
+>**Note:** Remove/Comment the default styling provided with App.css
 
-**home.js**
+`home.js`
 
 ```
 // Home.js
@@ -2695,7 +2654,7 @@ function Home (){
 export default Home;
 ```
 
-**about.js**
+`about.js`
 
 ```
 // About.js
@@ -2714,7 +2673,7 @@ function About () {
 export default About;
 ```
 
-**contact.js**
+`contact.js`
 
 ```
 // Contact.js
@@ -2736,7 +2695,7 @@ Now, let us include React Router components to the application:
 
 After adding all the components here is our complete source code:
 
-**App.js**
+`App.js`
 
 ```
 import React, { Component } from 'react';
@@ -2777,22 +2736,23 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
-1.This is the Home page 
+* **This is the Home page** 
 
 ![router](/images/router.png)
 
-2.If we Click on the About us, the page will be redirected.
+* **If we Click on the About us, the page will be redirected.**
 
 ![router](/images/router1.png)
 
-3.If u click on contact us .the page will be redirected.
+* **If u click on contact us .the page will be redirected.**
 
 ![router](/images/router2.png)
 
-### ReactJS Types of Routers
- React Router provides three different kinds of routers: 
+## ReactJS Types of Routers
+
+React Router provides three different kinds of routers: 
 
 •	Memory Router
 
@@ -2800,15 +2760,15 @@ export default App;
 
 •	Hash Router
 
-**Memory Router:** The memory router keeps the URL changes in memory not in the user browsers. It keeps the history of the URL in memory and it does not read or write to the address bar so the user can not use the browser’s back button as well as the forward button. It doesn’t change the URL in your browser. It is very useful for testing and non-browser environments like React Native.
+`Memory Router:` The memory router keeps the URL changes in memory not in the user browsers. It keeps the history of the URL in memory and it does not read or write to the address bar so the user can not use the browser’s back button as well as the forward button. It doesn’t change the URL in your browser. It is very useful for testing and non-browser environments like React Native.
 
-**Syntax:**
+`Syntax:`
 
 ```
 import { MemoryRouter as Router } from 'react-router-dom';
 ```
 
-**Example:**
+`Example:`
 
 ```
 import React, { Component } from 'react';
@@ -2846,24 +2806,24 @@ class App extends Component {
 }
 export default App;
 ```
-**Output:**
+`Output:`
 
 Here in this Output if u click back or forward button in the browser it wont work.
 
 ![router](/images/router.png)
 
-### Browser Router
+## Browser Router
 
-**Browser Router:** It uses HTML 5 history API (i.e. pushState, replaceState, and popState API) to keep your UI in sync with the URL. It routes as a normal URL in the browser and assumes that the server is handling all the request URL (eg., /, /about) and points to root index.html. It accepts forceRefresh props to support legacy browsers that don’t support HTML 5 pushState API
+`Browser Router:` It uses HTML 5 history API (i.e. pushState, replaceState, and popState API) to keep your UI in sync with the URL. It routes as a normal URL in the browser and assumes that the server is handling all the request URL (eg., /, /about) and points to root index.html. It accepts forceRefresh props to support legacy browsers that don’t support HTML 5 pushState API
 
-**Syntax:** 
+`Syntax:`
 
 ```
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ```
 
-**Example:**
+`Example:`
 
 ```
 import React, { Component } from 'react';
@@ -2903,7 +2863,7 @@ export default App;
 
 ```
 
-Output:
+`Output:`
 
 ![router](/images/router.png)
 
@@ -2911,16 +2871,16 @@ Output:
 
 Here in this Output if u click back or forward button in the browser it will work.
 
-### Hash Router
+## Hash Router
 
-**Hash Router:** Hash router uses client-side hash routing. It uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL. The hash portion of the URL won’t be handled by the server, the server will always send the index.html for every request and ignore the hash value. It doesn’t need any configuration in the server to handle routes. It is used to support legacy browsers which usually don’t support HTML pushState API. It is very useful for legacy browsers or you don’t have a server logic to handle the client-side. This route isn’t recommended to be used by the react-router-dom team.
+`Hash Router:` Hash router uses client-side hash routing. It uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL. The hash portion of the URL won’t be handled by the server, the server will always send the index.html for every request and ignore the hash value. It doesn’t need any configuration in the server to handle routes. It is used to support legacy browsers which usually don’t support HTML pushState API. It is very useful for legacy browsers or you don’t have a server logic to handle the client-side. This route isn’t recommended to be used by the react-router-dom team.
 
-**Syntax:** 
+`Syntax:`
 
 ```
 import { HashRouter as Router } from 'react-router-dom';
 ```
-**Example:**
+`Example:`
 
 ```
 import React, { Component } from 'react';
@@ -2960,21 +2920,21 @@ class App extends Component {
 export default App;
 
 ```
-**Output:**
+`Output:`
 
 ![router](/images/router4.png)
 
-## Adding Navigation using Link component
+# Adding Navigation using Link component
 
 Sometimes, we want to need multiple links on a single page. When we click on any of that particular Link, it should load that page which is associated with that path without reloading the web page. To do this, we need to import `<Link>` component in the index.js file.
 
-**What is `<Link>` component?**
+`What is <Link> component?`
 
 This component is used to create links which allow to navigate on different URLs and render its content without reloading the webpage.
 
-**Example:**
+`Example:`
 
-**Index.js**
+`Index.js`
 
 ```markdown
 import React from 'react';  
@@ -3009,7 +2969,7 @@ const routing = (
 ReactDOM.render(routing, document.getElementById('root'));  
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/react-router4.png)
 
@@ -3064,11 +3024,9 @@ ReactDOM.render(routing, document.getElementById('root'));
 ```
 
 
-**Output:**
+`Output:`
 
-When we execute the above program, we will get the following screen in which we can see that Home link is of 
-
-color Red and is the only currently active link.
+When we execute the above program, we will get the following screen in which we can see that Home link is of color Red and is the only currently active link.
 
 ![image](images/react-router6.png)
 
@@ -3077,20 +3035,20 @@ Now, when we click on About link, its color shown green that is the currently ac
 ![image](images/react-router7.png)
 
 
-**`<Link>` vs `<NavLink>`**
+`<Link> vs <NavLink>`
 
 The Link component allows navigating the different routes on the websites, whereas NavLink component is used 
 to add styles to the active routes.
 
 
-**React Router Switch**
+`React Router Switch`
 
 The `<Switch> `component is used to render components only when the path will be matched. Otherwise, it 
 returns to the not found component.
 
 To understand this, first, we need to create a notfound component.
 
-**notfound.js**
+`notfound.js`
 
 ```markdown
 
@@ -3101,7 +3059,7 @@ export default Notfound
 
 Now, import component in the index.js file. It can be seen in the below code.
 
-**Index.js**
+`Index.js`
 
 ```
 
@@ -3147,25 +3105,24 @@ const routing = (
 ReactDOM.render(routing, document.getElementById('root'));  
 ```
 
-
-**Output:**
+`Output:`
 
 If we manually enter the wrong path, it will give the not found error.
 
 ![image](images/react-router8.png)
 
-**React Router `<Redirect>`**
+`React Router <Redirect>`
 
 A `<Redirect>` component is used to redirect to another route in our application to maintain the old URLs. It 
 can be placed anywhere in the route hierarchy.
 
-**Nested Routing in React**
+`Nested Routing in React`
 
 Nested routing allows you to render sub-routes in your application. It can be understood in the below example.
 
-**Example**
+`Example`
 
-**Index.js**
+`Index.js`
 
 ```
 
@@ -3214,7 +3171,7 @@ ReactDOM.render(routing, document.getElementById('root'));
 In the contact.js file, we need to import the React Router component to implement the subroutes.
 
 
-**contact.js**
+`contact.js`
 
 ```
 
@@ -3252,7 +3209,7 @@ class Contact extends React.Component {
 export default Contact  
 ```
 
-**Output:**
+`Output:`
 
 When we execute the above program, we will get the following output.
 
@@ -3265,7 +3222,7 @@ corresponding output. It can be shown in the below example.
 ![image](images/react-router10.png)
 
 
-**Benefits Of React Router**
+`Benefits Of React Router`
 
 The benefits of React Router is given below:
 
@@ -3276,21 +3233,22 @@ The benefits of React Router is given below:
 * In this, every component is specified in .
 
 
+# React Forms
+
+* Forms are really important in any website for login, signup, or whatever. 
+
+* It is easy to make a form in HTML but forms in React work a little differently. 
+
+* In HTML the form data is usually handled by the DOM itself but in the case of react the form data is handled by the react components. 
+
+* All the form data is stored in the react’s component state, so it can handle the form submission and retrieve data that the user entered. To do this we use controlled components.
 
 
-
-
-
-## React Forms
-
-Forms are really important in any website for login, signup, or whatever. It is easy to make a form in HTML but forms in React work a little differently. In HTML the form data is usually handled by the DOM itself but in the case of react the form data is handled by the react components. All the form data is stored in the react’s component state, so it can handle the form submission and retrieve data that the user entered. To do this we use controlled components.
-
-
-**Adding Forms in React**
+`Adding Forms in React`
 
 You add a form with React like any other element:
 
-**Example**
+`Example`
 
 Add a form that allows users to enter their name:
 
@@ -3312,7 +3270,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
 
-**Output**
+`Output`
 
 ![image](images/form1.png)
 
@@ -3323,7 +3281,7 @@ But this is generally not what we want to happen in React.
 We want to prevent this default behavior and let React control the form.
 
 
-**Handling Forms**
+`Handling Forms`
 
 * Handling forms is about how you handle the data when it changes value or gets submitted.
 
@@ -3338,7 +3296,7 @@ We want to prevent this default behavior and let React control the form.
 * We can use the useState Hook to keep track of each inputs value and provide a "single source of truth" for the entire application.
 
 
-**Example:**
+`Example:`
 
 Use the useState Hook to manage the input:
 
@@ -3368,15 +3326,15 @@ root.render(<MyForm />);
 ```
 
 
-**Output:**
+`Output:`
 
 ![image](images/form2.png)
 
-**Submitting Forms**
+`Submitting Forms`
 
 You can control the submit action by adding an event handler in the onSubmit attribute for the `<form>`:
 
-**Example:**
+`Example:`
 
 Add a submit button and an event handler in the onSubmit attribute:
 
@@ -3408,12 +3366,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/form3.png)
 
 
-**Multiple Input fields**
+`Multiple Input fields`
 
 * You can control the values of more than one input field by adding a name attribute to each element.
 
@@ -3423,7 +3381,7 @@ root.render(<MyForm />);
 
 * To update the state, use square brackets [bracket notation] around the property name.
 
-**Example:**
+`Example:`
 
 Write a form with two input fields:
 
@@ -3473,7 +3431,7 @@ root.render(<MyForm />);
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/form4.png)
 
@@ -3485,7 +3443,7 @@ root.render(<MyForm />);
 
 * But, In React, whatever the value the user types we save it in state and pass the same value to the input tag as its value, so here DOM does not change its value, it is controlled by react state.
 
-**Example:**
+`Example:`
 
 ```
 import React, { Component } from 'react';  
@@ -3521,7 +3479,7 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![Form](images/form.png)
 
@@ -3534,7 +3492,7 @@ export default App;
 
 * You can use a ref to access the input field value of the form from the DOM.
 
-**Example:**
+`Example:`
 
 In this example, the code accepts a field username and company name in an uncontrolled component.
 
@@ -3570,11 +3528,9 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![Form](images/formm.png)
-
-
 
 # React Map
 
@@ -3591,7 +3547,7 @@ export default App;
 * A new array is made using the map() method, and a function is called on each element of the array.
 
 
-**Example:**
+`Example:`
 
 
 Here, we have an array of numbers. The map.method() will take the array of numbers and make a square of each element of the array.
@@ -3608,13 +3564,13 @@ console.log(squareValue);
 
 ```
 
-**Map Method in ReactJS: Usage**
+`Map Method in ReactJS: Usage`
 
-**Traverse a List of Elements**
+`Traverse a List of Elements`
 
 Let us see an example of how to traverse a list of elements using the map method.
 
-**Example:**
+`Example:`
 
 ```
 import React from 'react';  
@@ -3641,17 +3597,17 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![map](images/map.png)
 
 In the above example, we saw how we could use the map method on an array of strings called foodLists and return each array item to a new unordered list.
 
-**Traverse a List of Elements Using Keys**
+`Traverse a List of Elements Using Keys`
 
 Now let us go through an example to see how we can traverse through the list of elements using keys.
 
-**Example:**
+`Example:`
 
 ```
 
@@ -3682,21 +3638,19 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![map](images/map1.png)
 
 # React CSS
 
-CSS in React is used to style the React App or Component. The style attribute is the most used attribute for 
+* CSS in React is used to style the React App or Component. 
 
-styling in React applications, which adds dynamically-computed styles at render time. It accepts a JavaScript 
+* The style attribute is the most used attribute for styling in React applications, which adds dynamically-computed styles at render time. 
 
-object in camelCased properties rather than a CSS string. There are many ways available to add styling to 
+* It accepts a JavaScript object in camelCased properties rather than a CSS string. There are many ways available to add styling to your React App or Component with CSS. 
 
-your React App or Component with CSS. Here, we are going to discuss mainly four ways to style React 
-
-Components, which are given below:
+* Here, we are going to discuss mainly four ways to style React Components, which are given below:
 
 1. Inline Styling
 
@@ -3708,17 +3662,17 @@ Components, which are given below:
 
 <br>
 
-* 1. **Inline Styling**: In order to apply the inline styles to the elements, we use the style prop. We pass an object with key as CSS properties in camelCase and value as the values that can be assigned to these CSS properties.
+*  `Inline Styling:` In order to apply the inline styles to the elements, we use the style prop. We pass an object with key as CSS properties in camelCase and value as the values that can be assigned to these CSS properties.
 
-**Syntax:** The syntax to assign inline styles to CSS elements is mentioned below.
+`Syntax:` The syntax to assign inline styles to CSS elements is mentioned below.
 
 ```
 <div style={{backgroundColor: 'red'}}></div>
 ```
 
-**Example**
+`Example`
 
-**App.js**
+`App.js`
 
 ```
 
@@ -3743,16 +3697,17 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/CSS1.png)
 
- * **camelCase Property Name**
+`camelCase Property Name`
+
 If the properties have two names, like background-color, it must be written in camel case syntax.
 
-**Example**
+`Example`
 
-**App.js**
+`App.js`
 
 ```
 const App = () => {
@@ -3778,15 +3733,15 @@ export default App;
 
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/CSS2.png)
 
-* **Using JavaScript Object** : The inline styling also allows us to create an object with styling information and refer it in the style attribute.
+`Using JavaScript Object :` The inline styling also allows us to create an object with styling information and refer it in the style attribute.
 
-**Example**
+`Example`
 
-**App.js**
+`App.js`
 
 ```
 
@@ -3813,24 +3768,24 @@ export default App;
  
 ```
 
-**Output**
+`Output`
 
 ![image](images/CSS1.png)
 
 
 >Note: For all below-given examples, the output will remain as above only.
 
-* **2.Styling using CSS file** : To style the React elements using the CSS file, we first import the CSS file and then assign the classes contained in the CSS file to the className prop of React elements. 
+* `Styling using CSS file :` To style the React elements using the CSS file, we first import the CSS file and then assign the classes contained in the CSS file to the className prop of React elements. 
   
-**Syntax:** The syntax to assign the classes to the className prop is mentioned below. 
+`Syntax:` The syntax to assign the classes to the className prop is mentioned below. 
 
 ```
 <div className="name_of_the_class"></div>
 ```
 
-**Filename:** App.js The content of App.js and App.css files demonstrating the use of CSS files to style React elements is mentioned below.
+`Filename:` App.js The content of App.js and App.css files demonstrating the use of CSS files to style React elements is mentioned below.
 
-**Example:App.js**
+`Example:App.js`
 
 ```
 import './App.css';
@@ -3859,9 +3814,9 @@ App.css
 
 ```
 
-* 3. **Styling using CSS module** : CSS modules are a way to locally scope the content of your CSS file. We can create a CSS module file by naming our CSS file as App.modules.css and then it can be imported inside App.js file using the special syntax mentioned below.
+* `Styling using CSS module :` CSS modules are a way to locally scope the content of your CSS file. We can create a CSS module file by naming our CSS file as App.modules.css and then it can be imported inside App.js file using the special syntax mentioned below.
   
-**Syntax:**
+`Syntax:`
 
 ```
 import styles from './App.module.css';
@@ -3874,9 +3829,9 @@ Now we can easily assign the classes to the className properties mentioned below
 
 The square bracket is used to access the class when it contains a hyphen or we can use it generally also. The dot can be used to access the class when it does not contain a hyphen. 
 
-**Filename:** App.js The content of App.js and App.css files demonstrating the use of CSS modules to style the React element is mentioned below.
+`Filename:` App.js The content of App.js and App.css files demonstrating the use of CSS modules to style the React element is mentioned below.
 
-**App.js**
+`App.js`
 
 ```
 import styles from './App.module.css';
@@ -3905,16 +3860,16 @@ App.modules.css
 
 ```
 
-* 4. **Styling using styled-components** : The styled-components is a third-party package that helps us create a new Styled component based on the React element and CSS styles provided to it. 
+* `Styling using styled-components :` The styled-components is a third-party package that helps us create a new Styled component based on the React element and CSS styles provided to it. 
   
-**Module Installation:** In order to use the styled-components you must first install it as a dependency using the following command from the command line.
+`Module Installation:` In order to use the styled-components you must first install it as a dependency using the following command from the command line.
 
 ```
 npm install styled-components
 
 ```
 
-**Syntax:** To create a styled component you can use the syntax mentioned below.
+`Syntax:` To create a styled component you can use the syntax mentioned below.
 
 ```
 import styled from 'styled-components';
@@ -3926,7 +3881,7 @@ const WelcomeHeading = styled.h1`
 
 The code above will create a new component based on the h1 element and style it with the CSS properties passed to it. The content of the App.js file demonstrating the use of styled-components is mentioned below.
 
-**Example:**
+`Example:`
 
 ```
 import styled from 'styled-components';
@@ -3957,8 +3912,6 @@ export default App;
 ```
 
 
-
-
 # React Animation
 
 * The animation is a technique in which images are manipulated to appear as moving images. 
@@ -3978,7 +3931,7 @@ export default App;
 1. ReactTransitionGroup: It uses as a low-level API for animation.
 2. ReactCSSTransitionGroup: It uses as a high-level API for implementing basic CSS transitions and animations.
 
-**Installation**
+`Installation`
 
 We need to install react-transition-group for creating animation in React Web application. You can use the below command.
 
@@ -3988,7 +3941,7 @@ $ npm install react-transition-group --save
 
 ```
 
-**React Transition Group Components**
+`React Transition Group Components`
 
 React Transition Group API provides three main components. These are:
 
@@ -3997,7 +3950,7 @@ React Transition Group API provides three main components. These are:
 3. Transition Group
 
 
-* **Transition**
+1. `Transition`
 
 * It has a simple component API to describe a transition from one component state to another over time. 
 
@@ -4016,7 +3969,7 @@ We can access the Transition component into four states:
 * exited
 
 
-**CSSTransition**
+2. `CSSTransition`
 
 * The CSSTransition component uses CSS stylesheet classes to write the transition and create animations. 
 
@@ -4038,7 +3991,7 @@ fade, and when it applies to the 'enter' stage, the two classes will be fade-ent
 may also take a prop as Timeout which defines the maximum time to animate.
 
 
-**TransitionGroup**
+3. `TransitionGroup`
 
 * This component is used to manage a set of transition components (Transition and CSSTransition) in a list.
    
@@ -4052,9 +4005,9 @@ may also take a prop as Timeout which defines the maximum time to animate.
 
 Let us see the example below, which clearly help to understand the React Animation.
 
-**Example:**
+`Example:`
 
-**App.js**
+`App.js`
 
 In the App.js file, import react-transition-group component, and create the CSSTransition component that uses
 as a wrapper of the component you want to animate. We are going to use transitionEnterTimeout and transitionLeaveTimeout for CSS Transition. The Enter and Leave animations used when we want to insert or delete elements from the list.
@@ -4108,7 +4061,7 @@ class App extends React.Component {
 export default App;  
 ```
 
-**Main.js**
+`Main.js`
 
 ```
 
@@ -4119,7 +4072,7 @@ import App from './App.js';
 ReactDOM.render(<App />, document.getElementById('app'));  
 ```
 
-**style.css**
+`style.css`
 
 Add style.css file in your application, and add the following CSS styles. Now, to use this CSS file, you need to add the link of this file in your HTML file.
 
@@ -4147,7 +4100,7 @@ Add style.css file in your application, and add the following CSS styles. Now, t
 In the above example, the animation durations are specified in both the CSS and render method. It tells React component when to remove the animation classes from the list and if it is leaving when to remove the element 
 from the DOM.
 
-**Output:**
+`Output:`
 
 When we execute the above program, it gives the below output.
 
@@ -4168,7 +4121,7 @@ building web apps. Today, React has the most used JavaScript framework for build
 Bootstrap become the most popular CSS framework. So, it is necessary to learn various ways in which Bootstrap can be used in React apps, which is the main aim of this section.
 
 
-**Adding Bootstrap for React**
+`Adding Bootstrap for React`
 
 We can add Bootstrap to the React app in several ways. The three most common ways are given below:
 
@@ -4179,7 +4132,7 @@ We can add Bootstrap to the React app in several ways. The three most common way
 ![image](images/react-bootstrap.png)
 
 
-1. Using the Bootstrap CDN
+1. `Using the Bootstrap CDN`
 
 It is the easiest way of adding Bootstrap to the React app. There is no need to install or download Bootstrap. We can simply put an `<link>` into the `<head>` section of the index.html file of the React app as shown in the following snippet.
 
@@ -4202,7 +4155,7 @@ If there is a need to use Bootstrap components which depend on JavaScript/jQuery
 In the above snippet, we have used jQuery's slim version, although we can also use the full version as well.Now, Bootstrap is successfully added in the React application, and we can use all the CSS utilities and UI components available from Bootstrap in the React application.
 
 
-2. Bootstrap as Dependency
+2. `Bootstrap as Dependency`
 
 If we are using a build tool or a module bundler such as Webpack, then importing Bootstrap as dependency is the preferred option for adding Bootstrap to the React application. We can install Bootstrap as a dependency for the React app. To install the Bootstrap, run the following commands in the terminal window.
 
@@ -4237,17 +4190,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 Now, we can use Bootstrap JavaScript Components in the React application.
 
 
-3. React Bootstrap Package
+3. `React Bootstrap Package`
 
 The React Bootstrap package is the most popular way to add bootstrap in the React application. There are many
 Bootstrap packages built by the community, which aim to rebuild Bootstrap components as React components. The two most popular Bootstrap packages are:
 
-* **react-bootstrap**: It is a complete re-implementation of the Bootstrap components as React components. It does not need any dependencies like bootstrap.js or jQuery. If the React setup and React-Bootstrap installed, we have everything which we need.
+* `react-bootstrap:` It is a complete re-implementation of the Bootstrap components as React components. It does not need any dependencies like bootstrap.js or jQuery. If the React setup and React-Bootstrap installed, we have everything which we need.
 
-* **reactstrap**: It is a library which contains React Bootstrap 4 components that favor composition and control. It does not depend on jQuery or Bootstrap JavaScript. However, react-popper is needed for advanced positioning of content such as Tooltips, Popovers, and auto-flipping Dropdowns.
+* `reactstrap: `It is a library which contains React Bootstrap 4 components that favor composition and control. It does not depend on jQuery or Bootstrap JavaScript. However, react-popper is needed for advanced positioning of content such as Tooltips, Popovers, and auto-flipping Dropdowns.
 
 
-**React Bootstrap Installation**
+`React Bootstrap Installation`
 
 Let us create a new React app using the create-react-app command as follows.
 
@@ -4265,7 +4218,7 @@ npm install react-bootstrap bootstrap --save
 
 ```
 
-**Importing Bootstrap**
+`Importing Bootstrap`
 
 Now, open the src/index.js file and add the following code to import the Bootstrap file.
 
@@ -4335,7 +4288,7 @@ export default ThemeSwitcher;
 
 Now, update the src/index.js file with the following snippet.
 
-**App.js**
+`App.js`
 
 ```markdown
 import 'bootstrap/dist/css/bootstrap.min.css';  
@@ -4348,7 +4301,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 ReactDOM.render(<ThemeSwitcher />, document.getElementById('root'));  
 ```
 
-**Output:**
+`Output:`
 
 When we execute the React app, we should get the output as below.
 
@@ -4363,7 +4316,7 @@ Now, if we choose the Success Theme, we will get the below screen.
 ![image](images/react-bootstrap4.png)
 
 
-**Using reactstrap**
+`Using reactstrap`
 
 Let us create a new React app using the create-react-app command as follows.
 
@@ -4381,7 +4334,7 @@ npm install bootstrap reactstrap --save
 ```
 
 
-**Importing Bootstrap**
+`Importing Bootstrap`
 
 Now, open the src/index.js file and add the following code to import the Bootstrap file.
 
@@ -4395,7 +4348,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 * The react-table is a lightweight, fast, fully customizable (JSX, templates, state, styles, callbacks), and extendable Datagrid built for React. It is fully controllable via optional props and callbacks.
 
-**Features**
+`Features`
 
 *  It is lightweight at 11kb (and only need 2kb more for styles).
 
@@ -4412,7 +4365,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 *  Minimal design & easily themeable
 
 
-**Installation**
+`Installation`
 
 Let us create a React app using the following command.
 
@@ -4426,19 +4379,17 @@ Next, we need to install react-table. We can install react-table via npm command
 $ npm install react-table  
 ```
 
-Once, we have installed react-table, we need to import the react-table into the react component. To do this, 
-
-open the src/App.js file and add the following snippet.
+Once, we have installed react-table, we need to `import` the react-table into the react component. To do this, open the src/App.js file and add the following snippet.
 
 ```
 import ReactTable from "react-table";  
 ```
 
-**Example 1:** Here `App.js` is the default component. At first, we will see how to create a table using the
+`Example 1:` Here `App.js` is the default component. At first, we will see how to create a table using the
 hardcoded values. Later we will see how to dynamically render the data from an array inside the table. 
 
 
-**Filename: App.js**
+`Filename: App.js`
 
 
 ```markdown
@@ -4480,11 +4431,11 @@ export default App;
 In the above example, we just simply used the HTML table elements which are `<table>`, `<tr>`, `<th>`, and `<td> `
 elements. 
 
-**Example 2**: Now lets us see how we can dynamically render data from an array. Instead of manually iterating
+`Example 2:` Now lets us see how we can dynamically render data from an array. Instead of manually iterating
 over the array using a loop, we can simply use the inbuilt Array.map() method. The Array.map() method allows you to iterate over an array and modify its elements using a callback function. The callback function will then be executed on each of the array’s elements. In this case, we will just return a table row on each iteration.
 
 
-**Filename: App.js**
+`Filename: App.js`
 
 ```markdown
 
@@ -4524,7 +4475,7 @@ function App() {
 export default App;
 ```
 
-**Filename:** App.css Now, let’s edit the file named App.css to style the table.
+`Filename:` App.css Now, let’s edit the file named App.css to style the table.
 
 ```css
 .App {
@@ -4550,7 +4501,7 @@ td {
 }
 ```
 
-**Output:**
+`Output:`
 
 ![image](images/Screenshot20211017145400.png)
 
@@ -4568,7 +4519,7 @@ td {
 * This is where the code splitting technique comes in. Code splitting consists of separating the code into several packages or components that can be loaded on demand or in parallel. This means that they are not loaded until they are needed.
 
 
-**The benefits of code splitting are:**
+`The benefits of code splitting are:`
 
 * The speed at which a website loads and displays content becomes faster.
 
@@ -4577,7 +4528,7 @@ td {
 * The percentage of users who abandon the web page without interacting with it decreases.
 
 
-**Drawback of code splitting:**
+`Drawback of code splitting:`
 
 * Although you may not realize it, code splitting requires downloading some data after the page is initialized.
 
@@ -4593,7 +4544,7 @@ td {
 
 ![image](images/codesplitting.jpg)
 
-1. **Dynamic imports**
+1. `Dynamic imports`
 
 Perhaps the simplest way to split code in React is with the dynamic “import” syntax. Some bundlers can parse dynamic import statements natively, while others require some configuration. The dynamic import syntax works for both static site generation and server-side rendering.Dynamic imports use the then function to import only the code that is needed. Any call to the imported code must be inside that function.
 
@@ -4604,7 +4555,7 @@ import("./parseText").then(parseText => {
 });
 ```
 
-2. **React.lazy**
+2. `React.lazy`
 
 React.lazy allows for lazy loading of imports in many contexts. It is not yet available for server-side rendering, but its diversity of functions makes up for that. The React.lazy function allows you to dynamically import a dependency and render that dependency as a component in a single line of code. The component must be rendered inside another component that shows fallback content if the dynamic import fails.This can include error content, although this is not required. If error content is included, it must be included in a special type of component called an Error Boundary. The Error Boundary component must be above any components that are dynamically loaded to make sure they display properly.
 
@@ -4640,7 +4591,7 @@ function MyComponent() {
 ``` 
 
 
-3. **Suspense**
+3. `Suspense`
 
 If the module which contains the ExampleComponent is not yet loaded by the function component(MyComponent), then we need to show some fallback content while we are waiting for it to load. We can do this using the suspense component. In other words, the suspense component is responsible for handling the output when the lazy component is fetched and rendered.
 
@@ -4680,10 +4631,10 @@ function MyComponent() {
 }  
 ```
 
-Note: React.lazy and Suspense components are not yet available for server-side rendering. For code-splitting in a server-rendered app, it is recommended to use Loadable Components.
+>**Note:** React.lazy and Suspense components are not yet available for server-side rendering. For code-splitting in a server-rendered app, it is recommended to use Loadable Components.
 
 
-4. **Error boundaries**
+4. `Error boundaries`
 
 If any module fails to load, for example, due to network failure, we will get an error. We can handle these errors with Error Boundaries. Once we have created the Error Boundary, we can use it anywhere above our lazy components to display an error state.
 
@@ -4708,7 +4659,7 @@ const MyComponent = () => (
 ```
 
 
-5. **Route-based code splitting**
+5. `Route-based code splitting`
 
 It is very tricky to decide where we introduce code splitting in the app. For this, we have to make sure that we choose the place which will split the bundles evenly without disrupting the user experience.The route is the best place to start the code splitting. Route based code splitting is essential during the page transitions on the web, which takes some amount of time to load. Here is an example of how to setup route-based code splitting into the app using React Router with React.lazy.
 
@@ -4735,12 +4686,12 @@ const App = () => (
 ```
 
 
-6. **Named Export**
+6. `Named Export`
 
 Currently, React.lazy supports default exports only. If any module you want to import using named exports, you need to create an intermediate module that re-exports it as the default. We can understand it from the below example.
 
 
-**ExampleComponents.js**
+`ExampleComponents.js`
 
 ```markdown
 export const MyFirstComponent = /* ... */;  
@@ -4748,14 +4699,14 @@ export const MySecondComponent = /* ... */;
 ```
 
 
-**MyFirstComponent.js**
+`MyFirstComponent.js`
 
 ```markdown
 export { MyFirstComponent as default } from "./ExampleComponents.js";  
 ```
 
 
-**MyApp.js**
+`MyApp.js`
 
 ```markdown
 import React, { lazy } from 'react';  
@@ -4776,14 +4727,14 @@ The Context API in React are given below.
 
 * Class.contextType
 
-1.**React.createContext**
+1.`React.createContext`
 
 It creates a context object. When React renders a component which subscribes to this context object, then it 
 
 will read the current context value from the matching provider in the component tree.
 
 
-**Syntax**
+`Syntax`
 
 ```markdown
 const MyContext = React.createContext(defaultValue);  
@@ -4793,12 +4744,12 @@ When a component does not have a matching Provider in the component tree, it ret
 
 
 
-2. **Context.Provider**
+2. `Context.Provider`
 
 Every Context object has a Provider React component which allows consuming components to subscribe to context changes. It acts as a delivery service. When a consumer component asks for something, it finds it in the context and provides it to where it is needed.
 
 
-**Syntax**
+`Syntax`
 
 ```markdown
 <MyContext.Provider value={/* some value */}>  
@@ -4807,12 +4758,12 @@ Every Context object has a Provider React component which allows consuming compo
 It accepts the value prop and passes to consuming components which are descendants of this Provider. We can connect one Provider with many consumers. Context Providers can be nested to override values deeper within the component tree. All consumers that are descendants of a Provider always re-render whenever the Provider's value prop is changed. The changes are determined by comparing the old and new values using the same algorithm as Object.is algorithm.
 
 
-3. **Context.Consumer**
+3. `Context.Consumer`
 
 It is the React component which subscribes to the context changes. It allows us to subscribe to the context within the function component. It requires the function as a component. A consumer is used to request data through the provider and manipulate the central data store when the provider allows it.
 
 
-**Syntax**
+`Syntax`
 
 ```markdown
 <MyContext.Consumer>  
@@ -4823,14 +4774,14 @@ It is the React component which subscribes to the context changes. It allows us 
 The function component receives the current context value and then returns a React node. The value argument which passed to the function will be equal to the value prop of the closest Provider for this context in the component tree. If there is no Provider for this context, the value argument will be equal to the defaultValue which was passed to createContext().
 
 
-4. **Class.contextType**
+4. `Class.contextType`
 
 The contextType property on a class used to assign a Context object which is created by React.createContext(). It allows you to consume the closest current value of that Context type using this.context. We can reference this in any of the component life-cycle methods, including the render function.
 
 >Note: We can only subscribe to a single context using this API. If we want to use the experimental public class field's syntax, we can use a static class field to initialize the contextType.
 
 
-**React Context API Example**
+`React Context API Example`
 
 `Step1` Create a new React app using the following command.
 
@@ -4887,7 +4838,7 @@ In the above code snippet, we have created the context using React.createContext
 object. After that, we have created the wrapper component which returns the Provider component, and then add all the elements as children from which we want to access the context.
 
 
-**Output:**
+`Output:`
 
 When we run the React app, we will get the following screen.
 
@@ -4896,17 +4847,17 @@ When we run the React app, we will get the following screen.
 
 # React Hooks
 
-**What are Hooks?**
+`What are Hooks?`
 
 Hooks are used to give functional components an access to use the states and are used to manage side-effects in React. They were introduced React 16.8. They let developers use state and other React features without writing a class For example- State of a component It is important to note that hooks are not used inside the classes.
 
 >Note: Hooks cannot be used with class components
 
-**When to use a Hooks**
+`When to use a Hooks`
 
 If you write a function component, and then you want to add some state to it, previously you do this by converting it to a class. But, now you can do it by using a Hook inside the existing function component.
 
-**Rules for using hooks**
+`Rules for using hooks`
 
 *	Only functional components can use hooks
 
@@ -4914,19 +4865,17 @@ If you write a function component, and then you want to add some state to it, pr
 
 *	Hooks should not be inside conditional statements
 
-**Benefits with React Hooks**
+`Benefits with React Hooks`
+
+* `Easy−to−understand complex components:`In the past, the developers had to maintain parts that at first were straightforward but eventually turned into an unmanageable jumble of stateful logic. As a result, getting errors and inconsistencies became a normal thing. Instead of requiring a split based on lifecycle methods, hooks allow you to divide a single component into separate functions based on how its constituent parts are related.
 
 
-
-* **Easy−to−understand complex components**:In the past, the developers had to maintain parts that at first were straightforward but eventually turned into an unmanageable jumble of stateful logic. As a result, getting errors and inconsistencies became a normal thing. Instead of requiring a split based on lifecycle methods, hooks allow you to divide a single component into separate functions based on how its constituent parts are related.
-
-
-* **Reduced Complexity without Classes (with functions!)**:Learning React can be quite difficult because of classes. Props, state, and the downward data flow are concepts that people can grasp very well, but still have difficulty understanding in classes. Even among seasoned React developers, arguments over the distinction between function and class components can be seen frequently.
-
-Contrarily, hooks allow you to embrace functions and use more React capabilities without the need to understand intricate functional or reactive programming techniques.
+* `Reduced Complexity without Classes (with functions!):`Learning React can be quite difficult because of classes. Props, state, and the downward data flow are concepts that people can grasp very well, but still have difficulty understanding in classes. Even among seasoned React developers, arguments over the distinction between function and class components can be seen frequently.
+  
+  Contrarily, hooks allow you to embrace functions and use more React capabilities without the need to understand intricate functional or reactive programming techniques.
 
 
-* **Easy to reuse Stateful Logic**:You can remove stateful logic from a component using hooks so that it can be tested separately and used again. You can reuse stateful logic with hooks without altering the component structure which was very difficult earlier even the higher−order components and render props couldn’t manage to do it Sharing Hooks amongst numerous components or with the community is now way too simple.
+* `Easy to reuse Stateful Logic:`You can remove stateful logic from a component using hooks so that it can be tested separately and used again. You can reuse stateful logic with hooks without altering the component structure which was very difficult earlier even the higher−order components and render props couldn’t manage to do it Sharing Hooks amongst numerous components or with the community is now way too simple.
 
 
 * **Rules of Hooks**:Hooks are similar to JavaScript functions, but you need to follow these two rules when using them. Hooks rule ensures that all the stateful logic in a component is visible in its source code. These rules are:-
@@ -4986,22 +4935,10 @@ sure the package.json file lists the React and React-DOM dependencies as given b
 
 ## useState
 
-The useState() is a Hook that allows you to have state variables in functional components . so basically 
+This hook lets you add state to your functional components. It returns a state variable and a function to update that variable.so basically useState is the ability to encapsulate local state in a functional component.  The  useState hook is a special function that takes the initial state as an argument and returns an array of two entries.  UseState encapsulate only singular value from the state, for multiple state need to have useState calls.
 
-useState is the ability to encapsulate local state in a functional component. React has two types of 
 
-components, one is class components which are ES6 classes that extend from React and the other is functional 
-
-components. Class components a Component and can have state and lifecycle methods: class Message extends 
-
-React. The  useState hook is a special function that takes the initial state as an argument and returns an 
-
-array of two entries.  UseState encapsulate only singular value from the state, for multiple state need to 
-
-have useState calls.
-
-<!--style="font-size:20px"-->
-Syntax: 
+**Syntax: **
 
 The first element is the initial state and the second one is a function that is used for updating the state.
 
@@ -5009,20 +4946,16 @@ The first element is the initial state and the second one is a function that is 
 const [state, setState] = useState(initialstate)
 ```
 
-We can also pass a function as an argument if the initial state has to be computed. And the value returned by 
-
-the function will be used as the initial state.
+We can also pass a function as an argument if the initial state has to be computed. And the value returned by the function will be used as the initial state.
 
 ```markdown
 const [sum, setsum] = useState(function generateRandomInteger(){5+7);})
 ```
 
-The above function is oneline function which computes the sum of two numbers and will be set as the initial 
+The above function is oneline function which computes the sum of two numbers and will be set as the initial state.
 
-state.
 
-<!--style="font-size:20px"-->
-Importing:
+**Importing:**
 
 To use useState you need to import useState from react as shown below:
 
@@ -5030,8 +4963,8 @@ To use useState you need to import useState from react as shown below:
 import React, { useState } from "react"
 ```
 
-<!--style="font-size:20px"-->
-Example:
+
+**Example:**
 
 Below is the implementation of useState() function.
 
@@ -5063,20 +4996,15 @@ return (
 export default App
 ```
 
-<!--style="font-size:30px"-->
-Output
+**Output:**
 
 ![image](images/usestate.png)
 
-* when we click button it will prints the random number
+>when we click button it will prints the random number
 
 ## useEffect
 
-The Effect Hook allows us to perform side effects (an action) in the function components. It does not use 
-
-components lifecycle methods which are available in class components. In other words, Effects Hooks are 
-
-equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
+The Effect Hook allows us to perform side effects (an action) in the function components. It does not use components lifecycle methods which are available in class components. In other words, Effects Hooks are equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
 
 Side effects have common features which the most web applications need to perform, such as:
 
@@ -5086,8 +5014,8 @@ Side effects have common features which the most web applications need to perfor
 
 3. Setting up a subscription, etc.
 
-<!--style="font-size:20px"-->
-Example:
+
+**Example:**
 
 ```markdown
 import { useState, useEffect } from "react";
@@ -5114,42 +5042,29 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Counter />);
 ```
 
-<!--style="font-size:30px"-->
-Output
+
+**Output:**
 
 ![image](images/useeffect1.png)
 
 
-* In React component, there are two types of side effects:
+**In React component, there are two types of side effects:**
 
 1. Effects Without Cleanup
 
 2. Effects With Cleanup
 
-<!--style="font-size:20px"-->
-Effects without Cleanup
+**Effects without Cleanup**
 
-It is used in useEffect which does not block the browser from updating the screen. It makes the app more 
-
-responsive. The most common example of effects which don't require a cleanup are manual DOM mutations, 
-
-Network requests, Logging, etc.
-
-<!--style="font-size:20px"-->
-Effects with Cleanup
-
-Some effects require cleanup after DOM updation. For example, if we want to set up a subscription to some 
-
-external data source, it is important to clean up memory so that we don't introduce a memory leak. React 
-
-performs the cleanup of memory when the component unmounts. However, as we know that, effects run for every 
-
-render method and not just once. Therefore, React also cleans up effects from the previous render before 
-
-running the effects next time.
+It is used in useEffect which does not block the browser from updating the screen. It makes the app more responsive. The most common example of effects which don't require a cleanup are manual DOM mutations, Network requests, Logging, etc.
 
 
-Example
+**Effects with Cleanup**
+
+Some effects require cleanup after DOM updation. For example, if we want to set up a subscription to some external data source, it is important to clean up memory so that we don't introduce a memory leak. React performs the cleanup of memory when the component unmounts. However, as we know that, effects run for every render method and not just once. Therefore, React also cleans up effects from the previous render before running the effects next time.
+
+
+**Example:**
 
 ```markdown
 import { useState, useEffect } from "react";
@@ -5173,9 +5088,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Timer />);
 ```
 
-
-<!--style="font-size:30px"-->
-Output
+**Output:**
 
 ![image](images/useeffect2.png)
 
