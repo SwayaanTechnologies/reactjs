@@ -1088,6 +1088,27 @@ export default App;
 
 ![modify](/images/modify1.png)
 
+Here in this Example we are using the 'export default App' statement to export a file or function named 'App.'
+
+utilizing this exported component in another file, particularly within the 'render' method defined in 'index.js.'
+
+`index.js`
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+```
+>Note:we can also  directly render the App function in the App.js by importing an ReactDom from 'react-dom' and using the render() method.
+
 # React Rendering Elements
 
 * React elements are different from DOM elements as React elements are simple JavaScript objects and are efficient to create. 
@@ -1210,7 +1231,7 @@ Display a paragraph inside an element with the id of "root":
 
 ```markdown
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 ReactDOM.render(<p>Hello</p>, document.getElementById('root'));
 ```
@@ -1233,7 +1254,7 @@ Create a variable that contains HTML code and display it in the "root" node:
 
 ```markdown
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 const myelement = (
   <table>
@@ -1271,7 +1292,7 @@ The root node can be called whatever you like:
 
 ```markdown
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 ReactDOM.render(<p>Hallo</p>, document.getElementById('sandy'));
 
@@ -1634,6 +1655,16 @@ export default App;
 
 * To do this, add a class constructor which assigns an initial state using this.state. The `'this.state'` property can be rendered inside render() method.
 
+`Correct method to update states`
+
+In the below code, we are using the ES6 thick arrow function format to take the previous state and props of the component as parameters and are updating the counter. The same can be written using the default functional way as follows.  
+
+```
+this.setState((prevState, props) => ({
+      counter: prevState.count + props.diff
+}))
+
+```
 
 `Example:`
 
@@ -1685,6 +1716,61 @@ export default App;
 
 ![image](images/state.png)
 
+`Changing the State`
+
+We can change the component state by using the setState() method and passing a new state object as the argument. Now, create a new method toggleDisplayBio() in the above example and bind this keyword to the toggleDisplayBio() method otherwise we can't access this inside toggleDisplayBio() method.
+
+```
+
+this.toggleDisplayBio = this.toggleDisplayBio.bind(this); 
+```
+
+`Example`
+
+In this example, we are going to add a button to the render() method. Clicking on this button triggers the toggleDisplayBio() method which displays the desired output.
+
+```
+import React, { Component } from 'react';  
+class App extends React.Component {  
+ constructor() {  
+      super();        
+      this.state = { displayBio: false };  
+      console.log('Component this', this);  
+      this.toggleDisplayBio = this.toggleDisplayBio.bind(this);  
+      }  
+      toggleDisplayBio(){  
+          this.setState({displayBio: !this.state.displayBio});  
+          }  
+      render() {  
+          return (  
+              <div>  
+                  <h1>Welcome to ReactJS Tutorialsss!!</h1>  
+                  {  
+                      this.state.displayBio ? (   
+                          <div>  
+                              <p><h4>when You click Read more this Button expands and Compress when you click show less</h4></p>  
+                              <button onClick={this.toggleDisplayBio}> Show Less </button>  
+                        </div>  
+                          ) : (  
+                              <div>  
+                                  <button onClick={this.toggleDisplayBio}> Read More </button>  
+                              </div>  
+                          )  
+                  }  
+             </div>  
+        )  
+    }  
+}  
+export default App;
+
+```
+
+`Output:`
+
+![image](images/state4.png)
+
+![image](images/state3.png)
+
 # React Props
 
 * Props stand for "Properties." They are read-only components. 
@@ -1711,7 +1797,7 @@ main.js file of your ReactJS project and used it inside the component in which y
 
 ```markdown
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 function Car(props) {
   return <h2>I am a { props.brand }!</h2>;
@@ -1740,7 +1826,7 @@ Send the "brand" property from the Garage component to the Car component:
 
 ```markdown
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 function Car(props) {
   return <h2>I am a { props.brand }!</h2>;
@@ -1872,7 +1958,7 @@ App.defaultProps = {
 export default App;  
 ```
 
-`Main.js`
+`index.js`
 
 ```markdown
 import React from 'react';  
@@ -2454,6 +2540,226 @@ export default App;
 `Output:`
 
 ![image](images/key2.png)
+
+## React refs
+
+* Refs is the shorthand used for references in React. It is similar to keys in React. 
+
+* It is an attribute which makes it possible to store a reference to particular DOM nodes or React elements. It provides a way to access React DOM nodes or React elements and how to interact with it. 
+
+* It is used when we want to change the value of a child component, without making the use of props.
+
+* Refs are a function provided by React to access the DOM element and the React element that you might have created on your own. 
+
+* They are used in cases where we want to change the value of a child component, without making use of props and all. They have wide functionality as we can use callbacks with them.
+
+`Creating refs in React`
+
+Refs can be created using React.createRef() function and attached it with the React element via the ref attribute. When a component is constructed the Refs are commonly assigned to an instance property so that they can be referenced in the component. 
+
+`Syntax:`
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.myCallRef = React.createRef();
+    }
+    render() {
+        return <div ref={this.myCallRef} />;
+    }
+}
+
+
+```
+
+`Accessing Refs in React`
+
+In React, A reference to the node becomes accessible at the current attribute of the ref when a ref is passed to an element in the render.
+
+```
+const node = this.myCallRef.current;
+```
+
+Now, we are going to see how we can use refs in our code which will help you to understand the use case of refs better.
+
+`When to Use Refs`
+
+Refs can be used in the following cases:
+
+  * When we need DOM measurements such as managing focus, text selection, or media playback.
+	* It is used in triggering imperative animations.
+	* When integrating with third-party DOM libraries.
+	* It can also use as in callbacks.
+
+`When to not use Refs`
+
+*	Its use should be avoided for anything that can be done declaratively. For example, instead of using open() and close() methods on a Dialog component, you need to pass an isOpen prop to it.
+* You should have to avoid overuse of the Refs.
+
+`Add Ref to DOM elements`
+
+In the below example, we are adding a ref to store the reference to a DOM node or element.
+
+`Example:`
+
+```
+import React, { Component } from 'react';    
+   
+class App extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.callRef = React.createRef();  
+    this.addingRefInput = this.addingRefInput.bind(this);  
+  }  
+   
+  addingRefInput() {  
+    this.callRef.current.focus();  
+  }  
+   
+  render() {  
+    return (  
+      <div>  
+        <h2>Adding Ref to DOM element</h2>  
+        <input  
+          type="text"  
+          ref={this.callRef} />  
+        <input  
+          type="button"  
+          value="Add text input"  
+          onClick={this.addingRefInput}  
+        />  
+      </div>  
+    );  
+  }  
+}  
+export default App;
+
+```
+
+![ref](/images/ref.png)
+
+`Add Ref to Class components`
+
+In the below example, we are adding a ref to store the reference to a class component.
+
+`Example`
+
+```
+import React, { Component } from 'react';    
+   
+function CustomInput(props) {  
+  let callRefInput = React.createRef();  
+   
+  function handleClick() {  
+    callRefInput.current.focus();  
+  }  
+   
+  return (  
+    <div>  
+      <h2>Adding Ref to Class Component</h2>  
+      <input  
+        type="text"  
+        ref={callRefInput} />  
+      <input  
+        type="button"  
+        value="Focus input"  
+        onClick={handleClick}  
+      />  
+    </div>  
+  );  
+}  
+class App extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.callRefInput = React.createRef();  
+  }  
+   
+  focusRefInput() {  
+    this.callRefInput.current.focus();  
+  }  
+   
+  render() {  
+    return (  
+      <CustomInput ref={this.callRefInput} />  
+    );  
+  }  
+}  
+export default App;
+
+```
+
+`Output:`
+
+![ref](/images/ref1.png)
+
+## Callback refs
+
+In react, there is another way to use refs that is called "callback refs" and it gives more control when the refs are set and unset. Instead of creating refs by createRef() method, React allows a way to create refs by passing a callback function to the ref attribute of a component. It looks like the below code.
+
+```
+<input type="text" ref={element => this.callRefInput = element} />
+``` 
+
+The callback function is used to store a reference to the DOM node in an instance property and can be accessed elsewhere. It can be accessed as below:
+
+`this.callRefInput.value ` 
+
+The example below helps to understand the working of callback refs.
+
+`Example:`
+
+``` 
+import React, { Component } from 'react';   
+   
+class App extends React.Component {  
+    constructor(props) {  
+    super(props);  
+  
+    this.callRefInput = null;  
+  
+    this.setInputRef = element => {  
+      this.callRefInput = element;  
+    };  
+  
+    this.focusRefInput = () => {  
+      //Focus the input using the raw DOM API  
+      if (this.callRefInput) this.callRefInput.focus();  
+    };  
+  }  
+  
+  componentDidMount() {  
+    //autofocus of the input on mount  
+    this.focusRefInput();  
+  }  
+  
+  render() {  
+    return (  
+      <div>  
+    <h2>Callback Refs Example</h2>  
+        <input  
+          type="text"  
+          ref={this.setInputRef}  
+        />  
+        <input  
+          type="button"  
+          value="Focus input text"  
+          onClick={this.focusRefInput}  
+        />  
+      </div>  
+    );  
+  }  
+}  
+export default App;
+
+``` 
+
+In the above example, React will call the "ref" callback to store the reference to the input DOM element when the component **mounts**, and when the component** unmounts**, call it with null. Refs are always up-to-date before the **componentDidMount** or **componentDidUpdate** fires. The callback refs pass between components is the same as you can work with object refs, which is created with React.createRef().
+
+`Output:`
+
+![ref](/images/ref2.png)
+
 
 
 # React Fragments
@@ -3282,7 +3588,7 @@ Add a form that allows users to enter their name:
 
 ```
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 function MyForm() {
   return (
@@ -3331,7 +3637,7 @@ Use the useState Hook to manage the input:
 ```
 
 import { useState } from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 function MyForm() {
   const [name, setName] = useState("");
@@ -3368,7 +3674,7 @@ Add a submit button and an event handler in the onSubmit attribute:
 
 ```
 import { useState } from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 function MyForm() {
   const [name, setName] = useState("");
@@ -3415,7 +3721,7 @@ Write a form with two input fields:
 
 ```
 import { useState } from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 
 function MyForm() {
   const [inputs, setInputs] = useState({});
@@ -3669,6 +3975,164 @@ export default App;
 `Output:`
 
 ![map](images/map1.png)
+
+# React Component API
+
+React Component API includes various methods for creating elements, transforming elements and fragments to make the code completely individual and reusable in the application and is thus a top-level API. The three most important methods of the React component API are setState() method, forceUpdate() method and findDOMNode() method.
+
+`The setState() method:`
+
+The setState() method is a primary method which is used to set or update a state of the component and it also triggers UI updates on calling. It does not replace the state immediately, but only adds changes to the original state. It is also used to update the user interface(UI) in response to event handlers and server responses.
+
+`Syntax:`
+
+this.stateState(object newState, function_callback);
+
+`Parameters:`
+
+`function_callback:` It is an optional parameter which is executed once setState() is completed and the component is re-rendered.
+
+`Example:`
+
+
+`App.js:`
+
+```
+
+import React, { Component } from 'react';  
+import PropTypes from 'prop-types';  
+class App extends React.Component {  
+constructor() {  
+super();        
+this.state = {  
+message: "Hello World"  
+};      
+this.updateSetState = this.updateSetState.bind(this);  
+}  
+updateSetState() {  
+this.setState({  
+message:"It is a beautiful day."  
+});  
+}  
+render() {  
+return (  
+<div>  
+<h1>{this.state.message}</h1>  
+<button onClick = {this.updateSetState}>SET</button>  
+</div>  
+);  
+}  
+}  
+export default App;
+```
+
+`Output:`
+
+![map](images/component.png)
+
+![map](images/component1.png)
+
+## findDOMNode()
+
+`The findDOMNode() method:`
+It is used for DOM manipulation, to find or access the underlying DOM node.
+
+`Syntax:`
+
+ReactDOM.findDOMNode (component);
+
+`Example:`
+
+`App.js:`
+
+```
+import React, { Component } from 'react';
+
+class App extends Component {
+   constructor() {
+      super();
+      this.findDomNodeHandler1 = this.findDomNodeHandler1.bind(this);
+      this.findDomNodeHandler2 = this.findDomNodeHandler2.bind(this);
+   };
+
+   findDomNodeHandler1() {
+      const myDivOne = document.getElementById('myDivOne');
+      myDivOne.style.color = 'red';
+   }
+
+   findDomNodeHandler2() {
+      const myDivTwo = document.getElementById('myDivTwo');
+      myDivTwo.style.color = 'blue';
+   }
+
+   render() {
+      return (
+         <div>
+            <h1>ReactJS Find DOM Node Example</h1>
+            <button onClick={this.findDomNodeHandler1}>FIND_DOM_NODE1</button>
+            <button onClick={this.findDomNodeHandler2}>FIND_DOM_NODE2</button>
+            <h3 id="myDivOne">JTP-NODE1</h3>
+            <h3 id="myDivTwo">JTP-NODE2</h3>
+         </div>
+      );
+   }
+}
+
+export default App;
+
+```
+
+`Output:`
+
+![map](images/component2.png)
+
+![map](images/component3.png)
+
+## forceUpdate() 
+
+`The forceUpdate() method:`
+
+It is used to allow the users to update the component manually.
+
+`Syntax:`
+
+Component.forceUpdate (callback);
+
+`Example:`
+
+`App.js:`
+
+```
+
+import React, { Component } from 'react';  
+class App extends React.Component {  
+constructor() {  
+super();            
+this.forceUpdateState = this.forceUpdateState.bind(this);  
+}  
+forceUpdateState() {  
+this.forceUpdate();  
+};  
+render() {  
+return (  
+<div>  
+<h1>Random number</h1>  
+<h3>{Math.random()}</h3>  
+<button onClick = {this.forceUpdateState}>Update</button>  
+</div>  
+);  
+}  
+}  
+export default App;
+
+```
+
+`Output:`
+
+![map](images/component4.png)
+
+![map](images/component5.png)
+
 
 # React CSS
 
@@ -4870,7 +5334,7 @@ object. After that, we have created the wrapper component which returns the Prov
 
 When we run the React app, we will get the following screen.
 
-![image](images/react-context-api-output.png)
+![image](images/context-api.png)
 
 
 # React Hooks
@@ -5046,7 +5510,7 @@ Side effects have common features which the most web applications need to perfor
 
 ```markdown
 import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -5065,8 +5529,7 @@ function Counter() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Counter />);
+export default App;
 ```
 
 
@@ -5095,7 +5558,7 @@ Some effects require cleanup after DOM updation. For example, if we want to set 
 
 ```markdown
 import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+
 
 function Timer() {
   const [count, setCount] = useState(0);
@@ -5111,8 +5574,7 @@ function Timer() {
   return <h1>I've rendered {count} times!</h1>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Timer />);
+export default App;
 ```
 
 `Output:`
@@ -5248,7 +5710,6 @@ Use useRef to track application renders.
 
 ```markdown
 import { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom/client";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -5270,8 +5731,7 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 ```
 
 `Output`
@@ -5302,7 +5762,6 @@ Use useRef to focus the input:
 
 ```markdown
 import { useRef } from "react";
-import ReactDOM from "react-dom/client";
 
 function App() {
   const inputElement = useRef();
@@ -5342,7 +5801,6 @@ Use useRef to keep track of previous state values:
 
 ```markdown
 import { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom/client";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -5365,8 +5823,7 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 ```
 
 
@@ -5407,7 +5864,7 @@ Here is an example of useReducer in a counter app:
 
 ```markdown
 import { useReducer } from "react";
-import ReactDOM from "react-dom/client";
+
 
 const initialTodos = [
   {
@@ -5462,8 +5919,7 @@ function Todos() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Todos />);
+export default App;
 ```
 
 
@@ -5915,6 +6371,226 @@ To use React Redux with React application, you need to install the below command
 ```
  $ npm install redux react-redux --save 
 ``` 
+
+## Example
+
+Create a folder Structure like this 
+
+```bash 
+src/
+|-- actions/
+|   |-- actionTypes.js
+|   |-- todoActions.js
+|
+|-- components/
+|   |-- TodoList.js
+|   |-- TodoItem.js
+|
+|-- reducers/
+|   |-- todoReducer.js
+|
+|-- store/
+|   |-- configureStore.js
+|
+|-- App.js
+|-- index.js
+
+```
+Now, let's create the components step by step.
+
+1. `actions/actionTypes.js`: This file will define the action types for your Redux actions.
+
+```
+// actionTypes.js
+export const ADD_TODO = "ADD_TODO";
+export const REMOVE_TODO = "REMOVE_TODO";
+
+```
+2. `actions/todoActions.js:`This file will define the action creators for your Redux actions.
+
+```
+// todoActions.js
+import { ADD_TODO, REMOVE_TODO } from "./actionTypes";
+
+export const addTodo = (text) => ({
+  type: ADD_TODO,
+  payload: {
+    text,
+  },
+});
+
+export const removeTodo = (id) => ({
+  type: REMOVE_TODO,
+  payload: {
+    id,
+  },
+});
+```
+
+3. `reducers/todoReducer.js:`This file will define the reducer for handling the state changes based on the actions.
+
+```
+// todoReducer.js
+import { ADD_TODO, REMOVE_TODO } from "../actions/actionTypes";
+
+const initialState = {
+  todos: [],
+};
+
+const todoReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_TODO:
+      return {
+        ...state,
+        todos: [
+          ...state.todos,
+          {
+            id: Date.now(),
+            text: action.payload.text,
+          },
+        ],
+      };
+    case REMOVE_TODO:
+      return {
+        ...state,
+        todos: state.todos.filter((todo) => todo.id !== action.payload.id),
+      };
+    default:
+      return state;
+  }
+};
+
+export default todoReducer;
+
+```
+
+4. `store/configureStore.js:`This file will configure your Redux store.
+
+```
+// configureStore.js
+import { createStore } from "redux";
+import todoReducer from "../reducers/todoReducer";
+
+const store = createStore(todoReducer);
+
+export default store;
+
+```
+
+5. `components/TodoItem.js:`A simple component to display a single todo item.
+
+```
+// TodoItem.js
+import React from "react";
+
+const TodoItem = ({ id, text, onDelete }) => {
+  return (
+    <li>
+      <span>{text}</span>
+      <button onClick={() => onDelete(id)}>Delete</button>
+    </li>
+  );
+};
+
+export default TodoItem;
+
+```
+
+6. `components/TodoList.js:`The main component to display the list of todos and handle interactions.
+
+```
+// TodoList.js
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, removeTodo } from "../actions/todoActions";
+import TodoItem from "./TodoItem";
+
+const TodoList = () => {
+  const [inputText, setInputText] = useState("");
+  const todos = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
+
+  const handleAddTodo = () => {
+    if (inputText.trim() !== "") {
+      dispatch(addTodo(inputText));
+      setInputText("");
+    }
+  };
+
+  const handleDeleteTodo = (id) => {
+    dispatch(removeTodo(id));
+  };
+
+  return (
+    <div>
+      <h1>Todo List</h1>
+      <input
+        type="text"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+      />
+      <button onClick={handleAddTodo}>Add Todo</button>
+      <ul>
+        {todos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            id={todo.id}
+            text={todo.text}
+            onDelete={handleDeleteTodo}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TodoList;
+
+```
+
+7. `App.js:`The main entry point for your React application.
+
+```
+// App.js
+import React from "react";
+import TodoList from "./components/TodoList";
+
+function App() {
+  return (
+    <div className="App">
+      <TodoList />
+    </div>
+  );
+}
+
+export default App;
+```
+
+8. `index.js:`The file that renders your React app.
+
+```
+
+import React from "react";
+import { createRoot } from "react-dom/client"; // Import createRoot instead of render
+import { Provider } from "react-redux";
+import store from "./store/configureStore";
+import App from "./App";
+
+// Use createRoot instead of render
+createRoot(document.getElementById("root")).render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+```
+
+`Output:`
+
+![redux](/images/reduxex.png)
+
+
+
 
 # React Error Boundaries
 
