@@ -200,6 +200,104 @@ In React application, there are several files and folders in the root directory.
 
 6. `README.md:` It provides the documentation to read about React topics.
 
+# ReactJS Virtual DOM
+
+`What is DOM?`
+
+* DOM stands for ‘Document Object Model’. In simple terms, it is a structured representation of the HTML elements that are present in a webpage or web app. 
+
+* DOM represents the entire UI of your application. 
+
+* The DOM is represented as a tree data structure. 
+
+* It contains a node for each UI element present in the web document. 
+
+* It is very useful as it allows web developers to modify content through JavaScript, also it being in structured format helps a lot as we can choose specific targets and all the code becomes much easier to work with.
+
+`Disadvantages of real DOM?`
+
+Every time DOM gets updated, the updated element and its children have to be rendered again to update the UI of our page. For this, each time there is a component update, the DOM needs to be updated and the UI components have to be re-rendered.
+
+`Example: `
+
+```
+// Simple getElementById() method
+document.getElementById('some-id').innerValue = 'updated value';
+```
+
+When writing the above code in the console or in the JavaScript file, these things happen: 
+
+•	The browser parses the HTML to find the node with this id.
+•	It removes the child element of this specific element.
+•	Updates the element(DOM) with the ‘updated value’.
+•	Recalculates the CSS for the parent and child nodes.
+•	Update the layout.
+•	Finally, traverse the tree and paint it on the screen(browser) display.
+
+`What is Virtual DOM?`
+
+React uses Virtual DOM exists which is like a lightweight copy of the actual DOM(a virtual representation of the DOM). So for every object that exists in the original DOM, there is an object for that in React Virtual DOM. It is exactly the same, but it does not have the power to directly change the layout of the document. 
+
+## ReactDOM
+
+`What is ReactDOM? `
+
+ReactDOM is a package that provides DOM-specific methods that can be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page. ReactDOM provides the developers with an API containing the various methods to manipulate DOM. 
+
+`How to use ReactDOM?`
+
+To use the ReactDOM in any React web app we must first install the react-dom package in our project. To install the react-dom package use the following command.
+
+```
+// Installing
+npm i react-dom 
+```
+
+After installing the package use the following command to import the package in your application file.
+
+```
+// Importing
+import ReactDOM from 'react-dom'
+```
+
+After installing react-dom it will appear in the dependenices in package.json file like:
+
+```
+"dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+}
+```
+
+`Why ReactDOM is used?`
+
+Earlier, React Developers directly manipulated the DOM elements which resulted in frequent DOM manipulation, and each time an update was made the browser had to recalculate and repaint the whole view according to the particular CSS of the page, which made the total process to consume a lot of time.
+
+To solve this issue, React brought into the scene the virtual DOM. The Virtual DOM can be referred to as a copy of the actual DOM representation that is used to hold the updates made by the user and finally reflect it over to the original Browser DOM at once consuming much lesser time. 
+
+`Important functions provided by ReactDOM`
+
+•	`render():` This is one of the most important methods of ReactDOM. This function is used to render a single React Component or several Components wrapped together in a Component or a div element. 
+
+•	`findDOMNode():` This function is generally used to get the DOM node where a particular React component was rendered. This method is very less used like the following can be done by adding a ref attribute to each component itself.
+
+•	`unmountComponentAtNode():` This function is used to unmount or remove the React Component that was rendered to a particular container.
+
+•	`hydrate():` This method is equivalent to the render() method but is implemented while using server-side rendering. 
+
+•	`createPortal():` It allow us to render a component into a DOM node that resides outside the current DOM hierarchy of the parent component. 
+
+`Key features of ReactDOM:`
+
+•	ReactDOM.render() replaces the child of the given container if any. It uses a highly efficient diff algorithm and can modify any subtree of the DOM.
+
+•	React findDOMNode() function can only be implemented upon mounted components thus Functional components can not be used in findDOMNode() method.
+
+•	ReactDOM uses observables thus provides an efficient way of DOM handling.
+
+•	ReactDOM can be used on both the client-side and server-side.
+
 # React ES6
 
 `What is ES6?`
