@@ -568,6 +568,44 @@ var x = 5.6;
 let x = 5.6;
 ```
 
+1.`Variables defined with let cannot be Redeclared.`
+
+```
+let number = 5;
+let number = 10;
+```
+This will throw
+
+`SyntaxError`: Identifier 'number' has already been declared
+Variables declared with let cannot be redeclared. But variables declared with var can be redeclared.
+
+```
+var number = 5;
+var number = 10;
+```
+
+This will not throw any error.
+
+2. `Variables defined with let must be Declared before use.`
+
+
+let total = number + number;
+console.log(total)
+let number = 5;
+
+This will throw
+
+`ReferenceError:` Cannot access 'number' before initialization
+
+var allows such behaviour. Variable will be assigned the value `undefined` before initialisation. This is called as Hoisting.
+
+```
+var total = number + number;
+console.log(total) // Nan
+var number = 5;
+```
+
+This will not throw any error. It'll log `NaN` to console as `undefined + undefined = Nan`.
 
 `const`
 
@@ -596,6 +634,51 @@ let x = 5.6;
 ```
 const x = 5.6;
 ```
+
+1.  Variables defined with const must be Initialised.
+
+```
+const number;
+number = 5;
+console.log(number);
+```
+
+This will throw
+
+`SyntaxError:` Missing initializer in const declaration
+
+```
+let number;
+number = 5;
+console.log(number); // 5
+```
+
+This will not throw any error. Variable with `let` keyword can be defined and then initialised which is not the case with `const`.
+
+```
+const number;
+number = 5;
+console.log(number); 
+```
+
+2. Variables defined with const cannot be Reassigned
+
+```
+const number;
+number = 5;
+console.log(number); 
+```
+This will throw
+
+`TypeError:` Assignment to constant variable.
+
+```
+let number;
+number = 5;
+console.log(number); // 5
+```
+
+This will not throw any error. Variable with **let** keyword can be reassigned.
 
 ## ES6 Array Method
 
@@ -1495,6 +1578,8 @@ ReactDOM.render(element, document.getElementById("root"));
 * A Component is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. 
 
 * Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI.
+
+* When creating a React component, the component's name MUST start with an upper case letter.
 
 **In React, we mainly have two types of components:**
 
