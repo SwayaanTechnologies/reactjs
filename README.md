@@ -227,12 +227,17 @@ document.getElementById('some-id').innerValue = 'updated value';
 
 When writing the above code in the console or in the JavaScript file, these things happen: 
 
-•	The browser parses the HTML to find the node with this id.
-•	It removes the child element of this specific element.
-•	Updates the element(DOM) with the ‘updated value’.
-•	Recalculates the CSS for the parent and child nodes.
-•	Update the layout.
-•	Finally, traverse the tree and paint it on the screen(browser) display.
+*	The browser parses the HTML to find the node with this id.
+
+*	It removes the child element of this specific element.
+
+*	Updates the element(DOM) with the ‘updated value’.
+
+*	Recalculates the CSS for the parent and child nodes.
+
+*	Update the layout.
+
+*	Finally, traverse the tree and paint it on the screen(browser) display.
 
 `What is Virtual DOM?`
 
@@ -278,25 +283,25 @@ To solve this issue, React brought into the scene the virtual DOM. The Virtual D
 
 `Important functions provided by ReactDOM`
 
-•	`render():` This is one of the most important methods of ReactDOM. This function is used to render a single React Component or several Components wrapped together in a Component or a div element. 
+* `render():` This is one of the most important methods of ReactDOM. This function is used to render a single React Component or several Components wrapped together in a Component or a div element. 
 
-•	`findDOMNode():` This function is generally used to get the DOM node where a particular React component was rendered. This method is very less used like the following can be done by adding a ref attribute to each component itself.
+* `findDOMNode():` This function is generally used to get the DOM node where a particular React component was rendered. This method is very less used like the following can be done by adding a ref attribute to each component itself.
 
-•	`unmountComponentAtNode():` This function is used to unmount or remove the React Component that was rendered to a particular container.
+*	`unmountComponentAtNode():` This function is used to unmount or remove the React Component that was rendered to a particular container.
 
-•	`hydrate():` This method is equivalent to the render() method but is implemented while using server-side rendering. 
+*	`hydrate():` This method is equivalent to the render() method but is implemented while using server-side rendering. 
 
-•	`createPortal():` It allow us to render a component into a DOM node that resides outside the current DOM hierarchy of the parent component. 
+*	`createPortal():` It allow us to render a component into a DOM node that resides outside the current DOM hierarchy of the parent component. 
 
 `Key features of ReactDOM:`
 
-•	ReactDOM.render() replaces the child of the given container if any. It uses a highly efficient diff algorithm and can modify any subtree of the DOM.
+*	ReactDOM.render() replaces the child of the given container if any. It uses a highly efficient diff algorithm and can modify any subtree of the DOM.
 
-•	React findDOMNode() function can only be implemented upon mounted components thus Functional components can not be used in findDOMNode() method.
+*	React findDOMNode() function can only be implemented upon mounted components thus Functional components can not be used in findDOMNode() method.
 
-•	ReactDOM uses observables thus provides an efficient way of DOM handling.
+*	ReactDOM uses observables thus provides an efficient way of DOM handling.
 
-•	ReactDOM can be used on both the client-side and server-side.
+*	ReactDOM can be used on both the client-side and server-side.
 
 # React ES6
 
