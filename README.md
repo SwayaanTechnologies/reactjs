@@ -6507,6 +6507,28 @@ The dispatcher method allows us to trigger a dispatch to the store and include a
 
 * The flux application parts are decoupled.
 
+# React State Management
+
+`What is React State Management?`
+
+React components have a built-in state object. The state is encapsulated data where you store assets that are persistent between component renderings.
+
+The state is just a fancy term for a JavaScript data structure. If a user changes state by interacting with your application, the UI may look completely different afterwards, because it's represented by this new state rather than the old state.
+
+`Why do you need React state management?`
+
+React applications are built using components and they manage their state internally and it works well for applications with few components, but when the application grows bigger, the complexity of managing states shared across components becomes difficult.
+
+Here is a simple example of an e-commerce application, in which the status of multiple components will change when purchasing a product.
+
+* Add that product to the shopping list
+* Add product to customer history
+* trigger count of purchased products
+
+If developers do not have scalability in mind then it is really hard to find out what is happening when something goes wrong. This is why you need state management in your application.
+
+Let’s discuss how to use react state management using Redux.
+
 # React Redux
 
 * Redux is an open-source JavaScript library used to manage application state. React uses Redux for building the user interface. It was first introduced by Dan Abramov and Andrew Clark in 2015.
@@ -6545,9 +6567,53 @@ The components of Redux architecture are explained below.
 
 `STORE:` A Store is a place where the entire state of your application lists. It manages the status of the application and has a dispatch(action) function. It is like a brain responsible for all moving parts in Redux.
 
+Let’s create a store for our TODO app:
+
+```
+const store = createStore(TODOReducer);
+```
+
 `ACTION:` Action is sent or dispatched from the view which are payloads that can be read by Reducers. It is a pure object created to store the information of the user's event. It includes information such as type of action, time of occurrence, location of occurrence, its coordinates, and which state it aims to change.
 
+Here is an example action that represents adding a new todo item:
+
+```
+{ 
+type: "ADD_TODO", 
+payload: {text:"Hello Foo"}
+ }
+
+```
+
+Here is an example of its action creator:
+
+```
+const addTodo = (text) => {
+  return {
+     type: "ADD_TODO",
+     text
+  };
+}
+```
+
 `REDUCER:` Reducer read the payloads from the actions and then updates the store via the state accordingly. It is a pure function to return a new state from the initial state.
+
+An example of how Reducer works in Redux is as follows:
+
+```
+const TODOReducer= (state = {}, action) => {
+  switch (action.type) {
+    case "ADD_TODO":
+      return {
+        ...state,
+        ...action.payload
+      };
+    default:
+      return state;
+  }
+}
+
+```
 
 
 `Redux Installation`
