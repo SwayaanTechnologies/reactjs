@@ -21,55 +21,59 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 ![reactjsLogo](/images/logoo.png)
 
-## Table of Contents
+# Table of Contents
 
 ----------------------------------------------------------------------------------
 
 
-* .[What is React](#what-is-react)
-* [React Features](#react-features)
-* [ReactJS Environment Setup](#react-js-environment-setup)
-* [ReactJS Virtual DOM](#reactjs-virtual-dom)
-* [React ES6](#react-es6)
-* [Modify The React Application](#modify-the-react-application)
-* [React Rendering Elemets](#react-rendering-elements)
-* [React Render HTML](#react-render-html)
-* [React JSX](#react-jsx)
-* [React Components](#react-components)
-* [React State](#react-state)
-* [React Props](#react-props)
-* [React Props Validation](#react-props-validation)
-* [State vs Props](#state-vs-props)
-* [React Constructor](#react-constructor)
-* [React Events](#react-events)
-* [React List](#react-list)
-* [React Keys](#react-keys)
-* [React Refs](#react-refs)
-* [React Fragments](#react-fragments)
-* [React Router](#react-router)
-* [Adding Navigation using Link component](#adding-navigation-using-link-component)
-* [React Forms](#react-forms)
-* [React Map](#react-map)
-* [React Component API](#react-component-api)
-* [React CSS](#react-css)
-* [React Animation](#react-animation)
-* [React Bootstrap](#react-bootstrap)
-* [React Table](#react-table)
-* [React Code Splitting](#react-code-splitting)
-* [React Context API](#react-context-api)
-* [React Hooks](#react-hooks)
-* [React Flux](#react-flux)
-* [React State Management](#react-state-management)
-* [React Redux](#react-redux)
-* [React Error Boundaries](#react-error-boundaries)
-* [Unit Testing in React](#unit-testing-in-react)
-* [Conclusion](#conclusion)
-* [Reference](#reference-notes-link)
+* **[What is React](#what-is-react)**
+* **[React Features](#react-features)**
+* **[ReactJS Environment Setup](#react-js-environment-setup)**
+* **[ReactJS Virtual DOM](#reactjs-virtual-dom)**
+* **[React ES6](#react-es6)**
+* **[Modify The React Application](#modify-the-react-application)**
+* **[React Rendering Elemets](#react-rendering-elements)**
+* **[React Render HTML](#react-render-html)**
+* **[React JSX](#react-jsx)**
+* **[React Components](#react-components)**
+* **[React State](#react-state)**
+* **[React Props](#react-props)**
+* **[React Props Validation](#react-props-validation)**
+* **[State vs Props](#state-vs-props)**
+* **[React Constructor](#react-constructor)**
+* **[React Events](#react-events)**
+* **[React List](#react-list)**
+* **[React Keys](#react-keys)**
+* **[React Refs](#react-refs)**
+* **[React Fragments](#react-fragments)**
+* **[React Router](#react-router)**
+* **[Adding Navigation using Link component](#adding-navigation-using-link-component)**
+* **[React Forms](#react-forms)**
+* **[React Map](#react-map)**
+* **[React Component API](#react-component-api)**
+* **[React CSS](#react-css)**
+* **[React Animation](#react-animation)**
+* **[React Bootstrap](#react-bootstrap)**
+* **[React Table](#react-table)**
+* **[React Code Splitting](#react-code-splitting)**
+* **[React Context API](#react-context-api)**
+* **[React Hooks](#react-hooks)**
+* **[React Flux](#react-flux)**
+* **[React State Management](#react-state-management)**
+* **[React Redux](#react-redux)**
+* **[React Error Boundaries](#react-error-boundaries)**
+* **[Unit Testing in React](#unit-testing-in-react)**
+* **[Conclusion](#conclusion)**
+* **[Reference](#reference-notes-link)**
+
 
 
 -----------------------------------------------------------------------------
 
-##  what is React?
+
+
+
+#  what is React?
 
 * ReactJS is an open-source JavaScript library used to create user interfaces in a declarative and efficient way. 
 
@@ -92,7 +96,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * Offers performance optimization, JSX, and wide adoption, making it a top choice for dynamic web applications.
 
-### How does React works?
+## How does React works?
 
 * React works by creating a virtual representation of the UI called the Virtual DOM in memory.
 
@@ -104,7 +108,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * React finds out what changes have been made, and changes only what needs to be changed.
 
-### React.js History
+## React.js History
 
 * Current version of React.JS is V18.0.0 (April 2022).
 
@@ -118,7 +122,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * create-react-app includes built tools such as webpack, Babel, and ESLint.
 
-## React Features
+# React Features
 
 * `Component-Based Architecture:` Building UIs using reusable and self-contained components for easier development and maintenance.
 
@@ -142,7 +146,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * `License:` React is licensed under the Facebook Inc. Documentation is licensed under CC BY 4.0.
 
-### React Advantages
+## React Advantages
 
 •	Component-Based Architecture
 
@@ -161,7 +165,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 •	SEO-Friendly (with SSR and Next.js)
 
 
-### React Limitations
+## React Limitations
 
 •	Learning Curve
 
@@ -189,7 +193,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 3: Basic Understanding of how to use npm(Node Package Manager).
 
 
-## React JS Environment Setup
+# React JS Environment Setup
 
 To run any React application, we need to first setup a ReactJS Development Environment.
 
@@ -231,7 +235,7 @@ npm start
 
 ![environment](/images/ES4.png)
 
-### React File and Folder Structure
+## React File and Folder Structure
 
 In React application, there are several files and folders in the root directory. Some of them are as follows:
 
@@ -248,7 +252,7 @@ In React application, there are several files and folders in the root directory.
 
 6. `README.md:` It provides the documentation to read about React topics.
 
-## ReactJS Virtual DOM
+# ReactJS Virtual DOM
 
 `What is DOM?`
 
@@ -291,7 +295,7 @@ When writing the above code in the console or in the JavaScript file, these thin
 
 React uses Virtual DOM exists which is like a lightweight copy of the actual DOM(a virtual representation of the DOM). So for every object that exists in the original DOM, there is an object for that in React Virtual DOM. It is exactly the same, but it does not have the power to directly change the layout of the document. 
 
-### ReactDOM
+## ReactDOM
 
 `What is ReactDOM? `
 
@@ -351,7 +355,7 @@ To solve this issue, React brought into the scene the virtual DOM. The Virtual D
 
 *	ReactDOM can be used on both the client-side and server-side.
 
-## React ES6
+# React ES6
 
 `What is ES6?`
 
@@ -383,7 +387,7 @@ React uses ES6, and you should be familiar with some of the new features like:
 
 8. [Spread Operator](#es6-spread-operator)
 
-### ES6 Classes
+## ES6 Classes
 
 * ES6 introduced classes.
 
@@ -538,7 +542,7 @@ The super() method refers to the parent class.
 
 By calling the super() method in the constructor method, we call the parent's constructor method and get access to the parent's properties and methods.
 
-### ES6 Arrow Functions
+## ES6 Arrow Functions
 
 * The arrow function is a new feature of ES6, introduced in ReactJS 16. It allows the developer to create a function that has lexical “this” binding and no arguments.
 
@@ -674,7 +678,7 @@ document.getElementById("demo").innerHTML = hello("World");
 
 ![image](images/ES6Arrow1.png)
 
-### ES6 Variable
+## ES6 Variable
 
 Before ES6 there was only one way of defining your variables: with the var keyword. If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.
 
@@ -831,7 +835,7 @@ console.log(number); // 5
 
 This will not throw any error. Variable with **let** keyword can be reassigned.
 
-### ES6 Array Method
+## ES6 Array Method
 
 There are many JavaScript array methods.
 
@@ -864,7 +868,7 @@ ReactDOM.render(myList, document.getElementById('root'));
 ![image](images/arraymethod.png)
 
 
-### ES6 Destructuring
+## ES6 Destructuring
 
 * To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
 
@@ -954,7 +958,7 @@ My car is a red Ford Mustang.
 ```
 
 
-### ES6 Spread Operator
+## ES6 Spread Operator
 
 * ES6 introduced a new operator referred to as a spread operator, which consists of three dots (...). It allows an iterable to expand in places where more than zero arguments are expected. It gives us the privilege to obtain the parameters from an array.
 
@@ -1068,7 +1072,7 @@ console.log(myUpdatedVehicle);
 
 >Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle.
 
-### ES6 Rest Parameter
+## ES6 Rest Parameter
 
 * The rest parameter is introduced in ECMAScript 2015 or ES6, which improves the ability to handle parameters. 
 
@@ -1151,7 +1155,7 @@ console.log(num(10, 20, 30));
 ```
 
 
-### ES6 Ternary Operator
+## ES6 Ternary Operator
 
 The ternary operator is a simplified conditional operator like if / else.
 
@@ -1291,7 +1295,7 @@ export default App;
 
 ![image](images/ternarytrue.png)
 
-## Modify the React Application
+# Modify the React Application
 
 * So far so good, but how do I change the content?
 
@@ -1343,7 +1347,7 @@ ReactDOM.render(
 ```
 >Note:we can also  directly render the App function in the App.js by importing an ReactDom from 'react-dom' and using the render() method.
 
-## React Rendering Elements
+# React Rendering Elements
 
 * React elements are different from DOM elements as React elements are simple JavaScript objects and are efficient to create. 
 
@@ -1435,7 +1439,7 @@ In the above example, we have created a function showTime() that displays the cu
 
 * A React Element is almost never used isolated, we can use elements as the building blocks of creating a component in React.
 
-## React Render HTML
+# React Render HTML
 
 * React's goal is in many ways to render HTML in a web page.
 
@@ -1541,7 +1545,7 @@ id="sandy" on your "index.html" page.
 
 ![image](images/render3.png)
 
-## React Jsx
+# React Jsx
 
 * JSX stands for JavaScript XML.
 
@@ -1612,7 +1616,7 @@ ReactDOM.render(
 
 ![jsx](/images/jsx.png)
 
-### Attributes in JSX
+## Attributes in JSX
 
 JSX allows us to use attributes with the HTML elements just like we do with normal HTML. But instead of the normal naming convention of HTML, JSX uses the camelcase convention for attributes.
 
@@ -1664,7 +1668,7 @@ const ele = <h1 className = {varName}>Hello!</h1>;
 
 
 
-### Wrapping elements or Children in JSX
+## Wrapping elements or Children in JSX
 
 Consider a situation where you want to render multiple tags at a time. To do this we need to wrap all of these tags under a parent tag and then render this parent element to the HTML. All the subtags are called child tags or children of this parent element.
 
@@ -1724,7 +1728,7 @@ ReactDOM.render(element, document.getElementById("root"));
 
 ```
 
-## React Components
+# React Components
 
 * A Component is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. 
 
@@ -1865,7 +1869,7 @@ export default App;
 
 ![component](/images/compo2.png)
 
-## React State
+# React State
 
 * The state is an updatable structure that is used to contain data or information about the component. 
 
@@ -2007,7 +2011,7 @@ export default App;
 
 ![image](images/state3.png)
 
-## React Props
+# React Props
 
 * Props stand for "Properties." They are read-only components. 
 
@@ -2088,7 +2092,7 @@ root.render(<Garage />);
 >**Note**: React Props are read-only! You will get an error if you try to change their value.
 
 
-## React Props Validation
+# React Props Validation
 
 * Props are an important mechanism for passing the read-only attributes to React components. 
 
@@ -2235,7 +2239,7 @@ App.propTypes = {
 })  
 ```
 
-## State Vs. Props
+# State Vs. Props
 
 `State`
 
@@ -2273,7 +2277,7 @@ App.propTypes = {
 |Props are external and controlled by whatever renders the component.	|The State is internal and controlled by the React Component itself.|
 
 
-## React Constructor
+# React Constructor
 
 * The constructor is a method used to initialize an object's state in a class. 
 
@@ -2429,7 +2433,7 @@ When you execute the above code, you get the following output.
 
 ![image](images/constructor.png)
 
-## React Events
+# React Events
 
 * An action triggered as a result of the user action or system-generated event is termed as an event. 
 
@@ -2488,7 +2492,7 @@ export default App;
 
 ![image](images/event12.png)
 
-## React List
+# React List
 
 * Lists are used to display data in an ordered format and mainly used to display menus on websites. 
 
@@ -2609,7 +2613,7 @@ Rendering Lists inside component
 * Alisa
 ```
 
-## React Keys
+# React Keys
 
 * A “key” is a special string attribute you need to include when creating lists of elements in React. 
 
@@ -2643,7 +2647,7 @@ const updatedNums = numbers.map((number, index) =>
 
 * To avoid mistakes, you have to keep in mind that keys only make sense in the context of the surrounding array. So, anything you are returning from map() function is recommended to be assigned a key
 
-### Incorrect Key usage
+## Incorrect Key usage
 
 `Example:`
 
@@ -2692,7 +2696,7 @@ export default function App() {
 
 ![image](images/key.png)
 
-### Correct usage of keys
+## Correct usage of keys
 
 `Example:` The below example shows the correct usage of keys:
 
@@ -2731,7 +2735,7 @@ export default function App() {
 
 ![image](images/key1.png)
 
-### Uniqueness of Keys 
+## Uniqueness of Keys 
 
 * We have told many times while discussing keys that keys assigned to the array elements must be unique. 
 
@@ -2777,7 +2781,7 @@ export default App;
 
 ![image](images/key2.png)
 
-## React refs
+# React refs
 
 * Refs is the shorthand used for references in React. It is similar to keys in React. 
 
@@ -2929,7 +2933,7 @@ export default App;
 
 ![ref](/images/ref1.png)
 
-### Callback refs
+## Callback refs
 
 In react, there is another way to use refs that is called "callback refs" and it gives more control when the refs are set and unset. Instead of creating refs by createRef() method, React allows a way to create refs by passing a callback function to the ref attribute of a component. It looks like the below code.
 
@@ -2998,7 +3002,7 @@ In the above example, React will call the "ref" callback to store the reference 
 
 
 
-## React Fragments
+# React Fragments
 
 * In React, whenever you want to render something on the screen, you need to use a render method inside the component. 
 
@@ -3149,7 +3153,7 @@ Function  = (props) {
 
 ```
 
-## React Router
+# React Router
 
 * Routing is a process in which a user is directed to different pages based on their action or request. 
 
@@ -3183,7 +3187,7 @@ npm i react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 ```
 
-### React Router Components:
+## React Router Components:
 
 The Main Components of React Router are:
 
@@ -3382,7 +3386,7 @@ Here in this Output if u click back or forward button in the browser it wont wor
 
 ![router](/images/router.png)
 
-### Browser Router
+## Browser Router
 
 `Browser Router:` It uses HTML 5 history API (i.e. pushState, replaceState, and popState API) to keep your UI in sync with the URL. It routes as a normal URL in the browser and assumes that the server is handling all the request URL (eg., /, /about) and points to root index.html. It accepts forceRefresh props to support legacy browsers that don’t support HTML 5 pushState API
 
@@ -3441,7 +3445,7 @@ export default App;
 
 Here in this Output if u click back or forward button in the browser it will work.
 
-### Hash Router
+## Hash Router
 
 `Hash Router:` Hash router uses client-side hash routing. It uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL. The hash portion of the URL won’t be handled by the server, the server will always send the index.html for every request and ignore the hash value. It doesn’t need any configuration in the server to handle routes. It is used to support legacy browsers which usually don’t support HTML pushState API. It is very useful for legacy browsers or you don’t have a server logic to handle the client-side. This route isn’t recommended to be used by the react-router-dom team.
 
@@ -3494,7 +3498,7 @@ export default App;
 
 ![router](/images/router4.png)
 
-## Adding Navigation using Link component
+# Adding Navigation using Link component
 
 Sometimes, we want to need multiple links on a single page. When we click on any of that particular Link, it should load that page which is associated with that path without reloading the web page. To do this, we need to import `<Link>` component in the index.js file.
 
@@ -3803,7 +3807,7 @@ The benefits of React Router is given below:
 * In this, every component is specified in .
 
 
-## React Forms
+# React Forms
 
 * Forms are really important in any website for login, signup, or whatever. 
 
@@ -4007,7 +4011,7 @@ root.render(<MyForm />);
 
 >Note: We use the same event handler function for both input fields, we could write one event handler for each, but this gives us much cleaner code and is the preferred way in React.
 
-### Controlled Components
+## Controlled Components
 
 * In simple HTML elements like input tags, the value of the input field is changed whenever the user type. 
 
@@ -4053,7 +4057,7 @@ export default App;
 
 ![Form](images/form.png)
 
-### Uncontrolled Components
+## Uncontrolled Components
 
 * The uncontrolled input is similar to the traditional HTML form inputs. 
 
@@ -4102,7 +4106,7 @@ export default App;
 
 ![Form](images/formm.png)
 
-## React Map
+# React Map
 
 * Map is a type of data structure or data collection that is used to store the data in the form of key and value pairs. 
 
@@ -4212,7 +4216,7 @@ export default App;
 
 ![map](images/map1.png)
 
-## React Component API
+# React Component API
 
 React Component API includes various methods for creating elements, transforming elements and fragments to make the code completely individual and reusable in the application and is thus a top-level API. The three most important methods of the React component API are setState() method, forceUpdate() method and findDOMNode() method.
 
@@ -4268,7 +4272,7 @@ export default App;
 
 ![map](images/component1.png)
 
-### findDOMNode()
+## findDOMNode()
 
 `The findDOMNode() method:`
 It is used for DOM manipulation, to find or access the underlying DOM node.
@@ -4324,7 +4328,7 @@ export default App;
 
 ![map](images/component3.png)
 
-### forceUpdate() 
+## forceUpdate() 
 
 `The forceUpdate() method:`
 
@@ -4370,7 +4374,7 @@ export default App;
 ![map](images/component5.png)
 
 
-## React CSS
+# React CSS
 
 * CSS in React is used to style the React App or Component. 
 
@@ -4640,7 +4644,7 @@ export default App;
 ```
 
 
-## React Animation
+# React Animation
 
 * The animation is a technique in which images are manipulated to appear as moving images. 
 
@@ -4842,7 +4846,7 @@ Once we insert the item and press Ok, the new item can be added in the list with
 
 ![image](images/react-animation-output3.png)
 
-## React Bootstrap
+# React Bootstrap
 
 Single-page applications gaining popularity over the last few years, so many front-end frameworks have introduced such as Angular, React, Vue.js, Ember, etc. As a result, jQuery is not a necessary requirement for 
 building web apps. Today, React has the most used JavaScript framework for building web applications, and
@@ -5070,7 +5074,7 @@ Now, open the src/index.js file and add the following code to import the Bootstr
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 ```
 
-## React Table
+# React Table
 
 * A table is an arrangement which organizes information into rows and columns. It is used to store and display data in a structured format.
 
@@ -5234,7 +5238,7 @@ td {
 ![image](images/Screenshot20211017145400.png)
 
 
-## React Code Splitting
+# React Code Splitting
 
 * First you need to understand how most frameworks work.
 
@@ -5441,7 +5445,7 @@ import React, { lazy } from 'react';
 const MyFirstComponent = lazy(() => import("./MyFirstComponent.js"));  
 ```
 
-## React Context API
+# React Context API
 
 The React Context API is a component structure, which allows us to share data across all levels of the application. The main aim of Context API is to solve the problem of prop drilling (also called "Threading"). 
 
@@ -5573,7 +5577,7 @@ When we run the React app, we will get the following screen.
 ![image](images/context-api.png)
 
 
-## React Hooks
+# React Hooks
 
 `What are Hooks?`
 
@@ -5670,7 +5674,7 @@ sure the package.json file lists the React and React-DOM dependencies as given b
 7. [useMemo](#usememo)
 8. [Custom Hook](#custom-hook)
 
-### useState
+## useState
 
 This hook lets you add state to your functional components. It returns a state variable and a function to update that variable.so basically useState is the ability to encapsulate local state in a functional component.  The  useState hook is a special function that takes the initial state as an argument and returns an array of two entries.  UseState encapsulate only singular value from the state, for multiple state need to have useState calls.
 
@@ -5739,7 +5743,7 @@ export default App
 
 >when we click button it will prints the random number
 
-### useEffect
+## useEffect
 
 The Effect Hook allows us to perform side effects (an action) in the function components. It does not use components lifecycle methods which are available in class components. In other words, Effects Hooks are equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
 
@@ -5828,7 +5832,7 @@ export default App;
 ![image](images/useeffect2.png)
 
 
-### useContext
+## useContext
 
 Context provides a way to pass data or state through the component tree without having to pass props down manually through each nested component. It is designed to share data that can be considered as global data for a tree of React components, such as the current authenticated user or theme(e.g. color, paddings, margins, font-sizes).Context API uses Context. Provider and Context. Consumer Components pass down the data but it is very cumbersome to write the long functional code to use this Context API. So useContext hook helps to make the code more readable, less verbose and removes the need to introduce Consumer Component. The useContext hook is the new addition in React 16.8. 
 
@@ -5935,7 +5939,7 @@ export default Logout;
 
 ![image](images/usecontext1.png)
 
-### useRef
+## useRef
 
 * The useRef Hook allows you to persist values between renders.
 
@@ -6081,7 +6085,7 @@ This time we use a combination of useState, useEffect, and useRef to keep track 
 
 In the useEffect, we are updating the useRef current value each time the inputValue is updated by entering text into the input field.
 
-### useReducer
+## useReducer
 
 * The useReducer Hook is similar to the useState Hook.
 
@@ -6174,7 +6178,7 @@ export default App;
 ![image](images/usereducer1.png)
 
 
-### useCallback
+## useCallback
 
 * The useCallback hook is used when you have a component in which the child is rerendering again and again without need.
 
@@ -6306,7 +6310,7 @@ As we can see from the below output when we change the state ‘count’ then tw
 
 ![image](images/callback2.png)
 
-### useMemo
+## useMemo
 
 The useMemo is a hook used in the functional component of react that returns a memoized value. In Computer Science, memoization is a concept used in general when we don’t need to recompute the function with a given argument for the next time as it returns the cached result. A memoized function remembers the results of output for a given set of inputs. For example, if there is a function to add two numbers, and we give the parameter as 1 and 2 for the first time the function will add these two numbers and return 3, but if the same inputs come again then we will return the cached value i.e 3 and not compute with the add function again. In react also, we use this concept, whenever in the React component, the state and props do not change the component and the component does not re-render, it shows the same output. The useMemo hook is used to improve performance in our React application.
 
@@ -6428,7 +6432,7 @@ Now we can see in the console that the squareNum is running only when there is a
 
 >Note: Memorization is never free, we are trading space for time. 
 
-### custom hook
+## custom hook
 
 * Using custom hooks is an effective option in a case where we want to implement the derived functionality of both the useState and useEffect Hooks across many components.
 
@@ -6497,7 +6501,7 @@ export default useForm;
 In the above example, when the user types in the input field, then the custom hook is called which decides whether the text is valid or not based on certain conditions.
 
 
-## React Flux 
+# React Flux 
 
 * Flux is an application architecture that Facebook uses internally for building the client-side web application with React. 
 
@@ -6565,7 +6569,7 @@ The dispatcher method allows us to trigger a dispatch to the store and include a
 
 * The flux application parts are decoupled.
 
-## React State Management
+# React State Management
 
 `What is React State Management?`
 
@@ -6587,7 +6591,7 @@ If developers do not have scalability in mind then it is really hard to find out
 
 Let’s discuss how to use react state management using Redux.
 
-## React Redux
+# React Redux
 
 * Redux is an open-source JavaScript library used to manage application state. React uses Redux for building the user interface. It was first introduced by Dan Abramov and Andrew Clark in 2015.
 
@@ -6684,7 +6688,7 @@ To use React Redux with React application, you need to install the below command
  $ npm install redux react-redux --save 
 ``` 
 
-### Example
+## Example
 
 Create a folder Structure like this 
 
@@ -6904,7 +6908,7 @@ createRoot(document.getElementById("root")).render(
 
 
 
-## React Error Boundaries
+# React Error Boundaries
 
 * A JavaScript error in a part of the UI shouldn’t break the whole app. To solve this problem for React users, React 16 introduces a new concept of an “error boundary”.
 
@@ -7130,7 +7134,7 @@ class MyComponent extends React.Component {
 ```
 
 
-## Unit Testing in React
+# Unit Testing in React
 
 * Unit testing is a method of testing that tests the individual software unit in theprocess of isolation. Check the output of a function for any given input.
 
@@ -7505,7 +7509,7 @@ If you are providing a custom button component and pass a color prop with a valu
 
 It is very important to write unit tests, which is the simplest type of tests, and project to increase confidence and the code correctness. We have to aim for a higher percentage of code coverage to make it the part of workflow to write the unit test cases.
 
-## Conclusion
+# Conclusion
 
 In conclusion, this React documentation provides a comprehensive overview of key concepts, features, and best practices for building web applications with React. React's core principles, such as the Virtual DOM, JSX, and component-based architecture, have been explored in detail, allowing developers to grasp the foundation of this powerful library.
 
@@ -7518,7 +7522,7 @@ This documentation aims to provide developers with the knowledge and tools neede
 We encourage developers to leverage this documentation as a starting point, experiment with the concepts and examples provided, and continuously explore new resources and updates to stay at the forefront of React development. Whether you are a beginner or an experienced developer, React's versatility and the wealth of resources available make it an exciting platform for creating modern web applications.
 
 
-## Reference Notes Link:
+# Reference Notes Link:
 
 
 * https://www.javatpoint.com/reactjs-tutorial
