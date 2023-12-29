@@ -1,23 +1,5 @@
 # React
 
-* React is a JavaScript library for building user interfaces.
-
-* React allows us to create reusable UI components.
-
-* It was developed by Facebook and is often used for creating single-page applications (SPAs) and mobile applications.
-
-* React is known for its efficiency and flexibility in managing the UI of web applications.
-
-`Define UI`
-
-The User Interface (UI) is the point of human-computer interaction and communication in a device. UI encompasses all the visual and interactive elements through which users interact with software, websites, applications, and devices to perform tasks, access information, or achieve specific goals.
-
-`There are two primary types of user interfaces:`
-
-`Graphical User Interface (GUI):` GUI is the most common type of user interface and is characterized by graphical elements such as icons, buttons, windows, and menus. Users interact with GUIs by using input devices like a mouse, keyboard, or touch screen. Operating systems like Windows, macOS, and most mobile apps use GUIs.
-
-`Command Line Interface (CLI):` CLI is a text-based user interface where users interact with a program or system by typing commands in a terminal or console. It is commonly used by developers, system administrators, and power users for tasks that require precise control and automation. Popular CLI environments include the Windows Command Prompt, macOS Terminal, and various Linux shells.
-
 
 ![reactjsLogo](/images/logoo.png)
 
@@ -64,7 +46,7 @@ The User Interface (UI) is the point of human-computer interaction and communica
 * **[React Error Boundaries](#react-error-boundaries)**
 * **[Unit Testing in React](#unit-testing-in-react)**
 * **[Conclusion](#conclusion)**
-* **[Reference](#reference-notes-link)**
+* **[References](#references)**
 
 
 
@@ -83,6 +65,15 @@ The User Interface (UI) is the point of human-computer interaction and communica
 
 * React is used to create modular user interfaces and promotes the development of reusable UI components that display dynamic data.
 
+`Define UI`
+
+The User Interface (UI) is the point of human-computer interaction and communication in a device. UI encompasses all the visual and interactive elements through which users interact with software, websites, applications, and devices to perform tasks, access information, or achieve specific goals.
+
+`There are two primary types of user interfaces:`
+
+`Graphical User Interface (GUI):` GUI is the most common type of user interface and is characterized by graphical elements such as icons, buttons, windows, and menus. Users interact with GUIs by using input devices like a mouse, keyboard, or touch screen. Operating systems like Windows, macOS, and most mobile apps use GUIs.
+
+`Command Line Interface (CLI):` CLI is a text-based user interface where users interact with a program or system by typing commands in a terminal or console. It is commonly used by developers, system administrators, and power users for tasks that require precise control and automation. Popular CLI environments include the Windows Command Prompt, macOS Terminal, and various Linux shells.
 
 `Why React?`
 
@@ -7522,7 +7513,7 @@ This documentation aims to provide developers with the knowledge and tools neede
 We encourage developers to leverage this documentation as a starting point, experiment with the concepts and examples provided, and continuously explore new resources and updates to stay at the forefront of React development. Whether you are a beginner or an experienced developer, React's versatility and the wealth of resources available make it an exciting platform for creating modern web applications.
 
 
-# Reference Notes Link:
+# References:
 
 
 * https://www.javatpoint.com/reactjs-tutorial
